@@ -9,6 +9,8 @@
 
 \usepackage[export]{adjustbox}
 \usepackage{tikz}
+\usepackage{rotating}
+
 \usepackage{amsmath} % for \boxed and \smash[b] macros
 \usepackage{booktabs}% for \midrule and \cmidrule macros
 \newcommand\headercell[1]{%
@@ -114,7 +116,7 @@
         
               \begin{itemize}
                     \setlength\itemsep{1em}
-                    \item  \textbf{$\sim$ 500 BCE: \textit{Atomism}}: from Greek \textit{\'atomos} [uncuttable]: philosophical belief that the universe consists of indivisible units of matters (also present in ancient Indian philosophy) {\myfont{\tiny  [Wikipedia:Atomism,Leucippus]   }}
+                    \item  \textbf{$\sim$ 500 BCE: \textit{Atomism}}: From Greek \textit{\'atomos} [uncuttable]: philosophical belief that the universe consists of indivisible units of matters (also present in ancient Indian philosophy) {\myfont{\tiny  [Wikipedia:Atomism,Leucippus]   }}
                     \item \textbf{$\sim$1800s: Law of Multiple Proportions}: John Dalton: discovered that elements react and combine in small, integer ratios {\myfont{\tiny  [Wikipedia:Atom]   }}
                     \item \textbf{1897: Plum Pudding Model}: J.J. Thomson: discovered \textit{sub}atomic particles (originally called corpuscles, renamed to electrons) {\myfont{\tiny  [Wikipedia:Plum Pudding Model]   }}
                     \end{itemize}
@@ -193,8 +195,8 @@
                     %\vspace{2cm}
                     \begin{figure}
                         \centering
-                        \includegraphics[trim={0 0  0 0cm} ,clip,width=.982\textwidth]{Introduction/modernproton.png}
-                        \caption{                       {\myfont{\tiny  [Argonne National Lab]   }}}
+                        \includegraphics[trim={0 0  0 0cm} ,clip,width=.982\textwidth]{Introduction/eic_spin.png}
+                        \caption{                       {\myfont{\tiny  [EIC Whitepaper]   }}}
                         %https://www.anl.gov/article/getting-up-to-speed-on-the-proton
                         \label{fig:modernproton1}
                     \end{figure}
@@ -211,10 +213,11 @@
                     %\vspace{2cm}
                     \begin{figure}
                         \centering
-                        \includegraphics[trim={25cm 5cm  25cm 5cm} ,clip,width=.982\textwidth]{Introduction/quanta_protons.jpg}
-                        \caption{                       {\myfont{\tiny  [Quanta Magazine 20190911]   }}}
+                        %\includegraphics[trim={25cm 5cm  25cm 5cm} ,clip,width=.982\textwidth]{Introduction/quanta_protons.jpg}
+                        \includegraphics[trim={0 0  0 0cm} ,clip,width=.982\textwidth]{Introduction/modernproton.png}
+                        \caption{                       {\myfont{\tiny  [Argonne National Lab]   }}}
                         %https://www.anl.gov/article/getting-up-to-speed-on-the-proton
-                        \label{fig:modernproton}
+                        \label{fig:modernproton2}
                     \end{figure}
                     
         \column{0.69\textwidth}
@@ -243,10 +246,10 @@ Imaging limited by diffraction ($\sim \frac{\lambda}{2}$) $\rightarrow$ scale se
                     Optical Microscope
                     \begin{figure}
                         \centering
-                        \includegraphics[trim={0 1cm 0 0cm} ,clip,width=.67\textwidth]{Introduction/optmic.png}
+                        \includegraphics[trim={0 1cm 0 0cm} ,clip,width=.63\textwidth]{Introduction/optmic.png}
                         %\caption{                       {\myfont{\tiny  [Quanta Magazine 20190911]   }}}
                         %https://www.anl.gov/article/getting-up-to-speed-on-the-proton
-                        \label{fig:modernproton}
+                        \label{fig:modernproton3}
                     \end{figure} 
                      3 eV $\rightarrow$ $\lambda$ $\sim$ 400 nm\\
                      {\myfont{\tiny \quad \quad \quad [n.b. ex. mic for bio]   }}
@@ -258,7 +261,7 @@ Imaging limited by diffraction ($\sim \frac{\lambda}{2}$) $\rightarrow$ scale se
                         \includegraphics[trim={0 0 0 0} ,clip,width=.77\textwidth]{Introduction/elecmic.jpg}
                         %\caption{                       {\myfont{\tiny  [Quanta Magazine 20190911]   }}}
                         %https://www.anl.gov/article/getting-up-to-speed-on-the-proton
-                        \label{fig:modernproton}
+                        \label{fig:modernproton4}
                     \end{figure} 
              10 keV $\rightarrow$ $\lambda$ $\sim$ 0.01 nm
                     
@@ -270,7 +273,6 @@ Imaging limited by diffraction ($\sim \frac{\lambda}{2}$) $\rightarrow$ scale se
                         \includegraphics[trim={2cm 0 2cm 0} ,clip,width=.82\textwidth]{Introduction/elecfemt.jpg}
                         %\caption{                       {\myfont{\tiny  [Quanta Magazine 20190911]   }}}
                         %Source  https://home.cern/science/engineering/accelerating-radiofrequency-cavities
-                        \label{fig:modernproton}
                     \end{figure} 
             10 GeV $\rightarrow$ $\lambda$ $\sim$ 0.1 fm
                     
@@ -278,118 +280,131 @@ Imaging limited by diffraction ($\sim \frac{\lambda}{2}$) $\rightarrow$ scale se
     \end{columns}
 \end{frame}
 
-\begin{frame}{Proton can only be Indirectly Imaged}
- Rely on scattering, see what comes out.  [include slides from Or Hen]
- Specific reactions encode specific pieces of information of proton structure - e.g. quark momentum or spatial distributions
- 
-  1\q determines the spatial resolution
-                     pressure very high
-                    Translation scale: $\hbar c$ = 0.2 GeV fm - 
-                    Can't directly measure distributions, instead have to measure reaction rates, and infer distributions from obersved rates - cross section
-                    1/x determines the shutter speed
-  \begin{itemize}
-                    \item PDFs - 1D structure
-                    \item GPDs - 3D structure 
-                    \item sidis, 
-    \end{itemize}
-    
-\end{frame}
+\begin{frame}{Proton Structure must be Indirectly Imaged}
+Unlike optical imaging, must infer structure from reaction rates (cross sections) $\rightarrow$ structure encoded in various form factors and distribution functions
+\begin{columns}
 
+           \column{0.4\textwidth}
+                \begin{figure}
+                        \centering
+                        \includegraphics[trim={0cm 0 0cm 0} ,clip,width=.42\textwidth]{Introduction/gendia.png}
+                        %\caption{                       {\myfont{\tiny  [Quanta Magazine 20190911]   }}}
+                        %Source  https://home.cern/science/engineering/accelerating-radiofrequency-cavities
+                         
+                    \end{figure} 
 
+                        \begin{figure}
+                        \centering
+                        \includegraphics[trim={17cm 0 17cm 0} ,clip,width=.42\textwidth]{Introduction/shutter_speed.png}
+                        \caption{                       {\myfont{\tiny  [R.G. Milner and R. Ent, Visualzing the Proton (2022)]   }}}
+                        %Source  https://home.cern/science/engineering/accelerating-radiofrequency-cavities
+                         
+                    \end{figure} 
+      \column{0.6\textwidth}              
 
-\begin{frame}{Proton Structure: Distribution Functions}
-
- Rely on scattering, see what comes out.  [include slides from Or Hen]
-  1\q determines the spatial resolution
-  light microscope vs electron microscope vs femtomicroscope
-                     pressure very high
-                    Translation scale: $\hbar c$ = 0.2 GeV fm - 
-                    Can't directly measure distributions, instead have to measure reaction rates, and infer distributions from obersved rates - cross section
-                    1/x determines the shutter speed
-  \begin{itemize}
-                    \item PDFs - 1D structure
-                    \item GPDs - 3D structure 
-                    \item sidis, 
-    \end{itemize}
-    
-\end{frame}
-
-
-
-\begin{frame}{Theory:Experiment Relation: Xi and DVEP}
-DVCS, DVMP, how we get information from scattering
-\end{frame}
-
-
-\begin{frame}{Experiment Overview}
-Describe how we are going to measure this process
-Gonna take an electron, speed it up [accelerator], ram it into proton and detect what comes out [experiment and detectors], going to reconstruct what happened [analysis]
-\end{frame}
-
-
-\begin{frame}{Process Background}
-
-    %\vspace{-.5cm}
-         \begin{columns}[t, onlytextwidth]
-         
-          \column{0.35\textwidth}
-            \centering Deeply Virtual $\pi^0$ Production\\
-            \centering(\textcolor{alert}{DV$\pi^o$P})
-            \begin{center}
-                
-                $e+p \rightarrow$ \\
-                $e'+p' + \pi^0 \rightarrow$\\
-                $e' + p' + \gamma_1 + \gamma_2$ 
-            \end{center}
-            
-            
-            \includegraphics[trim={0 0 0 0cm} ,clip,width=.95\textwidth]{DNP/dvPiP_Feynman_diagram_2.jpg}
-            
-            
-            
-            \column{0.65\textwidth}
+    \begin{itemize}
+        \item Reactions of the form e + p $\rightarrow$ e + X
                 \begin{itemize}
-                    \setlength\itemsep{1em}
-                    \item 4-fold differential cross section $\frac{d\sigma}{d\textcolor{alert}{Q^2}d\textcolor{alert}{x_B}d\textcolor{alert}{t}d\textcolor{alert}{\phi}}$ expressed in terms of:
-                        \begin{itemize}
-                        \setlength\itemsep{0.5em}
-                            \item Virtual photon 4-momentum:  \textcolor{alert}{$Q^2$} $\equiv$  $-(p_e-p_{e'})^2$
-                            \item Bjorken x: \textcolor{alert}{$x_B$} $\equiv$ $\frac{Q^2}{2p_p\cdot(p_{e}-p_{e'})}$
-                            \item Momentum transfer: \textcolor{alert}{-t} $\equiv$ $-(p_{p'}-p_p)^2$
-                            \item Angle between lepton \& hadron planes: \textbf{\textcolor{alert}{$\phi$}} = 
-                            
-                             \begin{columns}[t, onlytextwidth]
-         
-          \column{0.6\textwidth}
-             \begin{center}
-                            
-                            \includegraphics[trim={10cm 8cm 10cm 8cm} ,clip,width=.96546725995\textwidth]{DNP/lept_had_planes.png}
-                            \end{center}
-            \column{0.4\textwidth}
-            \footnotesize{$\cos^{-1} \left( \frac{ \left(p_{e} \times p_{e'} \right) \cdot \left( p_{p'} \times p_{\gamma^*} \right) }{ \lVert p_{e} \times p_{e'} \rVert \: \lVert p_{p'} \times p_{\gamma^*} \rVert} \right)$}
-          
-          \vspace{1.5cm}
-          {\myfont{\tiny     \textcolor{white}{lllllll} Images from S. Lee, A. Kim   }}
-         \end{columns}
-                            
-                        \end{itemize}
-                                            
-                    \item In DIS regime: W$>2$GeV, $Q^2$> 1GeV$^2$
+                \item X = p: elastic scattering
+                \item X = X: inclusive scattering
+                \item X = p + $\pi$: DV$\pi$P (in proper kinematic regime)
                 \end{itemize}
-                
-     
-                               
-        \end{columns}
-\end{frame}    
+        \item   $\frac{1}{q}$ determines the spatial resolution
+                    
+        \item $\frac{1}{x_B}$ determines the shutter speed
+        
+    \end{itemize}
+    \vspace{-.5cm}
+\begin{figure}
+                        \centering
+                        \includegraphics[trim={5cm 0 5cm 0} ,clip,width=.62\textwidth]{Introduction/ff_pdf_gpd.png}
+                        \caption{                       {\myfont{\tiny  [A.V. Belitsky A.V. Radyushkin 2005]   }}}
+                        %Source  https://home.cern/science/engineering/accelerating-radiofrequency-cavities
+                         
+                    \end{figure} 
+
+    \end{columns}
+\end{frame}
+
+
+\begin{frame}{GPDs Encode Proton 3D Structural Information}
+
+\begin{columns}
+
+           \column{0.4\textwidth}
+
+                        \centering
+                        Proton Form Factors
+                        \vspace{-.1cm}
+                                                     \begin{figure}
+                        \centering
+                        \includegraphics[trim={0 0 0 0} ,clip,width=.82\textwidth]{Introduction/rosenbluth-2.PNG}
+                        %\caption{Proton From Factors}
+                        %\caption{                       {\myfont{\tiny  [Quanta Magazine 20190911]   }}}
+                        %Source  https://home.cern/science/engineering/accelerating-radiofrequency-cavities
+                         
+                    \end{figure}    
+                    \vspace{-.5cm}
+                 \begin{figure}
+                        \centering
+                        Parton Distribution Functions
+                        \includegraphics[trim={0 0 0 0} ,clip,width=.562\textwidth]{Introduction/pdf-10gev.PNG}
+                        %\caption{Parton Distribution Function at $Q^2=10GeV^2$}
+                        %\caption{                       {\myfont{\tiny  [Quanta Magazine 20190911]   }}}
+                        %Source  https://home.cern/science/engineering/accelerating-radiofrequency-cavities
+                         
+                    \end{figure} 
+
+            \column{0.6\textwidth}
+
+            %\centering
+            \begin{itemize}
+                \item All distribution functions related through limiting cases of Wigner distributions
+                \item Quark and gluon Wigner distributions have no known direct physical observable
+                \item Can experimentally access TMDs and GPDs
+            \end{itemize}
+            
+                \begin{figure}
+                        \centering
+                        \includegraphics[trim={0 0 0 0} ,clip,width=.72\textwidth]{Introduction/wigner_cube.png}
+                        \caption{ Relationships between different distribution functions\\
+                        {\myfont{\tiny  [EIC Whitepaper]   }}}
+                        %Source  https://home.cern/science/engineering/accelerating-radiofrequency-cavities
+                         
+                    \end{figure} 
+
+                    
+    \end{columns}
+
+\end{frame}
 
 
 
-\begin{frame}{Physics Motivation: $DV\pi^0P$ and GPDs}
 
+\begin{frame}{GPDs Accessible Through Deeply Virtual Processes}
+\begin{itemize}
+    \item Deeply Virtual Processe (DVCS, DVMP)s: target nucleon remains intact, DIS regime
+    \item Relies on factorization between hard scattering and soft QCD vertices
+    \item Factorization proved rigorously for DVCS in Bjorken limit, for DVMP with longitudinally polarized photons (sufficient if dominates)
+\end{itemize}
+
+
+                \begin{figure}
+                        \centering
+                        \includegraphics[trim={0 0 0 0} ,clip,width=.582\textwidth]{Introduction/andrey.png}
+                        \caption{ DVCS (left) and DVMP Feynman Handbag diagrams\\
+                        {\myfont{\tiny  [V. Kubarovsky Nuc Phys B 2011]   }}}
+                        %Source  https://home.cern/science/engineering/accelerating-radiofrequency-cavities
+                         
+                    \end{figure} 
+\end{frame}
+
+
+\begin{frame}{GPD Encoding in $DV\pi^0P$ Cross Section is Nontrivial}
 
     \vspace{-.01cm}
    
-    The cross section for DV$\pi^0$P has theoretically linked to Generalized Parton Distributions (GPDs), which describe the 3D structure of the nucleon:\\
+    The cross section for DV$\pi^0$P can be expressed in terms of structure functions, which can be expressed as convolutions of GPDs:\\
     \vspace{0.1cm}
  \scalebox{0.735}{%
     $
@@ -498,6 +513,69 @@ Gonna take an electron, speed it up [accelerator], ram it into proton and detect
 \end{frame}
 
 
+
+
+
+
+\begin{frame}{$DV\pi^0P$: 4 particle final state, 4 Degrees of Freedom}
+
+    %\vspace{-.5cm}
+         \begin{columns}[t, onlytextwidth]
+         
+          \column{0.35\textwidth}
+            \centering Deeply Virtual $\pi^0$ Production\\
+            \centering(\textcolor{alert}{DV$\pi^o$P})
+            \begin{center}
+                
+                $e+p \rightarrow$ \\
+                $e'+p' + \pi^0 \rightarrow$\\
+                $e' + p' + \gamma_1 + \gamma_2$ 
+            \end{center}
+            
+            
+            \includegraphics[trim={0 0 0 0cm} ,clip,width=.95\textwidth]{DNP/dvPiP_Feynman_diagram_2.jpg}
+            
+            
+            
+            \column{0.65\textwidth}
+                \begin{itemize}
+                    \setlength\itemsep{1em}
+                    \item 4-fold differential cross section $\frac{d\sigma}{d\textcolor{alert}{Q^2}d\textcolor{alert}{x_B}d\textcolor{alert}{t}d\textcolor{alert}{\phi}}$ expressed in terms of:
+                        \begin{itemize}
+                        \setlength\itemsep{0.5em}
+                            \item Virtual photon 4-momentum:  \textcolor{alert}{$Q^2$} $\equiv$  $-(p_e-p_{e'})^2$
+                            \item Bjorken x: \textcolor{alert}{$x_B$} $\equiv$ $\frac{Q^2}{2p_p\cdot(p_{e}-p_{e'})}$
+                            \item Momentum transfer: \textcolor{alert}{-t} $\equiv$ $-(p_{p'}-p_p)^2$
+                            \item Angle between lepton \& hadron planes: \textbf{\textcolor{alert}{$\phi$}} = 
+                            
+                             \begin{columns}[t, onlytextwidth]
+         
+          \column{0.6\textwidth}
+             \begin{center}
+                            
+                            \includegraphics[trim={10cm 8cm 10cm 8cm} ,clip,width=.96546725995\textwidth]{DNP/lept_had_planes.png}
+                            \end{center}
+            \column{0.4\textwidth}
+            \footnotesize{$\cos^{-1} \left( \frac{ \left(p_{e} \times p_{e'} \right) \cdot \left( p_{p'} \times p_{\gamma^*} \right) }{ \lVert p_{e} \times p_{e'} \rVert \: \lVert p_{p'} \times p_{\gamma^*} \rVert} \right)$}
+          
+          \vspace{1.5cm}
+          {\myfont{\tiny     \textcolor{white}{lllllll} Images from S. Lee, A. Kim   }}
+         \end{columns}
+                            
+                        \end{itemize}
+                                            
+                    \item In DIS regime: W$>2$GeV, $Q^2$> 1GeV$^2$
+                \end{itemize}
+                
+     
+                               
+        \end{columns}
+\end{frame}    
+
+
+
+
+
     
 
     
@@ -517,7 +595,45 @@ Gonna take an electron, speed it up [accelerator], ram it into proton and detect
              \includegraphics[trim={0 0 0 1.8cm} ,clip,width=.9725995\textwidth]{APS_2022/clas12_vs_clas6_kinematic_coverage.jpg}
     \end{columns}
     
-    {\myfont{\tiny     I. Bedlinskiy et al., PRC, 90, 025205     (2014)   }}
+    {\myfont{\tiny     [I. Bedlinskiy et al., PRC, 90, 025205     (2014)]   }}
+
+\end{frame}
+
+
+\begin{frame}{The Path to Measurement is Long}
+        \begin{columns}[t, onlytextwidth]
+            \column{0.45\textwidth}
+            
+            \begin{itemize}
+                \item \textbf{Design and Build Detectors}: 2006-2018
+                \item \textbf{Take Data}: 2018 start, continuing
+                \item \textbf{Process Data}: Reconstruct particle paths from detector signals 
+                \item \textbf{Analyze Data}: Event selection to find raw process rates
+                \item \textbf{Correct Data}: Run simulations and apply correction factors
+                \item \textbf{Extract Physics}: Calculate structure functions, deconvolve GPDS, 
+            \end{itemize}
+            \column{0.6\textwidth}
+                    \begin{figure}
+                        \centering
+                        \includegraphics[trim={0 0 0 0} ,clip,width=.8579562\textwidth]{Introduction/wirestring.png}
+                        
+                        %\caption{Parton Distribution Function at $Q^2=10GeV^2$}
+                        %\caption{                       {\myfont{\tiny  [Quanta Magazine 20190911]   }}}
+                        %Source  https://home.cern/science/engineering/accelerating-radiofrequency-cavities
+                         
+                    \end{figure} 
+    \centering
+                        Detector construction - wire chamber stringing\\
+                         {\myfont{\tiny[V. Burkert et al., NIMA, 959, 163419 (2020)] }}
+                    %\begin{figure}
+                    %    \centering
+                    %    \includegraphics[angle=90,trim={0 0 0 0} ,clip,width=.579562\textwidth]{Introduction/Centraldet.png}
+                    %    \caption{Detector Construction [V. Burkert et al., NIMA, 959, 163419 (2020)] }
+                    %    \label{fig:awesome_image}
+                    %\end{figure}
+                 
+        \end{columns}
+        
 
 \end{frame}
 
@@ -561,7 +677,9 @@ Gonna take an electron, speed it up [accelerator], ram it into proton and detect
 \end{frame}    
 
 
-\begin{frame}{CLAS12 Detector at Jefferson Lab Hall B} \label{frame:datasets2}
+
+
+\begin{frame}{CLAS12 Detector at Jefferson Lab Hall B} 
         \vspace{-0.5cm}
         \begin{columns}[t, onlytextwidth]
             \column{0.5\textwidth}
@@ -619,7 +737,7 @@ Gonna take an electron, speed it up [accelerator], ram it into proton and detect
                         \item Time-of-Flight Detectors
                         \item EM Calorimeters
                     \end{itemize}
-                      \item Central Detector ($\sim40 < \theta < \sim 125 ^{\circ}$) \\
+                      \item Central Detector ($\sim40^{\circ} < \theta < \sim 125 ^{\circ}$) \\
                       inside solenoid
                      \begin{itemize}
                     \setlength\itemsep{.25em}
@@ -656,7 +774,7 @@ Gonna take an electron, speed it up [accelerator], ram it into proton and detect
 \end{frame}    
 
 
-\begin{frame}{Analysis Overview: Components of Cross Section}
+\begin{frame}{Cross Section: Count Event Rate, Include Correction Factors}
 
                 %\textcolor{white}{blank space}
                 \centering 
@@ -664,6 +782,59 @@ Gonna take an electron, speed it up [accelerator], ram it into proton and detect
                 \includegraphics[trim={0 0  0 0cm} ,clip,width=.91725995\textwidth]{extra/steps3.jpg}
 
 \end{frame}
+
+
+\begin{frame}{Events and Preliminary Particle Identification} \label{frame:datasets2}
+        \vspace{-0.5cm}
+        \begin{columns}[t, onlytextwidth]
+            \column{0.5\textwidth}
+                %\vspace{1cm}
+                \begin{figure}[t!]
+                    %\includegraphics[height=\dimexpr0.5\textheight-0.5in]{Pics/dnp/clas12-overview.jpg}
+                    \includegraphics[width=.76349\textwidth]{midana/example_event.png}
+                    \caption{ Sample Recon. Event with Detector Hits}
+                    
+                \end{figure}
+                \vspace{-0.45cm}
+                
+                    
+            \column{0.5\textwidth}
+                \begin{itemize}
+                    \item Reconstruction conducted at collaboration level
+                    \item Provides particle features (momentum, charge, mass)
+                    \item Additional fiducial cuts, momentum corrections applied afterwards
+                \end{itemize}
+   \begin{columns}[t, onlytextwidth]
+            \column{0.5\textwidth}
+             \begin{figure}[t!]
+                    %\includegraphics[height=\dimexpr0.5\textheight-0.5in]{Pics/dnp/clas12-overview.jpg}
+                    \includegraphics[trim={0 0  0 0cm} ,clip,width=.92\textwidth]{midana/pcalcut.png}
+                    
+                    
+                    
+                \end{figure}
+            \column{0.5\textwidth}
+            
+                    \begin{figure}[t!]
+                    %\includegraphics[height=\dimexpr0.5\textheight-0.5in]{Pics/dnp/clas12-overview.jpg}
+                    \includegraphics[width=.958565899\textwidth]{midana/fiducial_cuts.png}
+                    
+                    
+                    
+                             \end{figure}
+               
+              
+                %Additional fiducial cuts
+                %\vspace{0.3cm}
+                %{\myfont{\tiny [V. Burkert et al., NIMA, 959, 163419 (2020)] }}
+        \end{columns}
+          %\vspace{-0.45cm}
+          \centering
+        {\myfont{\tiny [S. Lee] }}
+
+        \end{columns}
+\end{frame}    
+
 
 
 \begin{frame}{Event Selection - Particle Identification and Exclusivity Cuts}
@@ -741,18 +912,11 @@ Gonna take an electron, speed it up [accelerator], ram it into proton and detect
         \end{columns}
 \end{frame}
 
-\begin{frame}
-    cuts are restrictive
-    TALK ABOUT EIC
-\end{frame}
 
-\begin{frame}{Computational Resources}
-    Jefferson Lab Pic
-\end{frame}
 
-\begin{frame}{Computational Resources}
-    Bates OSG Pipeline
-\end{frame}
+%\begin{frame}{Correction Factors Determined by Simulations}
+%    Bates OSG Pipeline
+%\end{frame}
 
 \begin{frame}{Acceptance Correction - Event Generator and Simulation}
      \begin{columns}[c]
@@ -852,6 +1016,10 @@ With the addition of smearing factors to simulated particle reconstruction value
     \end{columns}
 \end{frame} 
 
+%\begin{frame}{Normalizing Flows - Simulation Speedup}
+%words
+
+%\end{frame}
 
 \begin{frame}{Acceptance Correction - Bin by Bin Calculation}
 \begin{columns}
@@ -880,6 +1048,7 @@ With the addition of smearing factors to simulated particle reconstruction value
 
                     %#---------------------------------------------
                       \centering   Acc. Correction \\
+                      
                 	\includegraphics[trim={0 0  0 0cm} ,clip,width=.8982\textwidth]{extra/corrs/raw2acc.png}
  
              
@@ -890,6 +1059,7 @@ With the addition of smearing factors to simulated particle reconstruction value
 
                     %#---------------------------------------------
                       \centering   Acc. Corr. Counts \\
+                      \vspace{0.25cm}
                 	\includegraphics[trim={0 0  0 0cm} ,clip,width=.982\textwidth]{extra/corrs/final1.png}
  
        
@@ -898,16 +1068,54 @@ With the addition of smearing factors to simulated particle reconstruction value
     \end{columns}
 \end{frame}
 
+\begin{frame}{Additional Corrections}
+The acceptance dominates the correction factors, but others must be included for a finalized cross section.
+\vspace{.2cm}
+    \begin{columns}
+    \column{0.33\textwidth}
+    \textbf{Radiative Corrections}
+    \vspace{.81cm}
+    
+    
+    \begin{itemize}
+        \item Finalizing results with radiative generator, \\
+        $\sim$5\% correction
+    \end{itemize}
+    \includegraphics[trim={0 0  17cm 0cm} ,clip,width=.82\textwidth]{janres/rad_1.png}
+    
+    
+    
+    
+    \column{0.33\textwidth}
+     \textbf{Binning Corrections}
+    \vspace{.6cm}
+         \begin{itemize} 
+        \item Finite bin size - average, not differential cross sections
+        \item Bin migration effects
+        \item Preliminary work indicates $\sim$ 5\% correction
+    \end{itemize}
+    \column{0.33\textwidth}
+     \textbf{Overall Normalization}
+              \begin{itemize} 
+        \item Simulation detector efficiencies need to be corrected to true efficiencies
+        \item Comparing with well known processes
+        \item Similar processes report $\sim$ 10 \% effect
+    \end{itemize}
+    \end{columns}
+
+    %\includegraphics[trim={0 0  0 0cm} ,clip,width=.52\textwidth]{janres/rad_2.png}
+\end{frame}
 
 
-\begin{frame}{Progress on Preliminary Cross Section}
+\begin{frame}{Preliminary Cross Section Results}
 
 \begin{columns}
 \column{0.4\textwidth}
 
     \begin{itemize}
+        \setlength\itemsep{2em}
         \item Acceptance corrected data follows functional form expected from structure function decomposition
-                        
+        \item Binning is currently being improved, along with larger simulation runs to decrease statistical uncertainties  
     \end{itemize}
 
 
@@ -1006,48 +1214,101 @@ With the addition of smearing factors to simulated particle reconstruction value
         \end{columns}
 \end{frame}
 
+\begin{frame}{Extracting Physics - B Parameter}
 
+            \begin{columns}[t, onlytextwidth]
+                        \column{0.45\textwidth}
 
-\begin{frame}{Finite Bin Volume Corrections}
-Bin Average is not the same as bin center
+                        \begin{itemize}
+                            \setlength\itemsep{2em}
+                \item Cross section expected to decrease across increasing \textbf{t} as $e^{B\textbf{t}}$
+                \item The parameter B is  related to the distance between the struck quark and the rest of the nucleon
+                \item Preliminary CLAS12 results agree with CLAS6 published results, and are in line with expectations from the above interpretation
+                
+                \end{itemize}
 
+            
+                        \column{0.55\textwidth}
 
+    \begin{figure}
+       
+                        \centering
+                        \includegraphics[trim={0 0cm  0 0cm} ,clip,width=.67897982\textwidth]{janres/bslope2.png}
+                       
+                        %britannica.com/science/Thomson-atomic-model
+                        \label{fig:plumpudding}
+                    \end{figure}
+                    \centering
+                    CLAS12 (this work) and CLAS6 B slope parameter across $x_B$ and $Q^2$\\
+                      {\myfont{\tiny     [I. Bedlinskiy et al., PRC, 90, 025205     (2014)]   }}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Extracting Physics - Rosenbluth Separation}
+
+            \begin{columns}[t, onlytextwidth]
+                        \column{0.5\textwidth}
+
+                        \begin{itemize}
+                \item Cross section measurement does not give a separation on $\sigma_T$ and $\sigma_L$ terms:
+                \scalebox{0.8735}{%
+            $
+                 \frac{d^4\sigma_{\gamma^*p \rightarrow p'\pi^0}}{dQ^2dx_Bdtd\phi_{\pi}} =
+                 \Gamma (Q^2, x_B, E)
+                 \frac{1}{2\pi}
+                 \left\{ \left(  \textcolor{sigmaT}{\frac{d\sigma_T}{dt}}+\epsilon  \textcolor{sigmaL}{\frac{d\sigma_L}{dt}} \right)+...
+                \right\}
+            $
+            }
+                
+            \end{itemize}
+            
+             \begin{figure}
+                        \centering
+                        \includegraphics[trim={0 0  0 0cm} ,clip,width=.9184982\textwidth]{janres/rosen1.png}
+                        %\caption{{Thomson model of atom, with negatively charged electrons embedded in positively charged ball %\\
+                        %{\myfont{\tiny  [Britannica:Thomson Atomic Model]   }}}}
+                        %britannica.com/science/Thomson-atomic-model
+                        %\label{fig:plumpudding}
+                    \end{figure}
+
+                
+
+                    \column{0.5\textwidth}
+                            
+            \begin{itemize}
+
+                \item However, can leverage different beam energies between CLAS12 and CLAS6 data to perform Rosenbluth separation
+                \item Will extend prior results and further constrain GPDs
+            \end{itemize}
+
+     \begin{figure}
+                        \centering
+                        \includegraphics[trim={0 0  0 0cm} ,clip,width=.5684982\textwidth]{janres/rosen2.png}
+                        %\caption{{Thomson model of atom, with negatively charged electrons embedded in positively charged ball %\\
+                        %{\myfont{\tiny  [Britannica:Thomson Atomic Model]   }}}}
+                        %britannica.com/science/Thomson-atomic-model
+                        \label{fig:plumpudding}
+                    \end{figure}
+                    
+    \end{columns}
 \end{frame}
 
 
-\begin{frame}{Ditching Binning - OMNIFOLD}
-words
+%\begin{frame}{Directly Accessing Physics with OMNIFOLD}
+%words
 
-\end{frame}
+%\end{frame}
 
-\begin{frame}{Rosenbluth Separation}
-Igor Paper
-
-\end{frame}
-
-\begin{frame}{Classifier -- box to manifold}
-words
-
-\end{frame}
-
-
-\begin{frame}{Normalizing Flows}
-words
-
-\end{frame}
-
-\begin{frame}{Simulation Based INference}
-Words
-\end{frame}
 
 \begin{frame}{Conclusion - Towards a Full Cross Section}
-Preliminary efforts on event selection, simulations, and acceptance corrections yield promising results but more work is needed to extract a complete cross section measurement:
+Preliminary efforts on event selection, simulations, and corrections yield promising results but more work is needed to extract a complete cross section measurement:
 \vspace{0.4cm}
 \begin{itemize}
     \setlength\itemsep{1em}
-    \item Determination of remaining correction factors - radiative, binning, and absolute normalization
-    \item Study of systematic uncertainties 
-    \item Quantitative comparisons between data and theory model will be meaningful when uncertainties and binning are more complete
+    \item Complete remaining correction factors - radiative, binning, and absolute normalization, and systematic uncertainties
+    \item Quantitative comparisons between data and theory model will be meaningful when uncertainties and binning are more understood
+    \item Pursue extraction of physics, and investigate Omnifold as an alternative analysis methodology
 \end{itemize}
     
 %Acknowledge: MIT group, Sangbaek Lee, Andrey Kim, CLAS collaboration
@@ -1067,35 +1328,36 @@ CLAS Collaboration, Bates Engineering, MIT Tier 2 Computing Group
 
 
 
-\begin{frame}{Extra slides}
-Extra Slides
-
-\end{frame}
-
-
-
-
 \begin{frame}{Backup slides}
-      - QCD factorization theorem for DVMP process has only been proven for longitudinally polarized photons\\
-    - QCD factorization has been proven for DVCS
- 
+Backup Slides
+
 \end{frame}
 
 
-\begin{frame}{Backup slides}
-
-   \begin{columns}
-            \column{0.5\textwidth}
-            \includegraphics[scale=0.2]{Pics/currentWork/dvpipdiagram.png}\\
-            DVMP is sensitive to chiral odd GPDs, distinguishing it from DVCS as a GDP probe\\
-            
-             \column{0.5\textwidth}
-            \includegraphics[scale=0.14]{Pics/currentWork/cross-section-formula.png}\\
-            \includegraphics[scale=0.085]{Pics/currentWork/gpds.png}\\
-            
-    \end{columns}
-    
-\end{frame}
+\begin{frame}{ Luminosity Determination}
+         \begin{equation*}
+                    \Lumi = \frac{N_A l \rho Q_{FCUP}}{e}
+        \end{equation*}
+        
+        \begin{columns}
+                                
+            \column{0.98\textwidth}
+                \begin{table}
+                    \centering
+                    \begin{tabular}{rcc}
+                         %& Heading 1 & Heading 2 \\\hline
+                        Quantity &  & CLAS12 Value \\\hline
+                       Avogadro's Number &  N$_A$  & $6x10^{23}$ \\
+                        Electron Charge &e  &  $1.6x10^{-19}$ \\
+                        Target Length &l &  5 cm \\
+                        Target Density &$\rho$  &  0.07 $g/cm^3$ (LH2) \\
+                        Charge on Faraday Cup & $Q_{FCUP}$ &  In data\\
+                    \end{tabular}
+                    \label{tab:demo}
+                \end{table}
+        \end{columns}
+       Calculated Integrated Luminosity from Fall 2018 inbending dataset: 5.512 e+40 $cm^{-2}$
+\end{frame}    
 
 \begin{frame}{Backup slides}
 \centering
@@ -1104,55 +1366,64 @@ Comparision with CLAS6\\
     \includegraphics[scale=0.2832]{DNP/comp_c12_gk_c6.jpg}\\
 \end{frame}
 
+
+
+\begin{frame}{Autoencoder approach to GPDs}
+
+  \includegraphics[scale=0.52832]{janres/vain1.png}
+\end{frame}
+
+
+\begin{frame}{Autoencoder approach to GPDs}
+
+  \includegraphics[scale=0.52832]{janres/vain2.png}
+\end{frame}
+
+
+%\begin{frame}{Backup slides}
+%\centering
+%Low Q2\\
+%
+%    \includegraphics[scale=0.2832]{DNP/beauty_2.jpg}\\
+%\end{frame}
+%
+%\begin{frame}{Backup slides}
+%\centering
+%Inbending%
+%
+%    \includegraphics[scale=0.2832]{DNP/nice_inbending.jpg}\\
+%\end{frame}
+
+
+
+%\begin{frame}{De-Fence!}
+%\centering
+%    \includegraphics[scale=0.5832]{Main/thesis_defense_2x.png}
+%    
+%    {\myfont{\tiny    https://xkcd.com/1403/   }}
+%\end{frame}
+
+
+%\begin{frame}{Backup slides}
+%\centering
+%Slide on cheesecake / pi
+%\end{frame}
+
+
+%begin{frame}{Backup slides}
+%Comments on measuring pion polariability
+%a few words about how pions are useful
+%\end{frame}
+
+
+
 \begin{frame}{Backup slides}
 \centering
-Low Q2\\
+All data bins
 
-    \includegraphics[scale=0.2832]{DNP/beauty_2.jpg}\\
+    \includegraphics[scale=0.172832]{Introduction/alldatapoints.png}
 \end{frame}
 
-\begin{frame}{Backup slides}
-\centering
-Inbending
-
-    \includegraphics[scale=0.2832]{DNP/nice_inbending.jpg}\\
-\end{frame}
-
-
-
-\begin{frame}{De-Fence!}
-\centering
-    \includegraphics[scale=0.5832]{Main/thesis_defense_2x.png}
-    
-    {\myfont{\tiny    https://xkcd.com/1403/   }}
-\end{frame}
-
-
-\begin{frame}{Backup slides}
-\centering
-Slide on cheesecake / pi
-\end{frame}
-
-\begin{frame}{Abstract}
-
-Imaging the Proton: Investigating Proton Structure with Electron Scattering
-\\
-The structure of the proton has been studied extensively since its discovery a century ago.  Electron scattering experiments have been utilized as a clean probe into the dynamics of the nucleon, and the past several decades of work investigating structure functions have yielded information on the proton Parton Distribution Functions, which describe the proton's physical inner workings along one dimension. Presently, in specific kinematic regimes nuclear reactions can be theoretically linked to the 3D substructure of the nucleon. This presentation will discuss work towards measuring the properties of one such reaction - Deeply Virtual Neutral Pion Production - from analyzing the data of a 10.6 GeV electron scattering experiment at the CLAS12 detector in Jefferson Lab Hall B. 
-
-\end{frame}
-
-
-\begin{frame}{Backup slides}
-Comments on measuring pion polariability
-a few words about how pions are useful
-\end{frame}
-
-\begin{frame}{Backup slides}
-\centering
-Other\\
-
-    \includegraphics[scale=0.2832]{DNP/finalfig2.png}\\
-\end{frame}
 
 
 \begin{frame}{Concrete Abstract}
