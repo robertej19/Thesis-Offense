@@ -6,6 +6,7 @@
 \usepackage{colortbl}
 \usepackage{hyperref}
 \usepackage{xcolor}
+
 \usepackage[export]{adjustbox}
 \usepackage{tikz}
 \usepackage{amsmath} % for \boxed and \smash[b] macros
@@ -20,15 +21,16 @@
 \newcommand*{\myfont}{\fontfamily{lmtt}\selectfont}
 
 
-\title{\Large{Towards a Deeply Virtual Neutral Pion Production\newline Cross Section Measurement at CLAS12}}
-\subtitle{Fall 2022 DNP Meeting}
+\title{{Imaging the Proton }}
+\subtitle{Investigating Proton Structure with Electron Scattering}
 \institute{Massachusetts Institute of Technology \\ CLAS12 Collaboration}
 \usepackage{caption}
 \captionsetup[figure]{labelformat=empty}
 \titlegraphic{\includegraphics[scale=.15]{Pics/Intro/mit-clas12-combined.PNG}}
 \author{R. Johnston\texorpdfstring{\\}{,}}
 %\date{\today}
-\date{Friday, October 28, 2022}
+\date{Monday, January 30, 2023}
+
 
 
 \usepackage{array}
@@ -101,9 +103,228 @@
 \begin{document}
 
 
-%\begin{frame}
-%    \maketitle
-%\end{frame}
+\begin{frame}
+    \maketitle
+\end{frame}
+
+
+\begin{frame}{What is Matter? A Brief History }
+   \begin{columns}
+        \column{0.69\textwidth}
+        
+              \begin{itemize}
+                    \setlength\itemsep{1em}
+                    \item  \textbf{$\sim$ 500 BCE: \textit{Atomism}}: from Greek \textit{\'atomos} [uncuttable]: philosophical belief that the universe consists of indivisible units of matters (also present in ancient Indian philosophy) {\myfont{\tiny  [Wikipedia:Atomism,Leucippus]   }}
+                    \item \textbf{$\sim$1800s: Law of Multiple Proportions}: John Dalton: discovered that elements react and combine in small, integer ratios {\myfont{\tiny  [Wikipedia:Atom]   }}
+                    \item \textbf{1897: Plum Pudding Model}: J.J. Thomson: discovered \textit{sub}atomic particles (originally called corpuscles, renamed to electrons) {\myfont{\tiny  [Wikipedia:Plum Pudding Model]   }}
+                    \end{itemize}
+                    
+        \column{0.31\textwidth}
+                    %\vspace{2cm}
+                    \begin{figure}
+                        \centering
+                        \includegraphics[trim={0 0  0 0cm} ,clip,width=.982\textwidth]{Introduction/plumb.png}
+                        \caption{{Thomson model of atom, with negatively charged electrons embedded in positively charged ball \\
+                        {\myfont{\tiny  [Britannica:Thomson Atomic Model]   }}}}
+                        %britannica.com/science/Thomson-atomic-model
+                        \label{fig:plumpudding}
+                    \end{figure}
+            
+    \end{columns}
+\end{frame}
+
+
+\begin{frame}{Brief History of the Proton}
+
+
+   \begin{columns}
+        \column{0.69\textwidth}
+        
+              \begin{itemize}
+                    \setlength\itemsep{1em}
+                    \item  \textbf{$\sim$ 1911: Discovery of the Nucleus} - Scattering $\alpha$ particles off gold foil yielded significant backscatter, indicating small, dense nucleus  {\myfont{\tiny  [Wikipedia:Geiger-Marsden]   }}
+                    \item \textbf{$\sim$ 1919: Discovery of the Proton} - Proposed by Rutherford after $\alpha$ particle scattering experiments off atoms {\myfont{\tiny  [E. Rutherford doi:10.1080/14786431003659230]   }}
+                    \item \textbf{$\sim$1961: Discovery of Quarks} - Electron scattering experiments provided evidence consistent with the proton being a composite object of point-like constituents 
+                    \end{itemize}
+
+        \column{0.31\textwidth}
+                    %\vspace{2cm}
+                    \begin{figure}
+                        \centering
+                        \includegraphics[trim={9cm 8cm  0 0cm} ,clip,width=.6\textwidth]{Introduction/rutherfordscattering.png}
+                        \caption{     {\myfont{\tiny  [Wikimedia:Geiger-Marsden Exp.]   }}}
+                        %https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Bohr_model_Hydrogen.svg/1280px-Bohr_model_Hydrogen.svg.png
+                        \label{fig:plumpudding1}
+                    \end{figure}
+                    \vspace{-1cm}
+                     \begin{figure}
+                        \centering
+                        \includegraphics[trim={0 0  0 0cm} ,clip,width=.65\textwidth]{Introduction/proton_quarks.png}
+                        \caption{
+                        {\myfont{\tiny  [Wikimedia:Proton Quark Structure]   }}}
+                        %https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Bohr_model_Hydrogen.svg/1280px-Bohr_model_Hydrogen.svg.png
+                        \label{fig:plumpudding2}
+                    \end{figure}
+            
+    \end{columns}
+\end{frame}
+
+
+\begin{frame}{The Proton is Now Well-Understood}
+   \begin{columns}
+        \column{0.69\textwidth}
+        Protons are:
+              \begin{itemize}
+                    \setlength\itemsep{1em}
+                    \item \textbf{Spin 1/2}
+                    \item \textbf{Stable}: mean lifetime $>$ 1E34 years 
+                    \item \textbf{Lightweight}: 938.272088 MeV; lightest baryon\\
+                     {\myfont{\tiny  [n.b. 1 eV = 1.8E-36 kg]   }}
+                    \item \textbf{Small}: radius $\sim$ 0.85 fm\\
+                         \begin{itemize}
+                            \item If protons were scaled to the size of pingpong balls,\\
+                            atoms would be $\sim$ 4 football fields across,\\
+                            humans would be $\sim$ diameter of the inner solar system
+                        \end{itemize}
+                    \end{itemize}
+                    
+                    
+        \column{0.31\textwidth}
+                    %\vspace{2cm}
+                    \begin{figure}
+                        \centering
+                        \includegraphics[trim={0 0  0 0cm} ,clip,width=.982\textwidth]{Introduction/modernproton.png}
+                        \caption{                       {\myfont{\tiny  [Argonne National Lab]   }}}
+                        %https://www.anl.gov/article/getting-up-to-speed-on-the-proton
+                        \label{fig:modernproton1}
+                    \end{figure}
+            
+    \end{columns}
+\end{frame}
+
+
+\begin{frame}{The Proton is \textbf{NOT} well-understood - Testbed for Physics}
+    Macroscopic features are well measured, but many properties remain to be understood
+    \begin{columns}
+
+           \column{0.31\textwidth}
+                    %\vspace{2cm}
+                    \begin{figure}
+                        \centering
+                        \includegraphics[trim={25cm 5cm  25cm 5cm} ,clip,width=.982\textwidth]{Introduction/quanta_protons.jpg}
+                        \caption{                       {\myfont{\tiny  [Quanta Magazine 20190911]   }}}
+                        %https://www.anl.gov/article/getting-up-to-speed-on-the-proton
+                        \label{fig:modernproton}
+                    \end{figure}
+                    
+        \column{0.69\textwidth}
+       
+              \begin{itemize}
+                    \setlength\itemsep{1em}
+                     \item \textbf{Proton Spin Crisis}: Where does the proton's spin come from? 1987 measurement showed valence quarks only contribute  a small percent to overall proton spin
+                     \item \textbf{Proton Decay}: Popular Beyond-Standard-Model theories predict the proton to decay, but never has been observed
+                     \item \textbf{Proton Radius Puzzle}: (possibly resolved) discrepancy in proton charge radius between experimental methods
+                      \end{itemize}
+
+            \quad \quad \quad  {\myfont{\tiny \quad \quad \quad [Proton Puzzles, Nat Rev Phys, 2021]   }}
+                
+            
+    \end{columns}
+\end{frame}
+
+
+\begin{frame}{Probing the Proton: Accelerators as Electron Femtoscopes}
+Imaging limited by diffraction ($\sim \frac{\lambda}{2}$) $\rightarrow$ scale set by $\lambda = \frac{hc}{pc}$ with hc = 1200 eV nm
+  \begin{columns}
+
+           \column{0.33\textwidth}
+                        %\vspace{2cm}
+                       \centering 
+                    Optical Microscope
+                    \begin{figure}
+                        \centering
+                        \includegraphics[trim={0 1cm 0 0cm} ,clip,width=.67\textwidth]{Introduction/optmic.png}
+                        %\caption{                       {\myfont{\tiny  [Quanta Magazine 20190911]   }}}
+                        %https://www.anl.gov/article/getting-up-to-speed-on-the-proton
+                        \label{fig:modernproton}
+                    \end{figure} 
+                     3 eV $\rightarrow$ $\lambda$ $\sim$ 400 nm\\
+                     {\myfont{\tiny \quad \quad \quad [n.b. ex. mic for bio]   }}
+        \column{0.33\textwidth}
+        \centering
+        Electron Microscope
+                    \begin{figure}
+                        \centering
+                        \includegraphics[trim={0 0 0 0} ,clip,width=.77\textwidth]{Introduction/elecmic.jpg}
+                        %\caption{                       {\myfont{\tiny  [Quanta Magazine 20190911]   }}}
+                        %https://www.anl.gov/article/getting-up-to-speed-on-the-proton
+                        \label{fig:modernproton}
+                    \end{figure} 
+             10 keV $\rightarrow$ $\lambda$ $\sim$ 0.01 nm
+                    
+         \column{0.33\textwidth}
+         \centering
+         Electron Accelerator
+                    \begin{figure}
+                        \centering
+                        \includegraphics[trim={2cm 0 2cm 0} ,clip,width=.82\textwidth]{Introduction/elecfemt.jpg}
+                        %\caption{                       {\myfont{\tiny  [Quanta Magazine 20190911]   }}}
+                        %Source  https://home.cern/science/engineering/accelerating-radiofrequency-cavities
+                        \label{fig:modernproton}
+                    \end{figure} 
+            10 GeV $\rightarrow$ $\lambda$ $\sim$ 0.1 fm
+                    
+         
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Proton can only be Indirectly Imaged}
+ Rely on scattering, see what comes out.  [include slides from Or Hen]
+ Specific reactions encode specific pieces of information of proton structure - e.g. quark momentum or spatial distributions
+ 
+  1\q determines the spatial resolution
+                     pressure very high
+                    Translation scale: $\hbar c$ = 0.2 GeV fm - 
+                    Can't directly measure distributions, instead have to measure reaction rates, and infer distributions from obersved rates - cross section
+                    1/x determines the shutter speed
+  \begin{itemize}
+                    \item PDFs - 1D structure
+                    \item GPDs - 3D structure 
+                    \item sidis, 
+    \end{itemize}
+    
+\end{frame}
+
+
+
+\begin{frame}{Proton Structure: Distribution Functions}
+
+ Rely on scattering, see what comes out.  [include slides from Or Hen]
+  1\q determines the spatial resolution
+  light microscope vs electron microscope vs femtomicroscope
+                     pressure very high
+                    Translation scale: $\hbar c$ = 0.2 GeV fm - 
+                    Can't directly measure distributions, instead have to measure reaction rates, and infer distributions from obersved rates - cross section
+                    1/x determines the shutter speed
+  \begin{itemize}
+                    \item PDFs - 1D structure
+                    \item GPDs - 3D structure 
+                    \item sidis, 
+    \end{itemize}
+    
+\end{frame}
+
+
+
+\begin{frame}{Theory:Experiment Relation: Xi and DVEP}
+DVCS, DVMP, how we get information from scattering
+\end{frame}
+
+
+\begin{frame}{Experiment Overview}
+Describe how we are going to measure this process
+Gonna take an electron, speed it up [accelerator], ram it into proton and detect what comes out [experiment and detectors], going to reconstruct what happened [analysis]
+\end{frame}
 
 
 \begin{frame}{Process Background}
@@ -163,9 +384,7 @@
 
 
 
-
 \begin{frame}{Physics Motivation: $DV\pi^0P$ and GPDs}
-
 
 
     \vspace{-.01cm}
@@ -275,21 +494,11 @@
    \end{columns}
    
    \vspace{0.1cm}
-   \begin{columns}
-            \column{0.6\textwidth}
-            \column{0.4\textwidth}
-
-   \end{columns}
-               
 
 \end{frame}
 
 
     
-    
-
-
-
 
     
 \begin{frame}{\textbf{Analysis Goal}: Extract DV$\pi^o$P Cross Section}
@@ -313,29 +522,67 @@
 \end{frame}
 
 
-
-\begin{frame}{CLAS12 Detector at Jefferson Lab Hall B} \label{frame:datasets1}
-        \vspace{-0.5cm}
+\begin{frame}{Jefferson Lab 10.6 GeV CEBAF Accelerator} \label{frame:datasets1}
+        Thomas Jefferson National Accelerator Facility - Newport News, VA
+        
         \begin{columns}[t, onlytextwidth]
             \column{0.5\textwidth}
                 %\vspace{1cm}
                 \begin{figure}[t!]
                     %\includegraphics[height=\dimexpr0.5\textheight-0.5in]{Pics/dnp/clas12-overview.jpg}
-                    \includegraphics[width=.6349\textwidth]{DNP/jlab_hall_b_circled.jpg}
+                    \includegraphics[width=.76349\textwidth]{Introduction/jlab.jpg}
+                    
+                    
+                \end{figure}
+                \vspace{-0.45cm}
+            \begin{itemize}
+                    \setlength\itemsep{1em}
+                    \item Jefferson Lab aerial view
+                    {\myfont{\tiny [jlab.org] }}
+                    \end{itemize}
+                    
+            \column{0.5\textwidth}
+                \begin{figure}[t!]
+                    %\includegraphics[height=\dimexpr0.5\textheight-0.5in]{Pics/dnp/clas12-overview.jpg}
+                    \includegraphics[width=.56765899\textwidth]{DNP/jlab_hall_b_circled.jpg}
                     
                     
                 \end{figure}
                 \vspace{-0.45cm}
                   \begin{itemize}
                     \setlength\itemsep{1em}
-                    \item CEBAF Large Acceptance Spectrometer in Jefferson Lab Hall B
-                    \item 10.6 GeV, $\sim$ 50 nA e$^-$ 86\% polarized beam on unpolarized LH$_2$ target
+                    \item CEBAF 1,400 m racetrack, 50 RF cryomodules
+                    \item 10.6 GeV, $\sim$ 50 nA electron beam
+                    \end{itemize}
+            
+                \vspace{0.3cm}
+                {\myfont{\tiny [V. Burkert et al., NIMA, 959, 163419 (2020)] }}
+        \end{columns}
+\end{frame}    
+
+
+\begin{frame}{CLAS12 Detector at Jefferson Lab Hall B} \label{frame:datasets2}
+        \vspace{-0.5cm}
+        \begin{columns}[t, onlytextwidth]
+            \column{0.5\textwidth}
+                %\vspace{1cm}
+                \begin{figure}[t!]
+                    %\includegraphics[height=\dimexpr0.5\textheight-0.5in]{Pics/dnp/clas12-overview.jpg}
+                    \includegraphics[width=.86349\textwidth]{Main/beamline.png}
+                    
+                    
+                \end{figure}
+                \vspace{-0.45cm}
+                  \begin{itemize}
+                    \setlength\itemsep{1em}
+                    \item  Top: Beamline into unpolarized LH$_2$ target (cryostat)
+                    \item Bottom: Downstream beamline to Faraday Cup (current monitor)
                     \end{itemize}
                     
             \column{0.5\textwidth}
                 \begin{figure}[t!]
                     %\includegraphics[height=\dimexpr0.5\textheight-0.5in]{Pics/dnp/clas12-overview.jpg}
-                    \includegraphics[width=.765899\textwidth]{DNP/CLASdetector.jpg}
+                    \includegraphics[width=.8565899\textwidth]{DNP/CLASdetector.jpg}
                     
                     
                 \end{figure}
@@ -343,7 +590,7 @@
                 \begin{itemize}
                     \setlength\itemsep{1em}
 
-                    \item Large Acceptance:\\
+                    \item CEBAF Large Acceptance Spectrometer:\\
                      \begin{itemize}
                             \item $\sim$ 2$\pi$ coverage in $\phi$\\
                         \item  $5^\circ$ - $125^\circ$ coverage in $\theta$
@@ -352,13 +599,13 @@
                     
                     
                 \end{itemize}
-                \vspace{0.3cm}
-                {\myfont{\tiny V. Burkert et al., NIMA, 959, 163419 (2020) }}
+                %\vspace{0.3cm}
+                {\myfont{\tiny [V. Burkert et al., NIMA, 959, 163419 (2020)] }}
         \end{columns}
 \end{frame}    
 
 
-\begin{frame}{Experiment Layout And Particle Detection} \label{frame:datasets}
+\begin{frame}{Experiment Layout And Particle Detection} \label{frame:datasets3}
 \vspace{-0.5cm}
         \begin{columns}[t, onlytextwidth]
             \column{0.55\textwidth}
@@ -372,7 +619,8 @@
                         \item Time-of-Flight Detectors
                         \item EM Calorimeters
                     \end{itemize}
-                      \item Central Detector ($\sim40 < \theta < \sim 125 ^{\circ}$) inside solenoid
+                      \item Central Detector ($\sim40 < \theta < \sim 125 ^{\circ}$) \\
+                      inside solenoid
                      \begin{itemize}
                     \setlength\itemsep{.25em}
                         \item Silicon Vertex Tracker
@@ -403,11 +651,9 @@
                     \setlength\itemsep{.35em}
                     \item This analysis examines data taken in Fall 2018
                     \end{itemize}
-                {\myfont{\tiny V. Burkert et al., NIMA, 959, 163419 (2020) }}
+                {\myfont{\tiny [V. Burkert et al., NIMA, 959, 163419 (2020)] }}
         \end{columns}
 \end{frame}    
-
-
 
 
 \begin{frame}{Analysis Overview: Components of Cross Section}
@@ -495,6 +741,18 @@
         \end{columns}
 \end{frame}
 
+\begin{frame}
+    cuts are restrictive
+    TALK ABOUT EIC
+\end{frame}
+
+\begin{frame}{Computational Resources}
+    Jefferson Lab Pic
+\end{frame}
+
+\begin{frame}{Computational Resources}
+    Bates OSG Pipeline
+\end{frame}
 
 \begin{frame}{Acceptance Correction - Event Generator and Simulation}
      \begin{columns}[c]
@@ -593,6 +851,54 @@ With the addition of smearing factors to simulated particle reconstruction value
 
     \end{columns}
 \end{frame} 
+
+
+\begin{frame}{Acceptance Correction - Bin by Bin Calculation}
+\begin{columns}
+            \column{0.25\textwidth}
+                %\textcolor{white}{blank space}
+                     \centering Raw Counts \\
+            
+                    %#---------------------------------------------
+                   	\includegraphics[trim={0 0  0 0cm} ,clip,width=.8982\textwidth]{extra/corrs/raw2.png}
+
+
+                   	
+                	\includegraphics[trim={0 0  0 0cm} ,clip,width=.8982\textwidth]{extra/corrs/raw4.png}
+
+
+                \column{0.25\textwidth}
+     
+                       \centering  Simulated $N_{Gen}$, $N_{Rec}$ \\
+                	\includegraphics[trim={0 0  0 0cm} ,clip,width=.8982\textwidth]{extra/corrs/acc2.png}
+   
+                    
+                	\includegraphics[trim={0 0  0 0cm} ,clip,width=.8982\textwidth]{extra/corrs/acc4.png}
+
+            
+            \column{0.25\textwidth}
+
+                    %#---------------------------------------------
+                      \centering   Acc. Correction \\
+                	\includegraphics[trim={0 0  0 0cm} ,clip,width=.8982\textwidth]{extra/corrs/raw2acc.png}
+ 
+             
+                	\includegraphics[trim={0 0  0 0cm} ,clip,width=.8982\textwidth]{extra/corrs/acc_3.png}
+                	
+                	
+            \column{0.25\textwidth}
+
+                    %#---------------------------------------------
+                      \centering   Acc. Corr. Counts \\
+                	\includegraphics[trim={0 0  0 0cm} ,clip,width=.982\textwidth]{extra/corrs/final1.png}
+ 
+       
+                	\includegraphics[trim={0 0  0 0cm} ,clip,width=.982\textwidth]{extra/corrs/final2.png}
+
+    \end{columns}
+\end{frame}
+
+
 
 \begin{frame}{Progress on Preliminary Cross Section}
 
@@ -702,25 +1008,6 @@ With the addition of smearing factors to simulated particle reconstruction value
 
 
 
-\begin{frame}{Conclusion - Towards a Full Cross Section}
-Preliminary efforts on event selection, simulations, and acceptance corrections yield promising results but more work is needed to extract a complete cross section measurement:
-\vspace{0.4cm}
-\begin{itemize}
-    \setlength\itemsep{1em}
-    \item Determination of remaining correction factors - radiative, binning, and absolute normalization
-    \item Study of systematic uncertainties 
-    \item Quantitative comparisons between data and theory model will be meaningful when uncertainties and binning are more complete
-\end{itemize}
-    
-%Acknowledge: MIT group, Sangbaek Lee, Andrey Kim, CLAS collaboration
-\end{frame}
-
-
-
-\appendix
-
-
-
 \begin{frame}{Finite Bin Volume Corrections}
 Bin Average is not the same as bin center
 
@@ -753,16 +1040,35 @@ words
 Words
 \end{frame}
 
-\begin{frame}{Extra slides}
-Extra Slides
-
+\begin{frame}{Conclusion - Towards a Full Cross Section}
+Preliminary efforts on event selection, simulations, and acceptance corrections yield promising results but more work is needed to extract a complete cross section measurement:
+\vspace{0.4cm}
+\begin{itemize}
+    \setlength\itemsep{1em}
+    \item Determination of remaining correction factors - radiative, binning, and absolute normalization
+    \item Study of systematic uncertainties 
+    \item Quantitative comparisons between data and theory model will be meaningful when uncertainties and binning are more complete
+\end{itemize}
+    
+%Acknowledge: MIT group, Sangbaek Lee, Andrey Kim, CLAS collaboration
+\end{frame}
+\begin{frame}{Acknowledgements}
+MIT Milner Hadronic Physics Research Group: Richard Milner, Doug Hasell, Sangbaek Lee, Igor Korover, Xiaqing Li, Patrick Moran\\
+CLAS Collaboration, Bates Engineering, MIT Tier 2 Computing Group
+    
+%Acknowledge: MIT group, Sangbaek Lee, Andrey Kim, CLAS collaboration
 \end{frame}
 
 
+
+
+
+\appendix
+
+
+
 \begin{frame}{Extra slides}
 Extra Slides
-Find this on the web at:
-https://github.com/robertej19/Thesis-Offense/blob/main/Main/presentation.tex
 
 \end{frame}
 
@@ -775,51 +1081,6 @@ https://github.com/robertej19/Thesis-Offense/blob/main/Main/presentation.tex
  
 \end{frame}
 
-
-\begin{frame}{Acceptance Correction - Bin by Bin Calculation}
-\begin{columns}
-            \column{0.25\textwidth}
-                %\textcolor{white}{blank space}
-                     \centering Raw Counts \\
-            
-                    %#---------------------------------------------
-                   	\includegraphics[trim={0 0  0 0cm} ,clip,width=.8982\textwidth]{extra/corrs/raw2.png}
-
-
-                   	
-                	\includegraphics[trim={0 0  0 0cm} ,clip,width=.8982\textwidth]{extra/corrs/raw4.png}
-
-
-                \column{0.25\textwidth}
-     
-                       \centering  Simulated $N_{Gen}$, $N_{Rec}$ \\
-                	\includegraphics[trim={0 0  0 0cm} ,clip,width=.8982\textwidth]{extra/corrs/acc2.png}
-   
-                    
-                	\includegraphics[trim={0 0  0 0cm} ,clip,width=.8982\textwidth]{extra/corrs/acc4.png}
-
-            
-            \column{0.25\textwidth}
-
-                    %#---------------------------------------------
-                      \centering   Acc. Correction \\
-                	\includegraphics[trim={0 0  0 0cm} ,clip,width=.8982\textwidth]{extra/corrs/raw2acc.png}
- 
-             
-                	\includegraphics[trim={0 0  0 0cm} ,clip,width=.8982\textwidth]{extra/corrs/acc_3.png}
-                	
-                	
-            \column{0.25\textwidth}
-
-                    %#---------------------------------------------
-                      \centering   Acc. Corr. Counts \\
-                	\includegraphics[trim={0 0  0 0cm} ,clip,width=.982\textwidth]{extra/corrs/final1.png}
- 
-       
-                	\includegraphics[trim={0 0  0 0cm} ,clip,width=.982\textwidth]{extra/corrs/final2.png}
-
-    \end{columns}
-\end{frame}
 
 \begin{frame}{Backup slides}
 
@@ -861,16 +1122,30 @@ Inbending
 
 \begin{frame}{De-Fence!}
 \centering
-    
-
     \includegraphics[scale=0.5832]{Main/thesis_defense_2x.png}
-
     
     {\myfont{\tiny    https://xkcd.com/1403/   }}
 \end{frame}
 
 
+\begin{frame}{Backup slides}
+\centering
+Slide on cheesecake / pi
+\end{frame}
 
+\begin{frame}{Abstract}
+
+Imaging the Proton: Investigating Proton Structure with Electron Scattering
+\\
+The structure of the proton has been studied extensively since its discovery a century ago.  Electron scattering experiments have been utilized as a clean probe into the dynamics of the nucleon, and the past several decades of work investigating structure functions have yielded information on the proton Parton Distribution Functions, which describe the proton's physical inner workings along one dimension. Presently, in specific kinematic regimes nuclear reactions can be theoretically linked to the 3D substructure of the nucleon. This presentation will discuss work towards measuring the properties of one such reaction - Deeply Virtual Neutral Pion Production - from analyzing the data of a 10.6 GeV electron scattering experiment at the CLAS12 detector in Jefferson Lab Hall B. 
+
+\end{frame}
+
+
+\begin{frame}{Backup slides}
+Comments on measuring pion polariability
+a few words about how pions are useful
+\end{frame}
 
 \begin{frame}{Backup slides}
 \centering
@@ -880,17 +1155,16 @@ Other\\
 \end{frame}
 
 
+\begin{frame}{Concrete Abstract}
+
+The structure of the proton has been studied extensively since its discovery a century ago.  Electron scattering experiments have been utilized as a clean probe into the dynamics of the nucleon, and the past several decades of work investigating structure functions have yielded information on the proton Parton Distribution Functions, which describe the proton's physical inner workings along one dimension. Presently, in specific kinematic regimes nuclear reactions can be theoretically linked to the 3D substructure of the nucleon. This presentation will discuss work towards measuring the properties of one such reaction - Deeply Virtual Neutral Pion Production - from analyzing the data of a 10.6 GeV electron scattering experiment at the CLAS12 detector in Jefferson Lab Hall B. 
+
+\end{frame}
+
+
 \begin{frame}{Backup slides}
 \centering
-Issues: Misfits\\
-    \begin{columns}
-             
- 
-     \column{0.5\textwidth}
-    \includegraphics[width=0.95\textwidth]{DNP/misfit_1.png}
-     \column{0.5\textwidth}
-    \includegraphics[width=0.95\textwidth]{DNP/misfit_2.png}
-       \end{columns}
+    Find this online at: https://github.com/robertej19/Thesis-Offense/blob/main/presentation.pdf
 \end{frame}
 
 
