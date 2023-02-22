@@ -243,7 +243,7 @@ Imaging limited by diffraction ($\sim \frac{\lambda}{2}$) $\rightarrow$ scale se
            \column{0.33\textwidth}
                         %\vspace{2cm}
                        \centering 
-                    Optical Microscope
+                    \textbf{Optical Microscope}
                     \begin{figure}
                         \centering
                         \includegraphics[trim={0 1cm 0 0cm} ,clip,width=.63\textwidth]{Introduction/optmic.png}
@@ -255,7 +255,7 @@ Imaging limited by diffraction ($\sim \frac{\lambda}{2}$) $\rightarrow$ scale se
                      {\myfont{\tiny \quad \quad \quad [n.b. ex. mic for bio]   }}
         \column{0.33\textwidth}
         \centering
-        Electron Microscope
+        \textbf{Electron Microscope}
                     \begin{figure}
                         \centering
                         \includegraphics[trim={0 0 0 0} ,clip,width=.77\textwidth]{Introduction/elecmic.jpg}
@@ -267,7 +267,7 @@ Imaging limited by diffraction ($\sim \frac{\lambda}{2}$) $\rightarrow$ scale se
                     
          \column{0.33\textwidth}
          \centering
-         Electron Accelerator
+         \textbf{Electron Accelerator}
                     \begin{figure}
                         \centering
                         \includegraphics[trim={2cm 0 2cm 0} ,clip,width=.82\textwidth]{Introduction/elecfemt.jpg}
@@ -292,11 +292,12 @@ Unlike optical imaging, must infer structure from reaction rates (cross sections
                         %Source  https://home.cern/science/engineering/accelerating-radiofrequency-cavities
                          
                     \end{figure} 
-
+                \vspace{-0.5cm}
                         \begin{figure}
                         \centering
                         \includegraphics[trim={17cm 0 17cm 0} ,clip,width=.42\textwidth]{Introduction/shutter_speed.png}
-                        \caption{                       {\myfont{\tiny  [R.G. Milner and R. Ent, Visualzing the Proton (2022)]   }}}
+                        \caption{                       {\myfont{\tiny  [R.G. Milner and R. Ent, \\
+                        Visualzing the Proton (2022)]   }}}
                         %Source  https://home.cern/science/engineering/accelerating-radiofrequency-cavities
                          
                     \end{figure} 
@@ -600,7 +601,7 @@ Unlike optical imaging, must infer structure from reaction rates (cross sections
 \end{frame}
 
 
-\begin{frame}{The Path to Measurement is Long}
+\begin{frame}{The Path to Measurement has Many Steps}
         \begin{columns}[t, onlytextwidth]
             \column{0.45\textwidth}
             
@@ -914,19 +915,62 @@ Unlike optical imaging, must infer structure from reaction rates (cross sections
 
 
 
-%\begin{frame}{Correction Factors Determined by Simulations}
-%    Bates OSG Pipeline
-%\end{frame}
+\begin{frame}{Simulations Needed to Determine Correction Factors}
+                  \begin{itemize}
+                        \item   High computational demands: 5 hours to simulate 10K events
+    \item Need $\mathcal{O}(2B)$ events $\rightarrow$ need 1M core-hours for this analysis alone
+    \item Built service to connect research collaboration with HTC nodes worldwide
 
-\begin{frame}{Acceptance Correction - Event Generator and Simulation}
+                    \end{itemize}
+
+    \begin{columns}
+            \column{0.2\textwidth}    
+            \centering
+                    %\vspace{1cm}
+                    \includegraphics[trim={0 0  0 0cm} ,clip,width=.8982\textwidth]{sims/osg_logo.png}
+                                          
+                           \includegraphics[trim={4.1cm 0  0 0cm} ,clip,width=.982\textwidth]{sims/htcondor.png}
+            \column{0.4\textwidth} 
+
+    \begin{figure}
+                \centering
+                \includegraphics[trim={0 0  0 0cm} ,clip,width=.8982\textwidth]{sims/gemc1.png}
+                 \end{figure}
+            \column{0.4\textwidth}    
+            \centering
+
+            \begin{figure}
+                \centering
+                \includegraphics[trim={0 0  0 0cm} ,clip,width=.8982\textwidth]{sims/gemc2.png}
+                \caption{Usage facilitated in 2022}
+                \label{fig:my_label}
+            \end{figure}
+                
+                                          
+                               
+                       
+
+                                          
+                        
+                           
+                                          
+                    \end{columns}
+  
+\end{frame}
+
+
+
+
+
+\begin{frame}{Event Generator and Simulation Details}
      \begin{columns}[c]
                \begin{column}{0.5\textwidth}
 
                     %\vspace{1cm}
                     \begin{itemize}
-                        \item Event Generator - aao\_norad
+                        \item Event Generator - aao\_(no)rad
                             \begin{itemize}
-                                \item Nonradiative $DV\pi^0P$ generator validated on CLAS6 and COMPASS data
+                                \item  $DVMP$ generator validated on CLAS6 and COMPASS data, origin 1990s
                             \end{itemize}
                         \item Simulation - GEMC
                             \begin{itemize}
@@ -934,7 +978,7 @@ Unlike optical imaging, must infer structure from reaction rates (cross sections
                             \end{itemize}
                         \item Computing Power
                             \begin{itemize}
-                                \item Through OSG pipeline, CLAS has access to supercomputing clusters around the world, including dedicated nodes at MIT Tier 2, UConn, INFN, GRIDPP, and more
+                                \item Through OSG pipeline, CLAS has access to supercomputing clusters around the world, including dedicated nodes at MIT Tier 2, UConn, INFN, GRIDPP, new groups still joining
                             \end{itemize}
                     \end{itemize}
                     \end{column}
@@ -976,10 +1020,49 @@ Unlike optical imaging, must infer structure from reaction rates (cross sections
     \end{columns}
 \end{frame}
 
-\begin{frame}{Acceptance Correction - Simulation : Experiment Matching}
+
+\begin{frame}{Simulation Needs to be Adjusted to Match Experimental Data}
+
+
+GEANT4 simulation results in reconstructed tracks that are overly optimistic - resolution is better in simulation than in real data
+
+
+
+\vspace{0.2cm}
+\begin{columns}
+            \column{0.32\textwidth}
+                %\textcolor{white}{blank space}
+                     \centering $ME_{ep\gamma\gamma}$ \\
+                        % trim={<left> <lower> <right> <upper>}
+                    %#---------------------------------------------
+                   	\includegraphics[trim={0 1.75cm  0 3.05cm} ,clip,width=.82\textwidth]{simcomp/nosmear/nosmear_ME_epgg.png}
+                   	   \centering  $MM^2_{e\gamma\gamma}$ \\
+                	\includegraphics[trim={0 1.75cm  0 3.05cm} ,clip,width=.82\textwidth]{simcomp/nosmear/nosmearMM2_egg.png}
+
+
+                \column{0.32\textwidth}
+     
+                       \centering  $MM^2_{ep\gamma\gamma}$ \\
+                	\includegraphics[trim={0 1.75cm  0 3.05cm} ,clip,width=.82\textwidth]{simcomp/nosmear/nosmearMM2_epgg.png}
+   
+                      \centering   $MM^2_{ep}$ \\
+                	\includegraphics[trim={0 1.75cm  0 3.05cm} ,clip,width=.82\textwidth]{simcomp/nosmear/nosmearMM2_ep.png}
+
+            
+            \column{0.32\textwidth}
+
+                    %#---------------------------------------------
+                      \centering   $M_{\gamma\gamma}$ \\
+                	\includegraphics[trim={0 1.75cm  0 3.05cm} ,clip,width=.82\textwidth]{simcomp/nosmear/nosmearMpi0.png}
+ 
+                       \centering  $\Delta p_{t}$ \\
+                	\includegraphics[trim={0 1.75cm  0 3.05cm} ,clip,width=.82\textwidth]{simcomp/nosmear/nosmearMPt.png}
+    \end{columns}
+\end{frame} 
+
+\begin{frame}{Smearing Factors makes Simulation More Realistic}
 
 With the addition of smearing factors to simulated particle reconstruction values, the simulation matches experimental distributions well.  {\myfont{\footnotesize [Collaborator S. Lee]}}
-
 
 
 
@@ -1016,10 +1099,38 @@ With the addition of smearing factors to simulated particle reconstruction value
     \end{columns}
 \end{frame} 
 
-%\begin{frame}{Normalizing Flows - Simulation Speedup}
-%words
 
-%\end{frame}
+\begin{frame}{Decrease Computational Needs with Normalizing Flows}
+    \begin{itemize} 
+        \item \textbf{Normalizing Flows}: generative model, uses series of invertible transforms to map simple prior distributions into (very complex) target distributions
+        \end{itemize}
+\begin{columns}
+            \column{0.33\textwidth}
+    \begin{itemize}
+        \item \textbf{Idea}: Pass only a small percent of generated events through GEANT4 micro physics and reconstruction algorithms ($\sim$90\% of comp. load), use to train a NF model to quickly generate the rest 
+ \end{itemize}
+            \column{0.33\textwidth}
+        \begin{figure}
+            \centering
+            \includegraphics[trim={0 0  30cm 0cm} ,clip,width=.975\textwidth]{normflows/nf0.png}
+        \end{figure}
+          \myfont{\tiny[arxiv:1908.05164]}
+        
+   
+        
+    \column{0.33\textwidth}
+    \begin{itemize}
+        \item \textbf{Result}: Worked well, but needs additional mechanism for lost particles; unused
+ \end{itemize}
+     \begin{figure}
+            \centering
+            \includegraphics[trim={0 0  0 0cm} ,clip,width=.8982\textwidth]{normflows/nf1.png}
+        \end{figure}
+    
+
+\end{columns}
+
+\end{frame}
 
 \begin{frame}{Acceptance Correction - Bin by Bin Calculation}
 \begin{columns}
@@ -1091,8 +1202,9 @@ The acceptance dominates the correction factors, but others must be included for
     \vspace{.6cm}
          \begin{itemize} 
         \item Finite bin size - average, not differential cross sections
+        \item Bin volume effects
         \item Bin migration effects
-        \item Preliminary work indicates $\sim$ 5\% correction
+        \item Preliminary work indicates $\sim$ 10\% correction in most bins
     \end{itemize}
     \column{0.33\textwidth}
      \textbf{Overall Normalization}
@@ -1295,10 +1407,36 @@ The acceptance dominates the correction factors, but others must be included for
 \end{frame}
 
 
-%\begin{frame}{Directly Accessing Physics with OMNIFOLD}
-%words
+\begin{frame}{Extracting Physics Directly with OMNIFOLD}
+\vspace{-.75cm}
+            \begin{columns}[t, onlytextwidth]
+                        \column{0.5\textwidth}
+                    \begin{figure}
+                        \centering
+                        \includegraphics[trim={0 0  0 0cm} ,clip,width=.915684982\textwidth]{Main/OMNI/omni1.png}
+                    \end{figure}
 
-%\end{frame}
+                                        \begin{figure}
+                        \centering
+                        \includegraphics[trim={0 0  0 0cm} ,clip,width=.60685684982\textwidth]{Main/OMNI/omni4.png}
+                    \end{figure}
+                        \column{0.5\textwidth}
+
+                                        \begin{figure}
+                        \centering
+                        \includegraphics[trim={0 0  0 0cm} ,clip,width=.585684982\textwidth]{Main/OMNI/omni3.png}
+                    \end{figure}
+                    
+                    \begin{figure}
+                        \centering
+                        \includegraphics[trim={0 0  0 0cm} ,clip,width=.89684982\textwidth]{Main/OMNI/omni2.png}
+                    \end{figure}
+
+            \end{columns}
+                        {\myfont{\tiny    [ arxiv:1911.09107]   }}
+                       
+
+\end{frame}
 
 
 \begin{frame}{Conclusion - Towards a Full Cross Section}
@@ -1419,9 +1557,9 @@ Comparision with CLAS6\\
 
 \begin{frame}{Backup slides}
 \centering
-All data bins
-
-    \includegraphics[scale=0.172832]{Introduction/alldatapoints.png}
+All data bins\\
+removed
+    %\includegraphics[scale=0.172832]{Introduction/alldatapoints.png}
 \end{frame}
 
 
