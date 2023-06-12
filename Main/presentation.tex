@@ -135,7 +135,11 @@
     \end{columns}
 \end{frame}
 
+\begin{frame}{Introduction Notes}
 
+Put in pictures of people - rutherford geiger marsden democritus jj thomson
+
+\end{frame}
 \begin{frame}{Brief History of the Proton}
 
 
@@ -204,6 +208,12 @@
     \end{columns}
 \end{frame}
 
+
+\begin{frame}{What is a Pion}
+(quark constituents, show standard model particles, etc)
+    	
+
+\end{frame}
 
 \begin{frame}{The Proton is \textbf{NOT} well-understood - Testbed for Physics}
     Macroscopic features are well measured, but many properties remain to be understood
@@ -401,119 +411,116 @@ Unlike optical imaging, must infer structure from reaction rates (cross sections
 \end{frame}
 
 
-\begin{frame}{GPD Encoding in $DV\pi^0P$ Cross Section is Nontrivial}
 
-    \vspace{-.01cm}
+
+
+\begin{frame}{GPD Encoding in  $DV\pi^0P$ Cross Section is Nontrivial}
+
+        \vspace{-.01cm}
    
     The cross section for DV$\pi^0$P can be expressed in terms of structure functions, which can be expressed as convolutions of GPDs:\\
     \vspace{0.1cm}
- \scalebox{0.735}{%
-    $
-         \frac{d^4\sigma_{\gamma^*p \rightarrow p'\pi^0}}{dQ^2dx_Bdtd\phi_{\pi}} =
-         \Gamma (Q^2, x_B, E)
-         \frac{1}{2\pi}
-         \left\{ \left(  \textcolor{sigmaT}{\frac{d\sigma_T}{dt}}+\epsilon  \textcolor{sigmaL}{\frac{d\sigma_L}{dt}} \right)+
-         \epsilon cos(2\phi)  \textcolor{sigmaTT}{\frac{d\sigma_{TT}}{dt}} + 
-         \sqrt{2\epsilon(1+\epsilon)} cos(\phi)  \textcolor{sigmaLT}{\frac{d\sigma_{LT}}{dt}} \right\}
-         \quad | \quad
-         \Gamma (Q^2, x_B, E) = \frac{\alpha}{8\pi} \frac{Q^2}{m^2_pE^2}\frac{1-x_B}{x_B^3}\frac{1}{1-\epsilon}
-    $
+    \scalebox{0.735}{%
+        $     \frac{d^4\sigma_{\gamma^*p \rightarrow p'\pi^0}}{dQ^2dx_Bdtd\phi_{\pi}} =
+             \Gamma (Q^2, x_B, E)
+             \frac{1}{2\pi}
+             \left\{ \left(  \textcolor{sigmaT}{\frac{d\sigma_T}{dt}}+\epsilon  \textcolor{sigmaL}{\frac{d\sigma_L}{dt}} \right)+
+             \epsilon cos(2\phi)  \textcolor{sigmaTT}{\frac{d\sigma_{TT}}{dt}} + 
+             \sqrt{2\epsilon(1+\epsilon)} cos(\phi)  \textcolor{sigmaLT}{\frac{d\sigma_{LT}}{dt}} \right\}
+             \quad | \quad
+             \Gamma (Q^2, x_B, E) = \frac{\alpha}{8\pi} \frac{Q^2}{m^2_pE^2}\frac{1-x_B}{x_B^3}\frac{1}{1-\epsilon}$
     }
     %\vspace{0.05cm}
 
     \begin{columns}
-            \column{0.5\textwidth}
+       \column{0.5\textwidth}
     
-
-    \begin{center}
-         The structure functions can be expressed in terms of GPDs:
-    \end{center}
-   
-    %\vspace{0.05cm}
-   
-    \scalebox{0.80}{%   
-    $      \textcolor{sigmaL}{\frac{d\sigma_{L}}{dt}} = 
-    \frac{4\pi\alpha}{kQ^2}\left\{ \left( 1 - \xi^2 \right) 
-    \lvert \langle \GPDHtildeEQ \rangle \rvert ^2 
-    -2\xi^2 \Re \left[  \langle \GPDHtildeEQ \rangle ^* \langle \GPDEtildeEQ \rangle    \right] - \frac{t'}{4m^2}\xi^2
-    \lvert \langle \GPDEtildeEQ \rangle \rvert ^2  \right\}$
-    }\\
-    
-    \scalebox{0.80}{%   
-    $      \textcolor{sigmaT}{\frac{d\sigma_{T}}{dt}} = 
-    \frac{2\pi\alpha \mu_{\pi}^2}{kQ^4}
-    \left\{ \left( 1 - \xi^2 \right) 
-    \lvert \langle \GPDHTEQ \rangle \rvert ^2
-    - \frac{t'}{8m^2}
-    \lvert \langle \GPDETbarEQ \rangle \rvert ^2  \right\}$
-    }\\
-    
-    \scalebox{0.80}{%   
-    $     \textcolor{sigmaLT}{\frac{d\sigma_{LT}}{dt}} = 
-    \frac{4\pi\alpha \mu_{\pi}}{\sqrt{2}kQ^3}
-    \xi\sqrt{1-\xi^2}
-    \frac{\sqrt{-t'}}{2m}
-    \Re \left\{ 
-     \langle \GPDHTEQ \rangle ^*
-    \langle \GPDEtildeEQ \rangle   
-    \right\}$
-    }\\
-    
-    \scalebox{0.80}{%   
-    $      \textcolor{sigmaTT}{\frac{d\sigma_{TT}}{dt}} = 
-    \frac{4\pi\alpha \mu_{\pi}^2}{kQ^4}
-    \frac{-t'}{16m^2}
-    \langle \GPDETbarEQ \rangle^2   
-    $
-    }\\
-    
-
-   
- 
-    
-    \column{0.5\textwidth}
-    
-    \centering 
-    %\vspace{0.3cm}
-    GPD Classification:\\\tiny{\textcolor{white}{lll}}\\
-         %\vspace{0.1cm}
-         \footnotesize
-    \scalebox{0.95}{%  
-    \begin{table}[H]
-        \centering
-        \begin{tabular}{@{} *{4}{c} @{}}
-                \headercell{Nucleon \\ Polarization} & \multicolumn{3}{c@{}}{Quark Polarization}\\
-                \cmidrule(l){2-4}
-                & U & \textcolor{white}{lllll}L & T    \\ 
-                \midrule
-                  U  & \GPDH &                                   &  \GPDETbar \\
-                  L  &                    &  \textcolor{white}{llll}\GPDHtilde &                                   \\
-                  T  & \GPDE &                                   &  \GPDHT,\GPDHTtilde \\
-            \end{tabular}\\
+            \begin{center}
+                 The structure functions can be expressed in terms of GPDs:
+            \end{center}
             
-    \end{table}
-    }
+             \scalebox{0.80}{%   
+            $      \textcolor{sigmaL}{\frac{d\sigma_{L}}{dt}} = 
+            \frac{4\pi\alpha}{kQ^2}\left\{ \left( 1 - \xi^2 \right) 
+            \lvert \langle \GPDHtildeEQ \rangle \rvert ^2 
+            -2\xi^2 \Re \left[  \langle \GPDHtildeEQ \rangle ^* \langle \GPDEtildeEQ \rangle    \right] - \frac{t'}{4m^2}\xi^2
+            \lvert \langle \GPDEtildeEQ \rangle \rvert ^2  \right\}$
+            }\\
             
-        \vspace{0.1cm}
-        \footnotesize{\GPDETbar = 2*\GPDHTtilde+\GPDET\\}
+            \scalebox{0.80}{%   
+            $      \textcolor{sigmaT}{\frac{d\sigma_{T}}{dt}} = 
+            \frac{2\pi\alpha \mu_{\pi}^2}{kQ^4}
+            \left\{ \left( 1 - \xi^2 \right) 
+            \lvert \langle \GPDHTEQ \rangle \rvert ^2
+            - \frac{t'}{8m^2}
+            \lvert \langle \GPDETbarEQ \rangle \rvert ^2  \right\}$
+            }\\
+            
+            \scalebox{0.80}{%   
+            $     \textcolor{sigmaLT}{\frac{d\sigma_{LT}}{dt}} = 
+            \frac{4\pi\alpha \mu_{\pi}}{\sqrt{2}kQ^3}
+            \xi\sqrt{1-\xi^2}
+            \frac{\sqrt{-t'}}{2m}
+            \Re \left\{ 
+             \langle \GPDHTEQ \rangle ^*
+            \langle \GPDEtildeEQ \rangle   
+            \right\}$
+            }\\
+        
+            \scalebox{0.80}{%   
+            $      \textcolor{sigmaTT}{\frac{d\sigma_{TT}}{dt}} = 
+            \frac{4\pi\alpha \mu_{\pi}^2}{kQ^4}
+            \frac{-t'}{16m^2}
+            \langle \GPDETbarEQ \rangle^2   
+            $
+            }\\
+           
+
+
+        \column{0.5\textwidth}
     
-    \end{columns}
+            \centering 
+            %\vspace{0.3cm}
+            GPD Classification:\\\tiny{\textcolor{white}{lll}}\\
+                 %\vspace{0.1cm}
+                 \footnotesize
+                 \begin{table}[H]
+                    \centering
+                    \begin{tabular}{@{} *{4}{c} @{}}
+                        \headercell{Nucleon \\ Polarization} & \multicolumn{3}{c@{}}{Quark Polarization}\\
+                        \cmidrule(l){2-4}
+                                                 &           U     &    \textcolor{white}{lllll}L       &          T      \\      
+                                  \midrule
+                            U  &        \GPDH    &                  *                           &         \GPDETbar       \\
+                            L  &          *      &        \textcolor{white}{llll}  \GPDHtilde   &               -         \\
+                            T  &        \GPDE    &                   -                          &  \GPDHT,\GPDHTtilde     \\                                     
+                    \end{tabular}
+                \end{table}
+            
+            
+                    
+                \vspace{0.1cm}
+                \footnotesize{\GPDETbar = 2*\GPDHTtilde+\GPDET\\}
+            
+        \end{columns}
+    
     \vspace{0.2cm}
     
+    
      \begin{columns}
-            \column{0.15\textwidth}
-            \column{0.7\textwidth}
-   \centering
-   In contrast to DVCS, DV$\pi^0$P allows access to chiral-odd GPDs, making it a distinct and valuable probe
-   
-             \column{0.15\textwidth}
-   \end{columns}
-   
-   \vspace{0.1cm}
+        \column{0.15\textwidth}
+        \column{0.7\textwidth}
+            \centering
+            In contrast to DVCS, DV$\pi^0$P allows access to chiral-odd GPDs, making it a distinct and valuable probe
+               
+        \column{0.15\textwidth}
+    \end{columns}
+               
+               \vspace{0.1cm}
+
+
 
 \end{frame}
-
-
 
 
 
@@ -577,6 +584,8 @@ Unlike optical imaging, must infer structure from reaction rates (cross sections
 
 
 
+
+
     
 
     
@@ -593,7 +602,7 @@ Unlike optical imaging, must infer structure from reaction rates (cross sections
              \column{0.5\textwidth}
              \centering$Q^2$ vs. $x_B$ - CLAS12
              %\includegraphics[width=.9\textwidth]{Pics/kinreach/bjorken_x_cropped.png}
-             \includegraphics[trim={0 0 0 1.8cm} ,clip,width=.9725995\textwidth]{APS_2022/clas12_vs_clas6_kinematic_coverage.jpg}
+             \includegraphics[trim={0 0 0 1.8cm} ,clip,width=.9725995\textwidth]{APS_2022/clas12_vs_clas6_kinematic_coverage.png}
     \end{columns}
     
     {\myfont{\tiny     [I. Bedlinskiy et al., PRC, 90, 025205     (2014)]   }}
@@ -836,7 +845,9 @@ Unlike optical imaging, must infer structure from reaction rates (cross sections
         \end{columns}
 \end{frame}    
 
-
+\begin{frame}{Event note}
+Fix CLAS12 slide to show better how particles are found like how Sangbaek did it and include specs (e.g. resolution of 3.3 sigma up to 5 GeV from NIMA paper)
+\end{frame}
 
 \begin{frame}{Event Selection - Particle Identification and Exclusivity Cuts}
 
@@ -912,6 +923,15 @@ Unlike optical imaging, must infer structure from reaction rates (cross sections
         \end{column}   
         \end{columns}
 \end{frame}
+
+
+
+
+\begin{frame}{Event Binning}
+NEED to show binning scheme and say more directly "bin by bin analysis"
+        
+\end{frame}
+
 
 
 
@@ -1179,6 +1199,14 @@ With the addition of smearing factors to simulated particle reconstruction value
     \end{columns}
 \end{frame}
 
+
+\begin{frame}{Correction Notes}
+draw radiative corrections to show why they are a problem
+Draw sample problems of binning corrections and why they are a problem
+"" with overall normalization 
+\end{frame}
+
+
 \begin{frame}{Additional Corrections}
 The acceptance dominates the correction factors, but others must be included for a finalized cross section.
 \vspace{.2cm}
@@ -1201,7 +1229,7 @@ The acceptance dominates the correction factors, but others must be included for
      \textbf{Binning Corrections}
     \vspace{.6cm}
          \begin{itemize} 
-        \item Finite bin size - average, not differential cross sections
+        \item Finite bin size: average, not differential cross sections
         \item Bin volume effects
         \item Bin migration effects
         \item Preliminary work indicates $\sim$ 10\% correction in most bins
@@ -1277,6 +1305,13 @@ The acceptance dominates the correction factors, but others must be included for
 
 
 
+\begin{frame}{Iterative Bayseian Unfolding}
+
+    	
+
+\end{frame}
+
+
 \begin{frame}{Theory Predictions - GK Model}
 \begin{columns}[t, onlytextwidth]
             \column{0.4\textwidth}
@@ -1348,7 +1383,7 @@ The acceptance dominates the correction factors, but others must be included for
                         \includegraphics[trim={0 0cm  0 0cm} ,clip,width=.67897982\textwidth]{janres/bslope2.png}
                        
                         %britannica.com/science/Thomson-atomic-model
-                        \label{fig:plumpudding}
+                        \label{fig:plumpudding4}
                     \end{figure}
                     \centering
                     CLAS12 (this work) and CLAS6 B slope parameter across $x_B$ and $Q^2$\\
@@ -1381,7 +1416,7 @@ The acceptance dominates the correction factors, but others must be included for
                         %\caption{{Thomson model of atom, with negatively charged electrons embedded in positively charged ball %\\
                         %{\myfont{\tiny  [Britannica:Thomson Atomic Model]   }}}}
                         %britannica.com/science/Thomson-atomic-model
-                        %\label{fig:plumpudding}
+                        %\label{fig:plumpudding1}
                     \end{figure}
 
                 
@@ -1400,7 +1435,7 @@ The acceptance dominates the correction factors, but others must be included for
                         %\caption{{Thomson model of atom, with negatively charged electrons embedded in positively charged ball %\\
                         %{\myfont{\tiny  [Britannica:Thomson Atomic Model]   }}}}
                         %britannica.com/science/Thomson-atomic-model
-                        \label{fig:plumpudding}
+                        \label{fig:plumpudding6}
                     \end{figure}
                     
     \end{columns}
@@ -1576,5 +1611,44 @@ The structure of the proton has been studied extensively since its discovery a c
     Find this online at: https://github.com/robertej19/Thesis-Offense/blob/main/presentation.pdf
 \end{frame}
 
+\begin{frame}{Backup slides}
+\centering
+    Include information at end of Thesis Defense of pictures from Personal Archieves including pics of me and Sangbaek and stuff at BAND
+\end{frame}
+
+\begin{frame}{Mass of Photon}
+\centering
+The photon is regarded in the standard model as being massless.
+
+If, on the other hand, photons did have mass, it would mean they are catholic 
+
+- credit: possibly Axel Schmidt
+\end{frame}
+
+
+\begin{frame}{Backup slides}
+\centering
+\includegraphics[width=0.6\textwidth]{backup/pdf_lead_twist.png}
+From \href{https://indico.cern.ch/event/797767/contributions/3682622/attachments/1965784/3268756/6_radici.pdf}{Marco Radici}
+\end{frame}
+
+
+
+
+\begin{frame}{Backup slides}
+\centering
+\includegraphics[width=0.6\textwidth]{backup/tmd_lead_twist.png}
+From \href{https://indico.cern.ch/event/797767/contributions/3682622/attachments/1965784/3268756/6_radici.pdf}{Marco Radici}
+\end{frame}
+
+\begin{frame}{Backup slides}
+\centering
+\includegraphics[width=0.6\textwidth]{backup/scale_walkdown.png}
+From \href{https://indico.gsi.de/event/6430/sessions/4600/attachments/21407/26971/AD_NucleonStructure2.pdf}{Alaa Dbeyssi}
+\end{frame}
 
 \end{document}
+
+\end{document}
+
+
