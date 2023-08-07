@@ -23,15 +23,18 @@
 \newcommand*{\myfont}{\fontfamily{lmtt}\selectfont}
 
 
-\title{{Imaging the Proton }}
-\subtitle{Investigating Proton Structure with Electron Scattering}
-\institute{Massachusetts Institute of Technology \\ CLAS12 Collaboration}
+\title{Measurement of the DV$\pi^0$P Cross Section}
+\subtitle{at the Thomas Jefferson
+National Accelerator Facility at 10.6 GeV}
+%\title{{Imaging the Proton }}
+%\subtitle{Investigating Proton Structure with Electron Scattering}
+\institute{Massachusetts Institute of Technology \\ Ph.D. Oral Defense}
 \usepackage{caption}
 \captionsetup[figure]{labelformat=empty}
 \titlegraphic{\includegraphics[scale=.15]{Pics/Intro/mit-clas12-combined.PNG}}
 \author{R. Johnston\texorpdfstring{\\}{,}}
 %\date{\today}
-\date{Monday, January 30, 2023}
+\date{Monday, August 14, 2023}
 
 
 
@@ -135,11 +138,11 @@
     \end{columns}
 \end{frame}
 
-\begin{frame}{Introduction Notes}
+%\begin{frame}{Introduction Notes}%
+%Put in pictures of people - rutherford geiger marsden democritus jj thomson
+%\end{frame}
 
-Put in pictures of people - rutherford geiger marsden democritus jj thomson
 
-\end{frame}
 \begin{frame}{Brief History of the Proton}
 
 
@@ -209,13 +212,11 @@ Put in pictures of people - rutherford geiger marsden democritus jj thomson
 \end{frame}
 
 
-\begin{frame}{What is a Pion}
-(quark constituents, show standard model particles, etc)
-    	
+%\begin{frame}{What is a Pion}
+%(quark constituents, show standard model particles, etc)
+%\end{frame}
 
-\end{frame}
-
-\begin{frame}{The Proton is \textbf{NOT} well-understood - Testbed for Physics}
+\begin{frame}{The Proton is \textbf{NOT YET} well-understood - Testbed for Physics}
     Macroscopic features are well measured, but many properties remain to be understood
     \begin{columns}
 
@@ -500,7 +501,7 @@ Unlike optical imaging, must infer structure from reaction rates (cross sections
             
                     
                 \vspace{0.1cm}
-                \footnotesize{\GPDETbar = 2*\GPDHTtilde+\GPDET\\}
+                \footnotesize{\GPDETbar = 2$times$ \GPDHTtilde+\GPDET\\}
             
         \end{columns}
     
@@ -845,9 +846,9 @@ Unlike optical imaging, must infer structure from reaction rates (cross sections
         \end{columns}
 \end{frame}    
 
-\begin{frame}{Event note}
-Fix CLAS12 slide to show better how particles are found like how Sangbaek did it and include specs (e.g. resolution of 3.3 sigma up to 5 GeV from NIMA paper)
-\end{frame}
+%\begin{frame}{Event note}
+%Fix CLAS12 slide to show better how particles are found like how Sangbaek did it and include specs (e.g. resolution of 3.3 sigma up to 5 GeV from NIMA paper)
+%\end{frame}
 
 \begin{frame}{Event Selection - Particle Identification and Exclusivity Cuts}
 
@@ -1247,6 +1248,32 @@ The acceptance dominates the correction factors, but others must be included for
 \end{frame}
 
 
+\begin{frame}{ Luminosity Determination}
+         \begin{equation*}
+                    \Lumi = \frac{N_A l \rho Q_{FCUP}}{e}
+        \end{equation*}
+        
+        \begin{columns}
+                                
+            \column{0.98\textwidth}
+                \begin{table}
+                    \centering
+                    \begin{tabular}{rcc}
+                         %& Heading 1 & Heading 2 \\\hline
+                        Quantity &  & CLAS12 Value \\\hline
+                       Avogadro's Number &  N$_A$  & $6x10^{23}$ \\
+                        Electron Charge &e  &  $1.6x10^{-19}$ \\
+                        Target Length &l &  5 cm \\
+                        Target Density &$\rho$  &  0.07 $g/cm^3$ (LH2) \\
+                        Charge on Faraday Cup & $Q_{FCUP}$ &  In data\\
+                    \end{tabular}
+                    \label{tab:demo}
+                \end{table}
+        \end{columns}
+       Calculated Integrated Luminosity from Fall 2018 inbending dataset: 5.512 e+40 $cm^{-2}$
+\end{frame}    
+
+
 \begin{frame}{Preliminary Cross Section Results}
 
 \begin{columns}
@@ -1391,87 +1418,6 @@ The acceptance dominates the correction factors, but others must be included for
 \end{columns}
 \end{frame}
 
-\begin{frame}{Extracting Physics - Rosenbluth Separation}
-
-            \begin{columns}[t, onlytextwidth]
-                        \column{0.5\textwidth}
-
-                        \begin{itemize}
-                \item Cross section measurement does not give a separation on $\sigma_T$ and $\sigma_L$ terms:
-                \scalebox{0.8735}{%
-            $
-                 \frac{d^4\sigma_{\gamma^*p \rightarrow p'\pi^0}}{dQ^2dx_Bdtd\phi_{\pi}} =
-                 \Gamma (Q^2, x_B, E)
-                 \frac{1}{2\pi}
-                 \left\{ \left(  \textcolor{sigmaT}{\frac{d\sigma_T}{dt}}+\epsilon  \textcolor{sigmaL}{\frac{d\sigma_L}{dt}} \right)+...
-                \right\}
-            $
-            }
-                
-            \end{itemize}
-            
-             \begin{figure}
-                        \centering
-                        \includegraphics[trim={0 0  0 0cm} ,clip,width=.9184982\textwidth]{janres/rosen1.png}
-                        %\caption{{Thomson model of atom, with negatively charged electrons embedded in positively charged ball %\\
-                        %{\myfont{\tiny  [Britannica:Thomson Atomic Model]   }}}}
-                        %britannica.com/science/Thomson-atomic-model
-                        %\label{fig:plumpudding1}
-                    \end{figure}
-
-                
-
-                    \column{0.5\textwidth}
-                            
-            \begin{itemize}
-
-                \item However, can leverage different beam energies between CLAS12 and CLAS6 data to perform Rosenbluth separation
-                \item Will extend prior results and further constrain GPDs
-            \end{itemize}
-
-     \begin{figure}
-                        \centering
-                        \includegraphics[trim={0 0  0 0cm} ,clip,width=.5684982\textwidth]{janres/rosen2.png}
-                        %\caption{{Thomson model of atom, with negatively charged electrons embedded in positively charged ball %\\
-                        %{\myfont{\tiny  [Britannica:Thomson Atomic Model]   }}}}
-                        %britannica.com/science/Thomson-atomic-model
-                        \label{fig:plumpudding6}
-                    \end{figure}
-                    
-    \end{columns}
-\end{frame}
-
-
-\begin{frame}{Extracting Physics Directly with OMNIFOLD}
-\vspace{-.75cm}
-            \begin{columns}[t, onlytextwidth]
-                        \column{0.5\textwidth}
-                    \begin{figure}
-                        \centering
-                        \includegraphics[trim={0 0  0 0cm} ,clip,width=.915684982\textwidth]{Main/OMNI/omni1.png}
-                    \end{figure}
-
-                                        \begin{figure}
-                        \centering
-                        \includegraphics[trim={0 0  0 0cm} ,clip,width=.60685684982\textwidth]{Main/OMNI/omni4.png}
-                    \end{figure}
-                        \column{0.5\textwidth}
-
-                                        \begin{figure}
-                        \centering
-                        \includegraphics[trim={0 0  0 0cm} ,clip,width=.585684982\textwidth]{Main/OMNI/omni3.png}
-                    \end{figure}
-                    
-                    \begin{figure}
-                        \centering
-                        \includegraphics[trim={0 0  0 0cm} ,clip,width=.89684982\textwidth]{Main/OMNI/omni2.png}
-                    \end{figure}
-
-            \end{columns}
-                        {\myfont{\tiny    [ arxiv:1911.09107]   }}
-                       
-
-\end{frame}
 
 
 \begin{frame}{Conclusion - Towards a Full Cross Section}
@@ -1507,30 +1453,6 @@ Backup Slides
 \end{frame}
 
 
-\begin{frame}{ Luminosity Determination}
-         \begin{equation*}
-                    \Lumi = \frac{N_A l \rho Q_{FCUP}}{e}
-        \end{equation*}
-        
-        \begin{columns}
-                                
-            \column{0.98\textwidth}
-                \begin{table}
-                    \centering
-                    \begin{tabular}{rcc}
-                         %& Heading 1 & Heading 2 \\\hline
-                        Quantity &  & CLAS12 Value \\\hline
-                       Avogadro's Number &  N$_A$  & $6x10^{23}$ \\
-                        Electron Charge &e  &  $1.6x10^{-19}$ \\
-                        Target Length &l &  5 cm \\
-                        Target Density &$\rho$  &  0.07 $g/cm^3$ (LH2) \\
-                        Charge on Faraday Cup & $Q_{FCUP}$ &  In data\\
-                    \end{tabular}
-                    \label{tab:demo}
-                \end{table}
-        \end{columns}
-       Calculated Integrated Luminosity from Fall 2018 inbending dataset: 5.512 e+40 $cm^{-2}$
-\end{frame}    
 
 \begin{frame}{Backup slides}
 \centering
@@ -1633,6 +1555,15 @@ From \href{https://indico.cern.ch/event/797767/contributions/3682622/attachments
 \end{frame}
 
 
+\begin{frame}{People}
+\includegraphics[width=0.5\textwidth]{people/matt_and_maddie_nuc.jpg}
+\end{frame}
+
+
+\begin{frame}{Slide about Lincoln Labs}
+Im going to Lincoln Labs but will continue this work
+\end{frame}
+
 
 
 \begin{frame}{Backup slides}
@@ -1646,6 +1577,133 @@ From \href{https://indico.cern.ch/event/797767/contributions/3682622/attachments
 \includegraphics[width=0.6\textwidth]{backup/scale_walkdown.png}
 From \href{https://indico.gsi.de/event/6430/sessions/4600/attachments/21407/26971/AD_NucleonStructure2.pdf}{Alaa Dbeyssi}
 \end{frame}
+
+
+
+\begin{frame}{Explaination of Phi Assymetry}
+ \footnotesize{ So, the phi angle is roughly the azimuthal angle of proton w.r.t. electron. Let’s forget about the reference plane defined by the incoming electron.
+I believe there’s nothing wrong with this. We can reproduce this asymmetry in phi in GEMC that doesn’t have no local efficiency input yet.
+My guess is as follows. Unlike the electron mainly moving straightforward, proton not only moves in/outward by torus, but only moves spiral by solenoid. You can draw the lab phi angle of electrons and protons, and label the each sector to see what happens. Now the protons are not symmetric w.r.t. electron because of this spiral motion, and due to the detector acceptance, we are seeing this weird shape. (edited)
+
+If you draw the t vs phi plot for each detector subsystem, the plot looks less angry.
+From S. Lee.}
+\begin{columns}
+            \column{0.33\textwidth}
+        \begin{figure}
+            \centering
+            \includegraphics[width=.975\textwidth]{phiassym/phiassym1.png}
+        \end{figure}
+            \column{0.33\textwidth}
+        \begin{figure}
+            \centering
+            \includegraphics[width=.975\textwidth]{phiassym/cdcase.png}
+        \end{figure}
+        
+   
+        
+    \column{0.33\textwidth}
+        \begin{figure}
+            \centering
+            \includegraphics[width=.975\textwidth]{phiassym/fdcase.png}
+        \end{figure}
+    
+
+\end{columns}
+
+\end{frame}
+
+
+\begin{frame}{Explaination of Phi Assymetry}
+\textbf{Motivation for xB relating to timing resolution in camera analogy}
+
+
+On xB being related to the timing resolution scale - essentially a post hoc interpretation: given you had an event at x\_B = 0.3 you can hand-waivingly conceive of the interaction as happening over a large time scale, where only the valence quarks are relevant. If you observed an event at low x\_B, you (very probably) saw a transient sea quark or gluon, which since they only "exist" for brief moments, you can consider your time resolution aka shutter speed to be very small.
+
+\end{frame}
+
+
+\begin{frame}{Extracting Physics - Rosenbluth Separation}
+
+            \begin{columns}[t, onlytextwidth]
+                        \column{0.5\textwidth}
+
+                        \begin{itemize}
+                \item Cross section measurement does not give a separation on $\sigma_T$ and $\sigma_L$ terms:
+                \scalebox{0.8735}{%
+            $
+                 \frac{d^4\sigma_{\gamma^*p \rightarrow p'\pi^0}}{dQ^2dx_Bdtd\phi_{\pi}} =
+                 \Gamma (Q^2, x_B, E)
+                 \frac{1}{2\pi}
+                 \left\{ \left(  \textcolor{sigmaT}{\frac{d\sigma_T}{dt}}+\epsilon  \textcolor{sigmaL}{\frac{d\sigma_L}{dt}} \right)+...
+                \right\}
+            $
+            }
+                
+            \end{itemize}
+            
+             \begin{figure}
+                        \centering
+                        \includegraphics[trim={0 0  0 0cm} ,clip,width=.9184982\textwidth]{janres/rosen1.png}
+                        %\caption{{Thomson model of atom, with negatively charged electrons embedded in positively charged ball %\\
+                        %{\myfont{\tiny  [Britannica:Thomson Atomic Model]   }}}}
+                        %britannica.com/science/Thomson-atomic-model
+                        %\label{fig:plumpudding1}
+                    \end{figure}
+
+                
+
+                    \column{0.5\textwidth}
+                            
+            \begin{itemize}
+
+                \item However, can leverage different beam energies between CLAS12 and CLAS6 data to perform Rosenbluth separation
+                \item Will extend prior results and further constrain GPDs
+            \end{itemize}
+
+     \begin{figure}
+                        \centering
+                        \includegraphics[trim={0 0  0 0cm} ,clip,width=.5684982\textwidth]{janres/rosen2.png}
+                        %\caption{{Thomson model of atom, with negatively charged electrons embedded in positively charged ball %\\
+                        %{\myfont{\tiny  [Britannica:Thomson Atomic Model]   }}}}
+                        %britannica.com/science/Thomson-atomic-model
+                        \label{fig:plumpudding6}
+                    \end{figure}
+                    
+    \end{columns}
+\end{frame}
+
+
+\begin{frame}{Extracting Physics Directly with OMNIFOLD}
+\vspace{-.75cm}
+            \begin{columns}[t, onlytextwidth]
+                        \column{0.5\textwidth}
+                    \begin{figure}
+                        \centering
+                        \includegraphics[trim={0 0  0 0cm} ,clip,width=.915684982\textwidth]{Main/OMNI/omni1.png}
+                    \end{figure}
+
+                                        \begin{figure}
+                        \centering
+                        \includegraphics[trim={0 0  0 0cm} ,clip,width=.60685684982\textwidth]{Main/OMNI/omni4.png}
+                    \end{figure}
+                        \column{0.5\textwidth}
+
+                                        \begin{figure}
+                        \centering
+                        \includegraphics[trim={0 0  0 0cm} ,clip,width=.585684982\textwidth]{Main/OMNI/omni3.png}
+                    \end{figure}
+                    
+                    \begin{figure}
+                        \centering
+                        \includegraphics[trim={0 0  0 0cm} ,clip,width=.89684982\textwidth]{Main/OMNI/omni2.png}
+                    \end{figure}
+
+            \end{columns}
+                        {\myfont{\tiny    [ arxiv:1911.09107]   }}
+                       
+
+\end{frame}
+
 
 \end{document}
 
