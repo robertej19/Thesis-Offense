@@ -412,6 +412,41 @@ Unlike optical imaging, must infer structure from reaction rates (cross sections
 \end{frame}
 
 
+\begin{frame}{Early Insights from Deeply Virtual Processes}
+\begin{itemize}
+    \item Deeply Virtual Processe (DVCS, DVMP)s: target nucleon remains intact, DIS regime
+    \item Relies on factorization between hard scattering and soft QCD vertices
+    \item Factorization proved rigorously for DVCS in Bjorken limit, for DVMP with longitudinally polarized photons (sufficient if dominates)
+\end{itemize}
+
+\begin{columns}
+       \column{0.5\textwidth}
+
+         \begin{figure}
+                        \centering
+                        \includegraphics[width=.5\textwidth]{defense/proton_pressure_dist.png}
+                      
+                        \caption{ DVCS (left) and DVMP Feynman Handbag diagrams\\
+                        {\myfont{\tiny  [V. Kubarovsky Nuc Phys B 2011]   }}}
+                        %Source  https://home.cern/science/engineering/accelerating-radiofrequency-cavities
+                         
+                    \end{figure} 
+       \column{0.5\textwidth}
+
+         \begin{figure}
+                        \centering
+                       
+                        \includegraphics[width=.95\textwidth]{defense/proton_pressure_theory.png}
+                        \caption{ DVCS (left) and DVMP Feynman Handbag diagrams\\
+                        {\myfont{\tiny  [V. Kubarovsky Nuc Phys B 2011]   }}}
+                        %Source  https://home.cern/science/engineering/accelerating-radiofrequency-cavities
+                         
+                    \end{figure} 
+       
+\end{columns}
+
+
+\end{frame}
 
 
 
@@ -785,13 +820,94 @@ Unlike optical imaging, must infer structure from reaction rates (cross sections
 \end{frame}    
 
 
-\begin{frame}{Cross Section: Count Event Rate, Include Correction Factors}
+\begin{frame}{Components of Cross Section}
 
-                %\textcolor{white}{blank space}
-                \centering 
-                %#---------------------------------------------
-                \includegraphics[trim={0 0  0 0cm} ,clip,width=.91725995\textwidth]{extra/steps3.jpg}
+    
+    \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[anchor=south west,inner sep=0] at (0,0) {\includegraphics[trim={0 0  0 0cm} ,clip,width=.791725995\textwidth]{extra/steps3.jpg}};
+            % The overlayed rectangle
+            \fill[green, opacity=0] (4.5cm,3.25cm) rectangle (7cm,3.65cm);
+        \end{tikzpicture}
+    \end{figure}
+\end{frame}
 
+
+
+
+
+
+\begin{frame}{Components of Cross Section: Luminosity}
+    \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[anchor=south west,inner sep=0] at (0,0) {\includegraphics[trim={0 0  0 0cm} ,clip,width=.791725995\textwidth]{extra/steps3.jpg}};
+            % The overlayed rectangle
+            \fill[green, opacity=0.25] (4.2cm,2.75cm) rectangle (4.85cm,3.15cm);
+        \end{tikzpicture}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{ Luminosity Determination}
+         \begin{equation*}
+                    \Lumi = \frac{N_A l \rho Q_{FCUP}}{e}
+        \end{equation*}
+        
+        \begin{columns}
+                                
+            \column{0.58\textwidth}
+                \begin{table}
+                    \centering
+                    \begin{tabular}{rcc}
+                         %& Heading 1 & Heading 2 \\\hline
+                        Quantity &  & CLAS12 Value \\\hline
+                       Avogadro's Number &  N$_A$  & $6x10^{23}$ \\
+                        Electron Charge &e  &  $1.6x10^{-19}$ \\
+                        Target Length &l &  5 cm \\
+                        Target Density &$\rho$  &  0.07 $g/cm^3$ (LH2) \\
+                        Charge on Faraday Cup & $Q_{FCUP}$ &  In data\\
+                    \end{tabular}
+                    \label{tab:demo}
+                \end{table}
+
+            \column{0.42\textwidth}
+                \begin{figure}
+                    \centering
+                    \includegraphics[width=0.6\textwidth]{defense/beamdump1.png}
+                    \caption{Caption}
+                    \label{fig:enter-label}
+                \end{figure}
+            
+        \end{columns}
+       Calculated Integrated Luminosity from Fall 2018  dataset: 5.512 e+40 $cm^{-2}$ inbending, 4.652 e+40 $cm^{-2}$ outbending
+\end{frame}    
+
+
+
+\begin{frame}{Components of Cross Section}
+    \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[anchor=south west,inner sep=0] at (0,0) {\includegraphics[trim={0 0  0 0cm} ,clip,width=.791725995\textwidth]{extra/steps3.jpg}};
+            % The overlayed rectangle
+            \fill[blue, opacity=0.25] (4.2cm,2.75cm) rectangle (4.85cm,3.15cm);
+        \end{tikzpicture}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Components of Cross Section: Event Counts}
+
+
+    \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[anchor=south west,inner sep=0] at (0,0) {\includegraphics[trim={0 0  0 0cm} ,clip,width=.791725995\textwidth]{extra/steps3.jpg}};
+            % The overlayed rectangle
+            \fill[blue, opacity=0.25] (4.2cm,2.75cm) rectangle (4.85cm,3.15cm);
+            \fill[green, opacity=0.25] (4.5cm,3.25cm) rectangle (7cm,3.65cm);
+        \end{tikzpicture}
+    \end{figure}
 \end{frame}
 
 
@@ -925,16 +1041,114 @@ Unlike optical imaging, must infer structure from reaction rates (cross sections
         \end{columns}
 \end{frame}
 
+\begin{frame}{Data Pipeline}
+
+        
+        \begin{columns}
+                                
+    
+            \column{0.5\textwidth}
+                \begin{figure}
+                    \centering
+                    \includegraphics[width=0.6\textwidth]{defense/box1.png}
+                    \caption{Caption}
+                    \label{fig:enter-label}
+                \end{figure}
+                    \column{0.5\textwidth}
+                \begin{figure}
+                    \centering
+                    \includegraphics[width=0.6\textwidth]{defense/box2.png}
+                    \caption{Caption}
+                    \label{fig:enter-label}
+                \end{figure}
+                
+        \end{columns}
+       Calculated Integrated Luminosity from Fall 2018  dataset: 5.512 e+40 $cm^{-2}$ inbending, 4.652 e+40 $cm^{-2}$ outbending
+\end{frame} 
 
 
+\begin{frame}{Components of Cross Section}
+
+    \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[anchor=south west,inner sep=0] at (0,0) {\includegraphics[trim={0 0  0 0cm} ,clip,width=.791725995\textwidth]{extra/steps3.jpg}};
+            % The overlayed rectangle
+                        \fill[blue, opacity=0.25] (4.2cm,2.75cm) rectangle (4.85cm,3.15cm);
+            \fill[blue, opacity=0.25] (4.5cm,3.25cm) rectangle (7cm,3.65cm);
+        \end{tikzpicture}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Components of (Binned) Cross Section: Bin Width}
+
+    \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[anchor=south west,inner sep=0] at (0,0) {\includegraphics[trim={0 0  0 0cm} ,clip,width=.791725995\textwidth]{extra/steps3.jpg}};
+            % The overlayed rectangle
+                       \fill[blue, opacity=0.25] (4.2cm,2.75cm) rectangle (4.85cm,3.15cm);
+            \fill[blue, opacity=0.25] (4.5cm,3.25cm) rectangle (7cm,3.65cm);
+            \fill[green, opacity=0.25] (4.85cm,2.75cm) rectangle (7.28cm,3.15cm);
+        \end{tikzpicture}
+    \end{figure}
+\end{frame}
 
 \begin{frame}{Event Binning}
-NEED to show binning scheme and say more directly "bin by bin analysis"
-        
+
+\begin{columns}
+        \column{0.3\textwidth}
+        words about binning
+        \column{0.35\textwidth}    
+            \begin{figure}
+                \centering
+                \includegraphics[width=0.97\textwidth]{defense/x_B_vs_Q2,_Exp_Inbend.png}
+                \caption{Caption}
+                \label{fig:enter-label}
+            \end{figure}
+                    \column{0.35\textwidth}    
+            \begin{figure}
+                \centering
+                \includegraphics[width=0.97\textwidth]{defense/phi_vs_Momentum_Transfer_t,_Exp_Inbend.png}
+                \caption{Caption}
+                \label{fig:enter-label}
+            \end{figure}
+
+\end{columns}
 \end{frame}
 
 
+\begin{frame}{Components of Cross Section}
 
+    
+    \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[anchor=south west,inner sep=0] at (0,0) {\includegraphics[trim={0 0  0 0cm} ,clip,width=.791725995\textwidth]{extra/steps3.jpg}};
+            % The overlayed rectangle
+            \fill[blue, opacity=0.25] (4.2cm,2.75cm) rectangle (4.85cm,3.15cm);
+            \fill[blue, opacity=0.25] (4.5cm,3.25cm) rectangle (7cm,3.65cm);
+            \fill[blue, opacity=0.25] (4.85cm,2.75cm) rectangle (7.28cm,3.15cm);
+        \end{tikzpicture}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}{Components of Cross Section: Correction Factors}
+
+    
+    \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[anchor=south west,inner sep=0] at (0,0) {\includegraphics[trim={0 0  0 0cm} ,clip,width=.791725995\textwidth]{extra/steps3.jpg}};
+            % The overlayed rectangle
+            \fill[blue, opacity=0.25] (4.2cm,2.75cm) rectangle (4.85cm,3.15cm);
+            \fill[blue, opacity=0.25] (4.5cm,3.25cm) rectangle (7cm,3.65cm);
+            \fill[blue, opacity=0.25] (4.85cm,2.75cm) rectangle (7.28cm,3.15cm);
+            \fill[green, opacity=0.25] (7.28cm,2.75cm) rectangle (11.68cm,3.15cm);
+        \end{tikzpicture}
+    \end{figure}
+\end{frame}
 
 \begin{frame}{Simulations Needed to Determine Correction Factors}
                   \begin{itemize}
@@ -965,23 +1179,10 @@ NEED to show binning scheme and say more directly "bin by bin analysis"
                 \includegraphics[trim={0 0  0 0cm} ,clip,width=.8982\textwidth]{sims/gemc2.png}
                 \caption{Usage facilitated in 2022}
                 \label{fig:my_label}
-            \end{figure}
-                
-                                          
-                               
-                       
-
-                                          
-                        
-                           
-                                          
+            \end{figure}                              
                     \end{columns}
   
 \end{frame}
-
-
-
-
 
 \begin{frame}{Event Generator and Simulation Details}
      \begin{columns}[c]
@@ -1201,11 +1402,11 @@ With the addition of smearing factors to simulated particle reconstruction value
 \end{frame}
 
 
-\begin{frame}{Correction Notes}
-draw radiative corrections to show why they are a problem
-Draw sample problems of binning corrections and why they are a problem
-"" with overall normalization 
-\end{frame}
+%\begin{frame}{Correction Notes}
+%draw radiative corrections to show why they are a problem
+%Draw sample problems of binning corrections and why they are a problem
+%"" with overall normalization 
+%\end{frame}
 
 
 \begin{frame}{Additional Corrections}
@@ -1248,33 +1449,10 @@ The acceptance dominates the correction factors, but others must be included for
 \end{frame}
 
 
-\begin{frame}{ Luminosity Determination}
-         \begin{equation*}
-                    \Lumi = \frac{N_A l \rho Q_{FCUP}}{e}
-        \end{equation*}
-        
-        \begin{columns}
-                                
-            \column{0.98\textwidth}
-                \begin{table}
-                    \centering
-                    \begin{tabular}{rcc}
-                         %& Heading 1 & Heading 2 \\\hline
-                        Quantity &  & CLAS12 Value \\\hline
-                       Avogadro's Number &  N$_A$  & $6x10^{23}$ \\
-                        Electron Charge &e  &  $1.6x10^{-19}$ \\
-                        Target Length &l &  5 cm \\
-                        Target Density &$\rho$  &  0.07 $g/cm^3$ (LH2) \\
-                        Charge on Faraday Cup & $Q_{FCUP}$ &  In data\\
-                    \end{tabular}
-                    \label{tab:demo}
-                \end{table}
-        \end{columns}
-       Calculated Integrated Luminosity from Fall 2018 inbending dataset: 5.512 e+40 $cm^{-2}$
-\end{frame}    
 
 
-\begin{frame}{Preliminary Cross Section Results}
+
+\begin{frame}{Bin-by-Bin Cross Sections}
 
 \begin{columns}
 \column{0.4\textwidth}
@@ -1331,15 +1509,171 @@ The acceptance dominates the correction factors, but others must be included for
 \end{frame}
 
 
+\begin{frame}{Correcting  Bin-by-Bin Analysis}
 
-\begin{frame}{Iterative Bayseian Unfolding}
-
-    	
+     Not true
 
 \end{frame}
 
+\begin{frame}{Iterative Bayseian Unfolding: Theory}
 
-\begin{frame}{Theory Predictions - GK Model}
+ \begin{itemize}
+        \item \textbf{Goal:} Correct distortions in measured data distributions.
+        \item Iteratively applies a Bayesian approach to adjust the measured distribution.
+        \item Starts with an initial guess for the true distribution.
+        \item Uses a response matrix that relates the true and measured quantities.
+        \item \textbf{Procedure:}
+            \begin{enumerate}
+                \item Use the current guess to predict the measurement.
+                \item Compare the predicted measurement to the actual measurement.
+                \item Adjust the guess based on Bayesian probability.
+                \item Repeat until convergence.
+            \end{enumerate}
+        \item Often used in high-energy physics to correct for detector effects and other distortions.
+    \end{itemize}
+    \includegraphics[width=0.5\textwidth]{defense/ibu/theory.png} % Optional: Insert an image if you have one
+\end{frame}
+
+\begin{frame}{Iterative Bayseian Unfolding: Method}
+
+
+\end{frame}
+
+\begin{frame}{Iterative Bayseian Unfolding: Result}
+
+\includegraphics[width=0.4\textwidth]{defense/sample_prelim_xsec.png}
+
+\end{frame}
+
+\begin{frame}{Summary of Systematic Uncertainties}
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{rcc}
+        \hline
+        Systematic Uncertainty & Median Percent Value & Bin or Overall \\ 
+        \hline
+            Fiducial Cuts / PID              & 12.3 \%    & Bin-by-bin   \\ 
+            Reconstruction Efficiency       & 8.0 \%       & Bin-by-bin   \\ 
+            Simulation Resolution Matching    & 8.6 \%       & Bin-by-bin   \\ 
+            Exclusivity Cuts            & 12.4 \%      & Bin-by-bin   \\ 
+            Acceptance Correction       & 9.8 \%       & Bin-by-bin   \\ 
+            Radiative Correction        & 5.1 \%       & Bin-by-bin   \\ 
+            Finite Bin Width            & 3.2 \%       & Bin-by-bin   \\
+            Unfolding Methods            & 13.4 \%       & Bin-by-bin   \\ 
+            Accumulated Beam Charge     & $<$1 \%        & Overall      \\ 
+            Physical Target Properties  & $<$1\%    & Overall      \\
+            Absolute Normalization      & 13\%       & Overall      \\ 
+            \hline
+            \textbf{Total (quadrature)}          & 30\%     & Bin-by-bin      \\ 
+                \hline
+        \end{tabular}
+        \caption[Major Systematic Uncertainties]{Systematic uncertainties, their median percent values, and their calculation type.}
+        \label{table:systematic_uncertainties}
+    \end{table}
+
+\end{frame}
+
+\begin{frame}{Preliminary Cross Section Results}
+    \begin{columns}
+        \column{0.33\textwidth}
+        words about it
+        \column{0.66\textwidth}
+        \begin{tikzpicture}
+            \node[anchor=south west, inner sep=0] (image) at (0,0) {\includegraphics[width=0.9\textwidth]{defense/prelim_xsec.png}};
+            
+            \node[anchor=north west, xshift=-.15cm, yshift=-0.1cm] at (image.north west) {\includegraphics[trim={2cm 0  5cm 0cm} ,clip,width=0.325\textwidth]{defense/xsec_insert_example.png}}; % Adjust the width if needed
+            
+          \draw[red,fill=red, opacity=0.25, thick]  ([xshift=1.1cm,yshift=-0.36cm]image.center) rectangle ([xshift=2.3cm,yshift=0.36cm]image.center);
+             % Draw vertical arrow
+            \draw[->, line width=0.3mm] (image.south west) -- (image.north west);
+            \node at ([xshift=0.3cm]image.north west) {$Q^2$};
+
+            % Draw horizontal arrow
+            \draw[->, line width=0.3mm] (image.south west) -- (image.south east);
+            \node at ([yshift=0.3cm]image.south east) {$x_B$};
+        \end{tikzpicture}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Structure Function Extraction}
+\vspace{-0.2cm}
+Fit A+Bcos(2ph)+Ccos(phi) for each distribution
+\vspace{0.2cm}
+\begin{columns}
+        \column{0.15\textwidth}
+            \includegraphics[width=0.99\textwidth]{defense/phi_fitting/xqt_302520.png}
+                \column{0.15\textwidth}
+            \includegraphics[width=0.99\textwidth]{defense/phi_fitting/xqt_302530.png}
+                \column{0.15\textwidth}
+            \includegraphics[width=0.99\textwidth]{defense/phi_fitting/xqt_302540.png}
+                \column{0.15\textwidth}
+            \includegraphics[width=0.99\textwidth]{defense/phi_fitting/xqt_302560.png}
+                \column{0.15\textwidth}
+            \includegraphics[width=0.99\textwidth]{defense/phi_fitting/xqt_3025100.png}
+                \column{0.15\textwidth}
+            \includegraphics[width=0.99\textwidth]{defense/phi_fitting/xqt_3025150.png}
+            
+    \end{columns}
+        % Adding a second row
+    \begin{columns}
+        \column{0.33\textwidth} % Empty column for padding
+        \column{0.33\textwidth}
+            \includegraphics[width=0.99\textwidth]{defense/phi_fitting/full_dataset.png}
+        \column{0.33\textwidth} % Empty column for padding
+    \end{columns}
+
+        \begin{tikzpicture}[overlay, remember picture]
+            % A
+            \node (Astart) at (1cm, 4.2cm) {};
+            \node (Aend) at (5.95cm, 1.8cm) {};
+            \node[draw=red, inner sep=0, minimum height=1.5cm, minimum width=2cm, anchor=center] (Astartrectangle) at (Astart) {};
+            \node[draw=red, inner sep=0, minimum width=0.18cm, minimum height=2.5cm, anchor=center] (Aendrectangle) at (Aend) {};
+            \draw[-,red] (Astartrectangle.south) -- (Aendrectangle.north);
+            
+            % B
+            \node (Bstart) at (3.6cm, 4.2cm) {};
+            \node (Bend) at (6.15cm, 1.8cm) {};
+            \node[draw=orange, inner sep=0, minimum height=1.5cm, minimum width=2cm, anchor=center] (Bstartrectangle) at (Bstart) {};
+            \node[draw=orange, inner sep=0, minimum width=0.18cm, minimum height=2.5cm, anchor=center] (Bendrectangle) at (Bend) {};
+            \draw[-,orange] (Bstartrectangle.south) -- (Bendrectangle.north);
+            
+            % C
+            \node (Cstart) at (6.2cm, 4.2cm) {};
+            \node (Cend) at (6.4cm, 1.6cm) {};
+            \node[draw=green, inner sep=0, minimum height=1.5cm, minimum width=2cm, anchor=center] (Cstartrectangle) at (Cstart) {};
+            \node[draw=green, inner sep=0, minimum width=0.18cm, minimum height=2.2cm, anchor=center] (Cendrectangle) at (Cend) {};
+            \draw[-,green] (Cstartrectangle.south) -- (Cendrectangle.north);
+            
+            % D
+            \node (Dstart) at (8.8cm, 4.2cm) {};
+            \node (Dend) at (6.95cm, 1.5cm) {};
+            \node[draw=blue, inner sep=0, minimum height=1.5cm, minimum width=2cm, anchor=center] (Dstartrectangle) at (Dstart) {};
+            \node[draw=blue, inner sep=0, minimum width=0.2cm, minimum height=2cm, anchor=center] (Dendrectangle) at (Dend) {};
+            \draw[-,blue] (Dstartrectangle.south) -- (Dendrectangle.north);
+            
+            % E
+            \node (Estart) at (11.4cm, 4.2cm) {};
+            \node (Eend) at (7.91cm, 1.2cm) {};
+            \node[draw=purple, inner sep=0, minimum height=1.5cm, minimum width=2cm, anchor=center] (Estartrectangle) at (Estart) {};
+            \node[draw=purple, inner sep=0, minimum width=0.2cm, minimum height=1.4cm, anchor=center] (Eendrectangle) at (Eend) {};
+            \draw[-,purple] (Estartrectangle.south) -- (Eendrectangle.north);
+            
+            % F
+            \node (Fstart) at (14cm, 4.2cm) {};
+            \node (Fend) at (8.63cm, 1cm) {};
+            \node[draw=black, inner sep=0, minimum height=1.5cm, minimum width=2cm, anchor=center] (Fstartrectangle) at (Fstart) {};
+            \node[draw=black, inner sep=0, minimum width=0.2cm, minimum height=1cm, anchor=center] (Fendrectangle) at (Fend) {};
+            \draw[-,black] (Fstartrectangle.south) -- (Fendrectangle.north);
+            
+            
+         %\draw[help lines, step=1cm] (current page.south west) grid (current page.north east);
+        % Add more nodes and draw commands for other arrows, if necessary.
+    \end{tikzpicture}
+\end{frame}
+
+
+
+\begin{frame}{Structure Function Extraction}
 \begin{columns}[t, onlytextwidth]
             \column{0.4\textwidth}
             
@@ -1388,10 +1722,112 @@ The acceptance dominates the correction factors, but others must be included for
         \end{columns}
 \end{frame}
 
+\begin{frame}{Structure Function Extraction}
+
+\begin{columns}
+    \column{0.33\textwidth}
+    curves = gk model
+    - more details - 
+    \column{0.66\textwidth}
+    \includegraphics[width=0.899\textwidth]{defense/combined_t_final.png}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Cross Section t Dependence}
+\vspace{-0.2cm}
+Instead of fitting A+Bcos(2ph)+Ccos(phi), integrate over phi
+\vspace{0.2cm}
+\begin{columns}
+        \column{0.15\textwidth}
+            \includegraphics[width=0.99\textwidth]{defense/phi_fitting/xqt_302520.png}
+                \column{0.15\textwidth}
+            \includegraphics[width=0.99\textwidth]{defense/phi_fitting/xqt_302530.png}
+                \column{0.15\textwidth}
+            \includegraphics[width=0.99\textwidth]{defense/phi_fitting/xqt_302540.png}
+                \column{0.15\textwidth}
+            \includegraphics[width=0.99\textwidth]{defense/phi_fitting/xqt_302560.png}
+                \column{0.15\textwidth}
+            \includegraphics[width=0.99\textwidth]{defense/phi_fitting/xqt_3025100.png}
+                \column{0.15\textwidth}
+            \includegraphics[width=0.99\textwidth]{defense/phi_fitting/xqt_3025150.png}
+            
+    \end{columns}
+        % Adding a second row
+    \begin{columns}
+        \column{0.33\textwidth} % Empty column for padding
+        \column{0.33\textwidth}
+            \includegraphics[width=0.99\textwidth]{defense/phi_fitting/tdep_integrated_example.png}
+        \column{0.33\textwidth} % Empty column for padding
+    \end{columns}
+
+        \begin{tikzpicture}[overlay, remember picture]
+            % A
+            \node (Astart) at (1cm, 4.2cm) {};
+            \node (Aend) at (5.95cm, 1.8cm) {};
+            \node[draw=red, inner sep=0, minimum height=1.5cm, minimum width=2cm, anchor=center] (Astartrectangle) at (Astart) {};
+            \node[draw=red, inner sep=0, minimum width=0.18cm, minimum height=2.5cm, anchor=center] (Aendrectangle) at (Aend) {};
+            \draw[-,red] (Astartrectangle.south) -- (Aendrectangle.north);
+            
+            % B
+            \node (Bstart) at (3.6cm, 4.2cm) {};
+            \node (Bend) at (6.15cm, 1.8cm) {};
+            \node[draw=orange, inner sep=0, minimum height=1.5cm, minimum width=2cm, anchor=center] (Bstartrectangle) at (Bstart) {};
+            \node[draw=orange, inner sep=0, minimum width=0.18cm, minimum height=2.5cm, anchor=center] (Bendrectangle) at (Bend) {};
+            \draw[-,orange] (Bstartrectangle.south) -- (Bendrectangle.north);
+            
+            % C
+            \node (Cstart) at (6.2cm, 4.2cm) {};
+            \node (Cend) at (6.4cm, 1.8cm) {};
+            \node[draw=green, inner sep=0, minimum height=1.5cm, minimum width=2cm, anchor=center] (Cstartrectangle) at (Cstart) {};
+            \node[draw=green, inner sep=0, minimum width=0.18cm, minimum height=2.4cm, anchor=center] (Cendrectangle) at (Cend) {};
+            \draw[-,green] (Cstartrectangle.south) -- (Cendrectangle.north);
+            
+            % D
+            \node (Dstart) at (8.8cm, 4.2cm) {};
+            \node (Dend) at (6.95cm, 1.5cm) {};
+            \node[draw=blue, inner sep=0, minimum height=1.5cm, minimum width=2cm, anchor=center] (Dstartrectangle) at (Dstart) {};
+            \node[draw=blue, inner sep=0, minimum width=0.2cm, minimum height=2cm, anchor=center] (Dendrectangle) at (Dend) {};
+            \draw[-,blue] (Dstartrectangle.south) -- (Dendrectangle.north);
+            
+            % E
+            \node (Estart) at (11.4cm, 4.2cm) {};
+            \node (Eend) at (7.91cm, 1.2cm) {};
+            \node[draw=purple, inner sep=0, minimum height=1.5cm, minimum width=2cm, anchor=center] (Estartrectangle) at (Estart) {};
+            \node[draw=purple, inner sep=0, minimum width=0.2cm, minimum height=1.4cm, anchor=center] (Eendrectangle) at (Eend) {};
+            \draw[-,purple] (Estartrectangle.south) -- (Eendrectangle.north);
+            
+            % F
+            \node (Fstart) at (14cm, 4.2cm) {};
+            \node (Fend) at (8.63cm, 1cm) {};
+            \node[draw=black, inner sep=0, minimum height=1.5cm, minimum width=2cm, anchor=center] (Fstartrectangle) at (Fstart) {};
+            \node[draw=black, inner sep=0, minimum width=0.2cm, minimum height=1cm, anchor=center] (Fendrectangle) at (Fend) {};
+            \draw[-,black] (Fstartrectangle.south) -- (Fendrectangle.north);
+            
+            
+         %\draw[help lines, step=1cm] (current page.south west) grid (current page.north east);
+        % Add more nodes and draw commands for other arrows, if necessary.
+    \end{tikzpicture}
+\end{frame}
+
+
+
+\begin{frame}{Cross Section t Dependence}
+    this will give straight lines over t with exponential
+    fit it, now get b impact paramtetr
+    \begin{columns}
+    
+        \column{0.33\textwidth}
+            fit to exponential
+        \column{0.66\textwidth}
+        \includegraphics[width=0.8\textwidth]{defense/phi_fitting/full_t_dep.png}
+            
+    \end{columns}
+\end{frame}
+
 \begin{frame}{Extracting Physics - B Parameter}
 
             \begin{columns}[t, onlytextwidth]
-                        \column{0.45\textwidth}
+                        \column{0.33\textwidth}
 
                         \begin{itemize}
                             \setlength\itemsep{2em}
@@ -1402,25 +1838,37 @@ The acceptance dominates the correction factors, but others must be included for
                 \end{itemize}
 
             
-                        \column{0.55\textwidth}
-
-    \begin{figure}
-       
-                        \centering
-                        \includegraphics[trim={0 0cm  0 0cm} ,clip,width=.67897982\textwidth]{janres/bslope2.png}
-                       
-                        %britannica.com/science/Thomson-atomic-model
-                        \label{fig:plumpudding4}
-                    \end{figure}
-                    \centering
-                    CLAS12 (this work) and CLAS6 B slope parameter across $x_B$ and $Q^2$\\
-                      {\myfont{\tiny     [I. Bedlinskiy et al., PRC, 90, 025205     (2014)]   }}
+                        \column{0.33\textwidth}
+                        \includegraphics[width=0.99\textwidth]{defense/B_vs_Q2_and_xB.png}
+                         \column{0.33\textwidth}
+                         \includegraphics[width=0.99\textwidth]{defense/B_vs_xB_and_Q2.png}
+            
 \end{columns}
 \end{frame}
 
+\iffalse
+\begin{frame}{Cross Section Q2, xB Dependence}
+Integrate over t, this gives you 1 datapoint for each q2, t value
+\end{frame}
+
+\begin{frame}{Cross Section Q2, xB Dependence}
+project onto x-axis
+\end{frame}
+
+\begin{frame}{Cross Section Q2, xB Dependence result}
+show q2 xb result as single panel
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{defense/q2_int.png}
+    \caption{Caption}
+    \label{fig:enter-label}
+\end{figure}
+\end{frame}
+\fi
 
 
-\begin{frame}{Conclusion - Towards a Full Cross Section}
+\begin{frame}{Conclusion and Path Forward}
 Preliminary efforts on event selection, simulations, and corrections yield promising results but more work is needed to extract a complete cross section measurement:
 \vspace{0.4cm}
 \begin{itemize}
@@ -1428,17 +1876,18 @@ Preliminary efforts on event selection, simulations, and corrections yield promi
     \item Complete remaining correction factors - radiative, binning, and absolute normalization, and systematic uncertainties
     \item Quantitative comparisons between data and theory model will be meaningful when uncertainties and binning are more understood
     \item Pursue extraction of physics, and investigate Omnifold as an alternative analysis methodology
-\end{itemize}
-    
-%Acknowledge: MIT group, Sangbaek Lee, Andrey Kim, CLAS collaboration
-\end{frame}
-\begin{frame}{Acknowledgements}
-MIT Milner Hadronic Physics Research Group: Richard Milner, Doug Hasell, Sangbaek Lee, Igor Korover, Xiaqing Li, Patrick Moran\\
-CLAS Collaboration, Bates Engineering, MIT Tier 2 Computing Group
-    
-%Acknowledge: MIT group, Sangbaek Lee, Andrey Kim, CLAS collaboration
-\end{frame}
 
+This work will be continued while at 
+\begin{figure}
+    \centering
+    \includegraphics[width=0.1\textwidth]{defense/lincolnlabslogo.png}
+    \caption{Caption}
+    \label{fig:enter-label}
+\end{figure}
+\end{itemize}
+
+\end{frame}
+    
 
 
 
@@ -1450,6 +1899,15 @@ CLAS Collaboration, Bates Engineering, MIT Tier 2 Computing Group
 \begin{frame}{Backup slides}
 Backup Slides
 
+\end{frame}
+
+%Acknowledge: MIT group, Sangbaek Lee, Andrey Kim, CLAS collaboration
+
+\begin{frame}{Acknowledgements}
+MIT Milner Hadronic Physics Research Group: Richard Milner, Doug Hasell, Sangbaek Lee, Igor Korover, Xiaqing Li, Patrick Moran\\
+CLAS Collaboration, Bates Engineering, MIT Tier 2 Computing Group
+    
+%Acknowledge: MIT group, Sangbaek Lee, Andrey Kim, CLAS collaboration
 \end{frame}
 
 
@@ -1705,7 +2163,24 @@ On xB being related to the timing resolution scale - essentially a post hoc inte
 \end{frame}
 
 
-\end{document}
+
+\begin{frame}{BSA}
+
+        
+        \begin{columns}
+                                
+    
+            \column{0.5\textwidth}
+                \begin{figure}
+                    \centering
+                    \includegraphics[width=0.6\textwidth]{defense/BSA.png}
+                    \caption{Caption}
+                    \label{fig:enter-label}
+                \end{figure}
+
+        \end{columns}
+       Calculated Integrated Luminosity from Fall 2018  dataset: 5.512 e+40 $cm^{-2}$ inbending, 4.652 e+40 $cm^{-2}$ outbending
+\end{frame} 
 
 \end{document}
 
