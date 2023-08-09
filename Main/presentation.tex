@@ -10,7 +10,7 @@
 \usepackage[export]{adjustbox}
 \usepackage{tikz}
 \usepackage{rotating}
-
+\usetikzlibrary{calc}
 \usepackage{amsmath} % for \boxed and \smash[b] macros
 \usepackage{booktabs}% for \midrule and \cmidrule macros
 \newcommand\headercell[1]{%
@@ -102,7 +102,7 @@ National Accelerator Facility at 10.6 GeV}
 
 
     
-    
+\usetikzlibrary{fit}
 
 
 \begin{document}
@@ -395,7 +395,7 @@ Unlike optical imaging, must infer structure from reaction rates (cross sections
 
 \begin{frame}{GPDs Accessible Through Deeply Virtual Processes}
 \begin{itemize}
-    \item Deeply Virtual Processe (DVCS, DVMP)s: target nucleon remains intact, DIS regime
+    \item Deeply Virtual Processes (DVCS, DVMP): target nucleon remains intact, DIS regime
     \item Relies on factorization between hard scattering and soft QCD vertices
     \item Factorization proved rigorously for DVCS in Bjorken limit, for DVMP with longitudinally polarized photons (sufficient if dominates)
 \end{itemize}
@@ -411,41 +411,36 @@ Unlike optical imaging, must infer structure from reaction rates (cross sections
                     \end{figure} 
 \end{frame}
 
-
 \begin{frame}{Early Insights from Deeply Virtual Processes}
 \begin{itemize}
-    \item Deeply Virtual Processe (DVCS, DVMP)s: target nucleon remains intact, DIS regime
-    \item Relies on factorization between hard scattering and soft QCD vertices
-    \item Factorization proved rigorously for DVCS in Bjorken limit, for DVMP with longitudinally polarized photons (sufficient if dominates)
+    \item DVCS measurements enabled mapping pressure distribution inside protons
+    \item Indicated pressures exceeding those inside of neutron stars (\textcolor{red}{\textit{10$^{30}$ atm!}})
 \end{itemize}
 
 \begin{columns}
-       \column{0.5\textwidth}
+    \column{0.5\textwidth}
 
-         \begin{figure}
-                        \centering
-                        \includegraphics[width=.5\textwidth]{defense/proton_pressure_dist.png}
-                      
-                        \caption{ DVCS (left) and DVMP Feynman Handbag diagrams\\
-                        {\myfont{\tiny  [V. Kubarovsky Nuc Phys B 2011]   }}}
-                        %Source  https://home.cern/science/engineering/accelerating-radiofrequency-cavities
-                         
-                    \end{figure} 
-       \column{0.5\textwidth}
+    \begin{minipage}[c][0.6\textheight][c]{\linewidth}
+        \begin{figure}
+            \centering
+            \includegraphics[width=.56\textwidth]{defense/proton_pressure_dist.png}
+            \caption{ \vspace{0.1cm}Proton pressure distribution from DVCS data\\
+            {\myfont{\tiny [V.D. Burkert, L. Elouadrhiri, F.X. Girod, Nature 2018]}}}
+        \end{figure}
+    \end{minipage}
 
-         \begin{figure}
-                        \centering
-                       
-                        \includegraphics[width=.95\textwidth]{defense/proton_pressure_theory.png}
-                        \caption{ DVCS (left) and DVMP Feynman Handbag diagrams\\
-                        {\myfont{\tiny  [V. Kubarovsky Nuc Phys B 2011]   }}}
-                        %Source  https://home.cern/science/engineering/accelerating-radiofrequency-cavities
-                         
-                    \end{figure} 
-       
+    \column{0.5\textwidth}
+
+    \begin{minipage}[c][0.6\textheight][c]{\linewidth}
+        \begin{figure}
+            \centering
+            \includegraphics[width=.8795\textwidth]{defense/proton_pressure_theory.png}
+            \caption{ Proton pressure distribution from LQCD\\
+            {\myfont{\tiny [P.E. Shanahan and W. Detmold, Phys. Rev. Lett. 2019]}}}
+        \end{figure}
+    \end{minipage}
+
 \end{columns}
-
-
 \end{frame}
 
 
@@ -622,9 +617,7 @@ Unlike optical imaging, must infer structure from reaction rates (cross sections
 
 
 
-    
 
-    
 \begin{frame}{\textbf{Analysis Goal}: Extract DV$\pi^o$P Cross Section}
     Extracting the cross section for the process will extend the CLAS6 work to a larger kinematic range with higher statistics
         \begin{columns}
@@ -638,7 +631,7 @@ Unlike optical imaging, must infer structure from reaction rates (cross sections
              \column{0.5\textwidth}
              \centering$Q^2$ vs. $x_B$ - CLAS12
              %\includegraphics[width=.9\textwidth]{Pics/kinreach/bjorken_x_cropped.png}
-             \includegraphics[trim={0 0 0 1.8cm} ,clip,width=.9725995\textwidth]{APS_2022/clas12_vs_clas6_kinematic_coverage.png}
+             \includegraphics[trim={0 0 0 1.5cm} ,clip,width=.9725995\textwidth]{APS_2022/clas12_vs_clas6_kinematic_coverage.png}
     \end{columns}
     
     {\myfont{\tiny     [I. Bedlinskiy et al., PRC, 90, 025205     (2014)]   }}
@@ -849,14 +842,26 @@ Unlike optical imaging, must infer structure from reaction rates (cross sections
     \end{figure}
 \end{frame}
 
-\begin{frame}{ Luminosity Determination}
-         \begin{equation*}
+\begin{frame}{ Luminosity Determination from Faraday Cup}
+       
+        \begin{columns}
+                    \column{0.32\textwidth}
+                     \begin{equation*}
                     \Lumi = \frac{N_A l \rho Q_{FCUP}}{e}
         \end{equation*}
+        \vspace{-0.8cm}
         
-        \begin{columns}
+                \begin{figure}
+                    \centering
+                    \includegraphics[width=0.7\textwidth]{defense/beamdump1.png}
+                    \caption{Hall B Faraday Cup\\
+                    {\myfont{\tiny [P. Achenbach 2022] }}
+                    }
+                \end{figure}
+                
                                 
             \column{0.58\textwidth}
+            \vspace{-0.5cm}
                 \begin{table}
                     \centering
                     \begin{tabular}{rcc}
@@ -870,17 +875,18 @@ Unlike optical imaging, must infer structure from reaction rates (cross sections
                     \end{tabular}
                     \label{tab:demo}
                 \end{table}
+                \vspace{0.5 cm}
+                \begin{center}
+                    Fall 2018 Integrated Luminosity:\\
+                5.512 $\times$ 10$^{40}$ $cm^{-2}$ inbending\\
+                4.652 $\times$ 10$^{40}$ $cm^{-2}$ outbending
+               
+                \end{center}
+       
 
-            \column{0.42\textwidth}
-                \begin{figure}
-                    \centering
-                    \includegraphics[width=0.6\textwidth]{defense/beamdump1.png}
-                    \caption{Caption}
-                    \label{fig:enter-label}
-                \end{figure}
             
         \end{columns}
-       Calculated Integrated Luminosity from Fall 2018  dataset: 5.512 e+40 $cm^{-2}$ inbending, 4.652 e+40 $cm^{-2}$ outbending
+
 \end{frame}    
 
 
@@ -1041,6 +1047,7 @@ Unlike optical imaging, must infer structure from reaction rates (cross sections
         \end{columns}
 \end{frame}
 
+\iffalse
 \begin{frame}{Data Pipeline}
 
         
@@ -1065,7 +1072,7 @@ Unlike optical imaging, must infer structure from reaction rates (cross sections
         \end{columns}
        Calculated Integrated Luminosity from Fall 2018  dataset: 5.512 e+40 $cm^{-2}$ inbending, 4.652 e+40 $cm^{-2}$ outbending
 \end{frame} 
-
+\fi
 
 \begin{frame}{Components of Cross Section}
 
@@ -1094,24 +1101,31 @@ Unlike optical imaging, must infer structure from reaction rates (cross sections
     \end{figure}
 \end{frame}
 
-\begin{frame}{Event Binning}
+\begin{frame}{Event Binning is Heuristically Driven}
 
 \begin{columns}
-        \column{0.3\textwidth}
-        words about binning
-        \column{0.35\textwidth}    
+        \column{0.25\textwidth}
+        \begin{itemize}
+            \item Straight bins for comparing across $x_B$,$Q^2$,$t$
+            \item Bounding lines:
+            \begin{itemize}
+                \item  $Q^2$ $>$ 1 $\text{GeV}^2$
+                \item $p_{e'} > 2 \, \text{GeV/c}$
+                \item $W^2 > $ 4 $\text{GeV}^2$
+            \end{itemize}
+            \item Edge bin volumes calculated by MC integration
+        \end{itemize}
+        \column{0.375\textwidth}    
             \begin{figure}
                 \centering
-                \includegraphics[width=0.97\textwidth]{defense/x_B_vs_Q2,_Exp_Inbend.png}
-                \caption{Caption}
-                \label{fig:enter-label}
+                \includegraphics[trim={0 0 7.5cm 0},clip,width=0.97\textwidth]{defense/x_B_vs_Q2,_Exp_Inbend.png}
+                \caption{Bins across $x_B$ and $Q^2$}
             \end{figure}
-                    \column{0.35\textwidth}    
+                    \column{0.375\textwidth}    
             \begin{figure}
                 \centering
-                \includegraphics[width=0.97\textwidth]{defense/phi_vs_Momentum_Transfer_t,_Exp_Inbend.png}
-                \caption{Caption}
-                \label{fig:enter-label}
+                \includegraphics[trim={0 0 7.5cm 0},clip,width=0.97\textwidth]{defense/phi_vs_Momentum_Transfer_t,_Exp_Inbend.png}
+                \caption{Bins across $\phi$ and $t$}
             \end{figure}
 
 \end{columns}
@@ -1413,35 +1427,34 @@ With the addition of smearing factors to simulated particle reconstruction value
 The acceptance dominates the correction factors, but others must be included for a finalized cross section.
 \vspace{.2cm}
     \begin{columns}
-    \column{0.33\textwidth}
+    \column{0.3\textwidth}
     \textbf{Radiative Corrections}
-    \vspace{.81cm}
     
-    
+        
     \begin{itemize}
-        \item Finalizing results with radiative generator, \\
-        $\sim$5\% correction
+        \item Full radiative generator, \\
+        $\sim$15\% correction, \\
+        $\pm$ 1\% correction uncertainty
     \end{itemize}
+
     \includegraphics[trim={0 0  17cm 0cm} ,clip,width=.82\textwidth]{janres/rad_1.png}
     
+   
     
-    
-    
-    \column{0.33\textwidth}
+    \column{0.3\textwidth}
      \textbf{Binning Corrections}
-    \vspace{.6cm}
          \begin{itemize} 
         \item Finite bin size: average, not differential cross sections
         \item Bin volume effects
-        \item Bin migration effects
-        \item Preliminary work indicates $\sim$ 10\% correction in most bins
+        \item Bin migrations
     \end{itemize}
-    \column{0.33\textwidth}
+    \column{0.4\textwidth}
+    
      \textbf{Overall Normalization}
               \begin{itemize} 
-        \item Simulation detector efficiencies need to be corrected to true efficiencies
-        \item Comparing with well known processes
-        \item Similar processes report $\sim$ 10 \% effect
+        \item Simulation detector efficiencies need match true efficiencies
+        \item Normalizing to prior CLAS result shows no systematic shift, $\sim$ 10\% spread
+        \item Studies ongoing collaboration-wide
     \end{itemize}
     \end{columns}
 
@@ -1452,123 +1465,104 @@ The acceptance dominates the correction factors, but others must be included for
 
 
 
-\begin{frame}{Bin-by-Bin Cross Sections}
-
-\begin{columns}
-\column{0.4\textwidth}
-
-    \begin{itemize}
-        \setlength\itemsep{2em}
-        \item Acceptance corrected data follows functional form expected from structure function decomposition
-        \item Binning is currently being improved, along with larger simulation runs to decrease statistical uncertainties  
-    \end{itemize}
-
-
-
-            \column{0.3\textwidth}
-                %\textcolor{white}{blank space}
-                    
-            
-                    %#---------------------------------------------
-                   	\includegraphics[trim={0 0  0 0cm} ,clip,width=.882\textwidth]{extra/xsec/fit1.jpg}
-                   	\vspace*{-1.1cm}  % Tune this to the image height.
-                    \begin{center}
-                    \scalebox{.4}{\color{gray}*Err. bars stat. only          }
-                    \end{center}
-                    \vspace*{.2cm} 
-                   	  
-                	\includegraphics[trim={0 0  0 0cm} ,clip,width=.882\textwidth]{extra/xsec/xsec_7.jpg}
-                	                   	\vspace*{-1.1cm}  % Tune this to the image height.
-                    \begin{center}
-                    \scalebox{.4}{\color{gray}*Err. bars stat. only          }
-                    \end{center}
-                    \vspace*{.2cm} 
-       
-                   \column{0.3\textwidth}
-                %\textcolor{white}{blank space}
-                     
-            
-                    %#---------------------------------------------
-                   	\includegraphics[trim={0 0  0 0cm} ,clip,width=.882\textwidth]{extra/xsec/xsec_5.jpg}
-                   	                      	\vspace*{-1.1cm}  % Tune this to the image height.
-                    \begin{center}
-                    \scalebox{.4}{\color{gray}*Err. bars stat. only          }
-                    \end{center}
-                    \vspace*{.2cm} 
-                    
-                	\includegraphics[trim={0 0  0 0cm} ,clip,width=.882\textwidth]{extra/xsec/xsec_9.jpg}
-                	                   	\vspace*{-1.1cm}  % Tune this to the image height.
-                    \begin{center}
-                    \scalebox{.4}{\color{gray}*Err. bars stat. only          }
-                    \end{center}
-                    \vspace*{.2cm} 
-       
-       
-       \end{columns}         	
-
-\end{frame}
-
-
 \begin{frame}{Correcting  Bin-by-Bin Analysis}
 
-     Not true
+    \begin{columns}
+        \column{0.5\textwidth}
+        \includegraphics[width=0.98\textwidth]{Main/ibu/purities/bin_purity_0.25_0.3_2_2.5}
 
+        \column{0.5\textwidth}
+    \includegraphics[\width=0.98\textwidth]{Main/ibu/overview/t1_bin_purity_vs_bin_efficiency}
+
+    \end{columns}
+    
 \end{frame}
+
+
+
+\begin{frame}{t variable is responsible for majority of drift}
+
+     \begin{center}
+            \begin{tabular}{cc}
+                \includegraphics[width=0.345\linewidth]{Main/ibu/waving/sine_plots_Q2.png} & 
+                \includegraphics[width=0.345\linewidth]{Main/ibu/waving/sine_plots_phi.png} \\
+                \includegraphics[width=0.345\linewidth]{Main/ibu/waving/sine_plots_xB.png} & 
+                \includegraphics[width=0.345\linewidth]{Main/ibu/waving/sine_plots_t.png} \\
+            \end{tabular}
+        \end{center}
+\end{frame}
+
 
 \begin{frame}{Iterative Bayseian Unfolding: Theory}
+\begin{columns}
+    \column{0.7\textwidth}
+    \begin{itemize}
+            \item \textbf{Goal:} Correct distortions in measured data distributions.
+            \item Iteratively applies a Bayesian approach to adjust the measured distribution.
+            \item Starts with an initial guess for the true distribution.
+            \item Uses a response matrix that relates the true and measured quantities.
+            \item \textbf{Procedure:}
+                \begin{enumerate}
+                    \item Use the current guess to predict the measurement.
+                    \item Compare the predicted measurement to the actual measurement.
+                    \item Adjust the guess based on Bayesian probability.
+                    \item Repeat until convergence.
+                \end{enumerate}
+        \end{itemize}
+    \column{0.3\textwidth}
+        
+    \includegraphics[width=0.95\textwidth]{Main/ibu/theory.png} % Optional: Insert an image if you have one
+    
+\end{columns}
+ 
 
- \begin{itemize}
-        \item \textbf{Goal:} Correct distortions in measured data distributions.
-        \item Iteratively applies a Bayesian approach to adjust the measured distribution.
-        \item Starts with an initial guess for the true distribution.
-        \item Uses a response matrix that relates the true and measured quantities.
-        \item \textbf{Procedure:}
-            \begin{enumerate}
-                \item Use the current guess to predict the measurement.
-                \item Compare the predicted measurement to the actual measurement.
-                \item Adjust the guess based on Bayesian probability.
-                \item Repeat until convergence.
-            \end{enumerate}
-        \item Often used in high-energy physics to correct for detector effects and other distortions.
-    \end{itemize}
-    \includegraphics[width=0.5\textwidth]{defense/ibu/theory.png} % Optional: Insert an image if you have one
 \end{frame}
 
-\begin{frame}{Iterative Bayseian Unfolding: Method}
+%
+%\begin{frame}{Iterative Bayseian Unfolding: Method}
 
 
-\end{frame}
+%\end{frame}
 
 \begin{frame}{Iterative Bayseian Unfolding: Result}
 
 \includegraphics[width=0.4\textwidth]{defense/sample_prelim_xsec.png}
 
+\includegraphics[width=0.4\textwidth]{Main/ibu/results/binbybin_to_unfolded.png}
 \end{frame}
 
 \begin{frame}{Summary of Systematic Uncertainties}
     \begin{table}[H]
         \centering
-        \begin{tabular}{rcc}
+        \begin{tabular}{|ccc|}
         \hline
-        Systematic Uncertainty & Median Percent Value & Bin or Overall \\ 
+        Systematic Uncertainty & Typical Scale & Bin or Overall \\ 
         \hline
             Fiducial Cuts / PID              & 12.3 \%    & Bin-by-bin   \\ 
+        \hline
             Reconstruction Efficiency       & 8.0 \%       & Bin-by-bin   \\ 
+        \hline
             Simulation Resolution Matching    & 8.6 \%       & Bin-by-bin   \\ 
+        \hline
             Exclusivity Cuts            & 12.4 \%      & Bin-by-bin   \\ 
+        \hline
             Acceptance Correction       & 9.8 \%       & Bin-by-bin   \\ 
+        \hline
             Radiative Correction        & 5.1 \%       & Bin-by-bin   \\ 
+        \hline
             Finite Bin Width            & 3.2 \%       & Bin-by-bin   \\
+        \hline
             Unfolding Methods            & 13.4 \%       & Bin-by-bin   \\ 
+        \hline
             Accumulated Beam Charge     & $<$1 \%        & Overall      \\ 
+        \hline
             Physical Target Properties  & $<$1\%    & Overall      \\
+        \hline
             Absolute Normalization      & 13\%       & Overall      \\ 
             \hline
             \textbf{Total (quadrature)}          & 30\%     & Bin-by-bin      \\ 
                 \hline
         \end{tabular}
-        \caption[Major Systematic Uncertainties]{Systematic uncertainties, their median percent values, and their calculation type.}
-        \label{table:systematic_uncertainties}
     \end{table}
 
 \end{frame}
@@ -1576,14 +1570,27 @@ The acceptance dominates the correction factors, but others must be included for
 \begin{frame}{Preliminary Cross Section Results}
     \begin{columns}
         \column{0.33\textwidth}
-        words about it
+        \begin{itemize}
+            \item 1841 total bins passing all criteria
+            \item 7 bins in t from t=0.12 to t=1.7 
+            \item Bins with enough statics used in further analysis:
+            \begin{itemize}
+                
+                \item structure function extraction
+                \item dimension dependence 
+            \end{itemize}
+
+        \end{itemize}
         \column{0.66\textwidth}
         \begin{tikzpicture}
             \node[anchor=south west, inner sep=0] (image) at (0,0) {\includegraphics[width=0.9\textwidth]{defense/prelim_xsec.png}};
             
-            \node[anchor=north west, xshift=-.15cm, yshift=-0.1cm] at (image.north west) {\includegraphics[trim={2cm 0  5cm 0cm} ,clip,width=0.325\textwidth]{defense/xsec_insert_example.png}}; % Adjust the width if needed
+            \node[anchor=north west, xshift=-.15cm, yshift=-0.1cm](smallImage) at (image.north west) {\includegraphics[trim={2.5cm 0.5cm  5cm 2.5cm} ,clip,width=0.325\textwidth]{defense/xsec_insert_example.png}}; % Adjust the width if needed
+          \draw[red, thick] ($(smallImage.south west) + (0.185cm, 0.15cm)$) rectangle ($(smallImage.north east) - (0.1cm, 0.1cm)$);
+
             
-          \draw[red,fill=red, opacity=0.25, thick]  ([xshift=1.1cm,yshift=-0.36cm]image.center) rectangle ([xshift=2.3cm,yshift=0.36cm]image.center);
+          \draw[red,fill=red, opacity=0.25, thick]  
+          ([xshift=1.1cm,yshift=-0.36cm]image.center) rectangle ([xshift=2.2cm,yshift=0.36cm]image.center);
              % Draw vertical arrow
             \draw[->, line width=0.3mm] (image.south west) -- (image.north west);
             \node at ([xshift=0.3cm]image.north west) {$Q^2$};
@@ -1597,7 +1604,7 @@ The acceptance dominates the correction factors, but others must be included for
 
 \begin{frame}{Structure Function Extraction}
 \vspace{-0.2cm}
-Fit A+Bcos(2ph)+Ccos(phi) for each distribution
+Fit A+\textcolor{blue}{Bcos(2$\phi$)}+\textcolor{red}{Ccos($\phi$)} for each distribution
 \vspace{0.2cm}
 \begin{columns}
         \column{0.15\textwidth}
@@ -1672,70 +1679,59 @@ Fit A+Bcos(2ph)+Ccos(phi) for each distribution
 \end{frame}
 
 
-
 \begin{frame}{Structure Function Extraction}
-\begin{columns}[t, onlytextwidth]
-            \column{0.4\textwidth}
-            
-                \begin{itemize}
+ \begin{columns}
+        \column{0.3\textwidth}
+        \begin{itemize}
                     \setlength\itemsep{1em}
-                    \item \footnotesize Goloskokov-Kroll (GK) model predicts exclusive $\pi$ electroproduction cross sections using handbag approach\\
+                    \item \footnotesize Compare with Goloskokov-Kroll (GK) model %predicts exclusive $\pi$ electroproduction cross sections using handbag approach\\
                     {\myfont{\tiny [S.V. Goloskokov $\&$ P. Kroll, EPJC, 65,137 (2010)]}}
 
-                    \item Model parameters chosen to best describe recent CLAS $\pi^+$ BSA result\\
-                    {\myfont{\tiny [S. Diehl et al., PRL 125 182001 (2020)]}}
+                    % Model parameters chosen to best describe recent CLAS $\pi^+$ BSA result\\
+                    %{\myfont{\tiny [S. Diehl et al., PRL 125 182001 (2020)]}}
                     
                     \item Software implementation from\\
                     K. Tezgin / PARTONS Framework\\
                     {\myfont{\tiny [B. Berthou et al., EPJC, 78, 478 (2018)]}}
-                    
+
+                    \item Also compare to prior CLAS result; gray kinematic overlap bins
                     \end{itemize}
+
+                    %\footnotesize Note: 
+                     %\scalebox{0.835}{
+                     %   W $>$ 2 GeV $\implies \frac{Q^2\left( %1-x_B\right)}{x_B} > 3.12$ GeV$^2$
+                     %   }\\
+                     
+                    % \scalebox{0.835}{
+                    %        $t > t_{min} \implies t> \frac{m_p^2x_B^2}{1-x_B}$
+                    % }
                     
-                    \vspace{0.1cm}
-                    \footnotesize Note: 
-                    \vspace{0.1cm}
-                     
-                     \scalebox{0.835}{
-                        W $>$ 2 GeV $\implies \frac{Q^2\left( 1-x_B\right)}{x_B} > 3.12$ GeV$^2$
-                        }\\
-                     
-                     \scalebox{0.835}{
-                            $t > t_{min} \implies t> \frac{m_p^2x_B^2}{1-x_B}$
-                     }
-                
-                
-            \column{0.3\textwidth}
-            \centering
-                Model Predictions\\
-                	\includegraphics[trim={0 0  0 0cm} ,clip,width=.9882\textwidth]{DNP/gk_q2/fig_8_q2_5.25.png}
-                	\includegraphics[trim={0 0  0 0cm} ,clip,width=.9882\textwidth]{DNP/gk_xb/fig_4_xb_0.425.png}
-                		
-            \column{0.3\textwidth}
-                \centering
-                \vspace{0.2cm}
-                GK and CLAS12 Data
-                    \includegraphics[trim={0 0  0 0cm} ,clip,width=.92\textwidth]{DNP/gk_1.jpg}
-                    \vspace{0.1cm}
-                	\includegraphics[trim={0 0  0 0cm} ,clip,width=.92\textwidth]{DNP/gk_2.jpg}
-                		
-                
-        \end{columns}
-\end{frame}
+        \column{0.7\textwidth}
+        \begin{tikzpicture}
+            \node[anchor=south west, inner sep=0] (image) at (0,0) {\includegraphics[width=0.859\textwidth]{defense/combined_t_final.png}};
+            
+            \node[anchor=north west, xshift=-.15cm, yshift=-0.1cm](smallImage) at (image.north west) {\includegraphics[trim={2.5cm 0.5cm  5cm 2.5cm} ,clip,width=0.325\textwidth]{defense/sample_struct_fun.png}}; % Adjust the width if needed
+          \draw[red, thick] ($(smallImage.south west) + (0.185cm, 0.15cm)$) rectangle ($(smallImage.north east) - (0.1cm, 0.1cm)$);
 
-\begin{frame}{Structure Function Extraction}
+            
+          \draw[red,fill=red, opacity=0.25, thick]  
+          ([xshift=-1.1cm,yshift=-2.6cm]image.center) rectangle ([xshift=-0.05cm,yshift=-1.88cm]image.center);
+             % Draw vertical arrow
+            \draw[->, line width=0.3mm] (image.south west) -- (image.north west);
+            \node at ([xshift=0.3cm]image.north west) {$Q^2$};
 
-\begin{columns}
-    \column{0.33\textwidth}
-    curves = gk model
-    - more details - 
-    \column{0.66\textwidth}
-    \includegraphics[width=0.899\textwidth]{defense/combined_t_final.png}
-\end{columns}
+            % Draw horizontal arrow
+            \draw[->, line width=0.3mm] (image.south west) -- (image.south east);
+            \node at ([yshift=0.3cm]image.south east) {$x_B$};
+        \end{tikzpicture}
+    \end{columns}
+
+
 \end{frame}
 
 \begin{frame}{Cross Section t Dependence}
 \vspace{-0.2cm}
-Instead of fitting A+Bcos(2ph)+Ccos(phi), integrate over phi
+Instead of fitting A+\textcolor{blue}{Bcos(2$\phi$)}+\textcolor{red}{Ccos($\phi$)}, integrate over $\phi$
 \vspace{0.2cm}
 \begin{columns}
         \column{0.15\textwidth}
@@ -1812,28 +1808,44 @@ Instead of fitting A+Bcos(2ph)+Ccos(phi), integrate over phi
 
 
 \begin{frame}{Cross Section t Dependence}
-    this will give straight lines over t with exponential
-    fit it, now get b impact paramtetr
+   
     \begin{columns}
     
-        \column{0.33\textwidth}
-            fit to exponential
-        \column{0.66\textwidth}
-        \includegraphics[width=0.8\textwidth]{defense/phi_fitting/full_t_dep.png}
+        \column{0.3\textwidth}
+           Cross section expected to decrease across increasing \textbf{t} as $e^{B\textbf{t}}$
+        \column{0.7\textwidth}
+        \begin{tikzpicture}
+            \node[anchor=south west, inner sep=0] (image) at (0,0) {\includegraphics[width=0.8\textwidth]{defense/tslopes_final.png}};
             
+            \node[anchor=north west, xshift=-.15cm, yshift=-0.1cm](smallImage) at (image.north west) {\includegraphics[trim={2.5cm 0.5cm  5cm 2.5cm} ,clip,width=0.325\textwidth]{defense/t_int_single_sample.png}}; % Adjust the width if needed
+          \draw[red, thick] ($(smallImage.south west) + (0.185cm, 0.15cm)$) rectangle ($(smallImage.north east) - (0.1cm, 0.1cm)$);
+
+            
+          \draw[red,fill=red, opacity=0.25, thick]  
+          ([xshift=0.6cm,yshift=-1.7cm]image.center) rectangle ([xshift=1.8cm,yshift=-0.93cm]image.center);
+             % Draw vertical arrow
+            \draw[->, line width=0.3mm] (image.south west) -- (image.north west);
+            \node at ([xshift=0.3cm]image.north west) {$Q^2$};
+
+            % Draw horizontal arrow
+            \draw[->, line width=0.3mm] (image.south west) -- (image.south east);
+            \node at ([yshift=0.3cm]image.south east) {$x_B$};
+        \end{tikzpicture}
     \end{columns}
+
+
 \end{frame}
 
-\begin{frame}{Extracting Physics - B Parameter}
+\begin{frame}{xB, Q2 Dependence of B Parameter}
 
-            \begin{columns}[t, onlytextwidth]
+            \begin{columns}
                         \column{0.33\textwidth}
-
+                    
                         \begin{itemize}
-                            \setlength\itemsep{2em}
-                \item Cross section expected to decrease across increasing \textbf{t} as $e^{B\textbf{t}}$
-                \item The parameter B is  related to the distance between the struck quark and the rest of the nucleon
-                \item Preliminary CLAS12 results agree with CLAS6 published results, and are in line with expectations from the above interpretation
+                            \setlength\itemsep{.5em}
+                \item Dependence of B parameter decreases as expected across $x_B$
+                %\item The parameter B is  related to the distance between the struck quark and the rest of the nucleon
+                %\item Preliminary CLAS12 results agree with CLAS6 published results, and are in line with expectations from the above interpretation
                 
                 \end{itemize}
 
@@ -1869,22 +1881,23 @@ show q2 xb result as single panel
 
 
 \begin{frame}{Conclusion and Path Forward}
-Preliminary efforts on event selection, simulations, and corrections yield promising results but more work is needed to extract a complete cross section measurement:
-\vspace{0.4cm}
 \begin{itemize}
     \setlength\itemsep{1em}
-    \item Complete remaining correction factors - radiative, binning, and absolute normalization, and systematic uncertainties
-    \item Quantitative comparisons between data and theory model will be meaningful when uncertainties and binning are more understood
-    \item Pursue extraction of physics, and investigate Omnifold as an alternative analysis methodology
-
-This work will be continued while at 
-\begin{figure}
-    \centering
-    \includegraphics[width=0.1\textwidth]{defense/lincolnlabslogo.png}
-    \caption{Caption}
-    \label{fig:enter-label}
-\end{figure}
+    \item Efforts have allowed for measurement of DV$\pi^0$P cross section over a wide range of kinematics.
+    \item Overall normalization efforts are a collaboration wide effort and ongoing; normalization independent results can already be extracted
+    \item Results are consistent with expectations from prior results
+    \item Path is cleared for Rosenbluth separation of $\sigma_L$ and $\sigma_T$ terms, expansion to unbinned cross section results, more
 \end{itemize}
+
+%\iffalse
+%This work will be continued while at 
+%\begin{figure}
+%    \centering
+%    \includegraphics[width=0.1\textwidth]%{defense/lincolnlabslogo.png}
+%    \caption{Caption}
+%    \label{fig:enter-label}
+%\end{figure}
+%\fi 
 
 \end{frame}
     
@@ -1894,7 +1907,53 @@ This work will be continued while at
 
 \appendix
 
+\begin{frame}{ACKNOLEDGEMENTS}
+Richard, committtee, MIT LNS / professors, Peter, Lupe 
+\end{frame}
 
+\begin{frame}{ACKNOLEDGEMENTS}
+Entire slide just for sangbaek
+\end{frame}
+\begin{frame}{ACKNOLEDGEMENTS}
+Other richard group members past and present ross ivicia jan charles yimin patrick doug etc
+\end{frame}
+
+\begin{frame}{ACKNOLEDGEMENTS}
+All the JLab people - work wise
+\end{frame}
+
+\begin{frame}{ACKNOLEDGEMENTS}
+All the Jlab people - hockey wise
+\end{frame}
+
+
+\begin{frame}{ACKNOLEDGEMENTS}
+other friends at MIT loyd joe chiara brandon Joe Griffin, BAND group
+\end{frame}
+
+\begin{frame}{ACKNOLEDGEMENTS}
+Other staff at MIT - jack joe karen the camera guy, Ernie, other Bates
+\end{frame}
+
+\begin{frame}{ACKNOLEDGEMENTS}
+Other mentors - magnusson phillips noon mvevoy messina
+\end{frame}
+
+\begin{frame}{ACKNOLEDGEMENTS}
+Other mentors - all the college people, Tami
+\end{frame}
+
+\begin{frame}{ACKNOLEDGEMENTS}
+Mentors outside of college - Strong man Rum guy, MIT hobby shop guys, Sandbox
+\end{frame}
+
+\begin{frame}{ACKNOLEDGEMENTS}
+Other friends - Dan Nick Garnette brett
+\end{frame}
+
+\begin{frame}{ACKNOLEDGEMENTS}
+Family and Haley - Jen 
+\end{frame}
 
 \begin{frame}{Backup slides}
 Backup Slides
