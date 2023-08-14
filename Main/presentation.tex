@@ -531,7 +531,7 @@ Unlike optical imaging, must infer structure from reaction rates (cross sections
             
                     
                 \vspace{0.1cm}
-                \footnotesize{\GPDETbar = 2$times$ \GPDHTtilde+\GPDET\\}
+                \footnotesize{\GPDETbar = 2$\times$ \GPDHTtilde+\GPDET\\}
             
         \end{columns}
     
@@ -768,7 +768,7 @@ Unlike optical imaging, must infer structure from reaction rates (cross sections
             \column{0.55\textwidth}
                 \begin{itemize}
                     \setlength\itemsep{.35em}
-                    \item 6-fold symmetric Forward Detector ($\theta < \sim 40 ^{\circ}$) with torodial field
+                    \item 6-fold symmetric Forward Detector ($\theta < \sim 40 ^{\circ}$) with toroidal field
                      \begin{itemize}
                     \setlength\itemsep{.25em}
                         \item Cherenkov Counters
@@ -1469,10 +1469,11 @@ The acceptance dominates the correction factors, but others must be included for
 
     \begin{columns}
         \column{0.5\textwidth}
+        Bin-by-bin analysis neglects cases where events are observed in a bin different from the one they were generated in
         \includegraphics[width=0.98\textwidth]{Main/ibu/purities/bin_purity_0.25_0.3_2_2.5}
 
         \column{0.5\textwidth}
-    \includegraphics[\width=0.98\textwidth]{Main/ibu/overview/t1_bin_purity_vs_bin_efficiency}
+    \includegraphics[width=0.98\textwidth]{Main/ibu/overview/t1_bin_purity_vs_bin_efficiency}
 
     \end{columns}
     
@@ -1482,6 +1483,8 @@ The acceptance dominates the correction factors, but others must be included for
 
 \begin{frame}{t variable is responsible for majority of drift}
 
+\centering
+Superimposed sine-wave coloring indicates reconstruction performance
      \begin{center}
             \begin{tabular}{cc}
                 \includegraphics[width=0.345\linewidth]{Main/ibu/waving/sine_plots_Q2.png} & 
@@ -1493,7 +1496,7 @@ The acceptance dominates the correction factors, but others must be included for
 \end{frame}
 
 
-\begin{frame}{Iterative Bayseian Unfolding: Theory}
+\begin{frame}{Iterative Bayesian Unfolding: Theory}
 \begin{columns}
     \column{0.7\textwidth}
     \begin{itemize}
@@ -1518,17 +1521,28 @@ The acceptance dominates the correction factors, but others must be included for
 
 \end{frame}
 
-%
-%\begin{frame}{Iterative Bayseian Unfolding: Method}
 
+\begin{frame}{Iterative Bayesian Unfolding: Method}
+     \begin{center}
+            \begin{tabular}{cc}
+                \includegraphics[width=0.249345\linewidth]{Main/ibu/4d-2n_example/4D_2bin_sample_response_matrix.png} & 
+                \includegraphics[width=0.249345\linewidth]{Main/ibu/4d-2n_example/plaid/4D_2bin_sample_response_matrix_xb_q2.png} \\
+                \includegraphics[width=0.249345\linewidth]{Main/ibu/kerneling/bin_migration_0_0_0_0.png} & 
+                \includegraphics[width=0.249345\linewidth]{Main/ibu/4d-2n_example/4D_2bin_sample_unfolding.png} \\
+            \end{tabular}
+        \end{center}
 
-%\end{frame}
+\end{frame}
 
-\begin{frame}{Iterative Bayseian Unfolding: Result}
+\begin{frame}{Iterative Bayesian Unfolding: Result}
+\begin{columns}
+    \column{0.5\textwidth}
+\includegraphics[width=0.94\textwidth]{defense/sample_prelim_xsec.png}
+    \column{0.5\textwidth}
+\includegraphics[width=0.94\textwidth]{Main/ibu/results/binbybin_to_unfolded.png}
+    
+\end{columns}
 
-\includegraphics[width=0.4\textwidth]{defense/sample_prelim_xsec.png}
-
-\includegraphics[width=0.4\textwidth]{Main/ibu/results/binbybin_to_unfolded.png}
 \end{frame}
 
 \begin{frame}{Summary of Systematic Uncertainties}
@@ -1887,6 +1901,8 @@ show q2 xb result as single panel
     \item Overall normalization efforts are a collaboration wide effort and ongoing; normalization independent results can already be extracted
     \item Results are consistent with expectations from prior results
     \item Path is cleared for Rosenbluth separation of $\sigma_L$ and $\sigma_T$ terms, expansion to unbinned cross section results, more
+    %thats it for the physics results, but the physics wouldn't be possible without the people
+    
 \end{itemize}
 
 %\iffalse
@@ -1907,53 +1923,263 @@ show q2 xb result as single panel
 
 \appendix
 
-\begin{frame}{ACKNOLEDGEMENTS}
-Richard, committtee, MIT LNS / professors, Peter, Lupe 
+
+\begin{frame}{Acknowledgements - Committee}
+    \begin{columns}
+            \centering
+            \column{0.3\textwidth}
+            \includegraphics[width=0.95\textwidth]{people/milnergroup/janet2.png}
+                \column{0.3\textwidth}
+            \includegraphics[width=0.95\textwidth]{people/milnergroup/richard.png}
+            \column{0.3\textwidth}
+            \includegraphics[width=0.95\textwidth]{people/milnergroup/detmold.png}
+    \end{columns}            
 \end{frame}
 
-\begin{frame}{ACKNOLEDGEMENTS}
-Entire slide just for sangbaek
-\end{frame}
-\begin{frame}{ACKNOLEDGEMENTS}
-Other richard group members past and present ross ivicia jan charles yimin patrick doug etc
+\begin{frame}{Acknowledgements - Research Group}
+    \begin{columns}
+            \column{0.2\textwidth}
+            \includegraphics[width=0.75\textwidth]{people/actual_mrg/charles.png}
+            \includegraphics[width=0.75\textwidth]{people/actual_mrg/axel.png}
+            
+                \column{0.2\textwidth}
+            \includegraphics[width=0.75\textwidth]{people/actual_mrg/doug.png}
+            \includegraphics[width=0.75\textwidth]{people/actual_mrg/steve.png}
+
+            \column{0.2\textwidth}
+            \includegraphics[width=0.75\textwidth]{people/actual_mrg/patrick.png}
+            \includegraphics[width=0.75\textwidth]{people/actual_mrg/ivica.png}
+            
+            \column{0.2\textwidth}
+            \includegraphics[width=0.75\textwidth]{people/actual_mrg/jan.png}
+            \includegraphics[width=0.75\textwidth]{people/actual_mrg/ross.png}
+            
+            \column{0.2\textwidth}
+            \includegraphics[width=0.75\textwidth]{people/actual_mrg/igor.png}
+            \includegraphics[width=0.75\textwidth]{people/actual_mrg/igor.png}
+            % ALSO YIMIN!
+    \end{columns}            
 \end{frame}
 
-\begin{frame}{ACKNOLEDGEMENTS}
-All the JLab people - work wise
+\begin{frame}{Acknowledgements - Research Group}
+    \begin{columns}
+        \centering
+            \column{0.3\textwidth}
+            \includegraphics[width=0.95\textwidth]{people/band/sangbaek.png}
+                \column{0.3\textwidth}
+            \includegraphics[width=0.95\textwidth]{people/actual_mrg/sangbaek2.png}
+            \column{0.3\textwidth}
+            \includegraphics[width=0.95\textwidth]{people/actual_mrg/sangbaek3.png}
+    \end{columns}            
 \end{frame}
 
-\begin{frame}{ACKNOLEDGEMENTS}
-All the Jlab people - hockey wise
+\begin{frame}{Acknowledgements - CLAS}
+    \begin{columns}
+        \centering
+            \column{0.3\textwidth}
+        \centering
+            
+            \includegraphics[width=0.5\textwidth]{people/jlab_clas/latifa.png}
+            \includegraphics[width=0.5\textwidth]{people/jlab_clas/mauri.png}
+            
+                \column{0.3\textwidth}
+        \centering
+                
+            \includegraphics[width=0.5\textwidth]{people/jlab_clas/volker.png}
+            \includegraphics[width=0.5\textwidth]{people/jlab_clas/valery.png}
+            \column{0.3\textwidth}
+        \centering
+            
+            \includegraphics[width=0.5\textwidth]{people/jlab_clas/joo.png}
+            \includegraphics[width=0.5\textwidth]{people/jlab_clas/fx.png}
+            
+        \end{columns}      
+    
+%Acknowledge: Andrey Kim, CLAS collaboration
+\end{frame}
+
+\begin{frame}{Acknowledgements - JLab}
+
+     \begin{columns}
+            \centering
+                \column{0.5\textwidth}
+                \includegraphics[width=0.95\textwidth]{people/jlab_hockey/halls_and_hockey.png}
+                \column{0.5\textwidth}
+                \includegraphics[width=0.95\textwidth]{people/jlab_hockey/JLab Hockey 2002.jpg}
+    \end{columns}
+    
 \end{frame}
 
 
-\begin{frame}{ACKNOLEDGEMENTS}
-other friends at MIT loyd joe chiara brandon Joe Griffin, BAND group
+\begin{frame}{Acknowledgements - Bates}
+    \begin{columns}
+        \centering
+            \column{0.3\textwidth}
+        \centering
+            
+            \includegraphics[width=0.95\textwidth]{people/bates/jim.png}
+            
+                \column{0.3\textwidth}
+        \centering
+                
+            \includegraphics[width=0.95\textwidth]{people/bates/ernie.png}
+            \column{0.3\textwidth}
+        \centering
+            
+            \includegraphics[width=0.95\textwidth]{people/bates/chris.png}
+            
+        \end{columns}   
+
 \end{frame}
 
-\begin{frame}{ACKNOLEDGEMENTS}
-Other staff at MIT - jack joe karen the camera guy, Ernie, other Bates
+\begin{frame}{Acknowledgements - MIT / LNS}
+    \begin{columns}
+        \centering
+            \column{0.3\textwidth}
+        \centering
+            
+            \includegraphics[width=0.5\textwidth]{people/lns/karen.png}
+            \includegraphics[width=0.5\textwidth]{people/lns/elsye.png}
+            
+                        \column{0.15\textwidth}
+        \centering
+            
+            \includegraphics[width=0.99\textwidth]{people/lns/jack.png}
+                                   \column{0.15\textwidth}
+        \centering
+            
+            \includegraphics[width=0.99\textwidth]{people/lns/jack.png}
+
+                        \column{0.3\textwidth}
+        \centering
+            
+            \includegraphics[width=0.5\textwidth]{people/lns/cathy.png}
+            \includegraphics[width=0.5\textwidth]{people/lns/sydney.png}
+            
+        \end{columns}   
 \end{frame}
 
-\begin{frame}{ACKNOLEDGEMENTS}
+\begin{frame}{Acknowledgements - MIT}
+
+\end{frame}
+
+
+\begin{frame}{Acknowledgements}
 Other mentors - magnusson phillips noon mvevoy messina
+other friends at MIT  BAND group
 \end{frame}
 
-\begin{frame}{ACKNOLEDGEMENTS}
+
+\begin{frame}{Acknowledgements - Mentors}
+    \begin{columns}
+        \column{0.25\textwidth}
+            \centering
+            \includegraphics[width=0.5\textwidth]{people/coaches/cullen.png}
+            \includegraphics[width=0.5\textwidth]{people/coaches/maly.png}
+        \column{0.25\textwidth}
+            \centering
+            \includegraphics[width=0.5\textwidth]{people/coaches/pancoast.png}
+            \includegraphics[width=0.5\textwidth]{people/coaches/deli.png}   
+        \column{0.25\textwidth}
+            \centering
+            \includegraphics[width=0.5\textwidth]{people/docs/cardoos.png}
+            \includegraphics[width=0.5\textwidth]{people/docs/chukwueloka.png}
+        \column{0.25\textwidth}
+            \centering
+            \includegraphics[width=0.5\textwidth]{people/docs/jon.png}
+            \includegraphics[width=0.5\textwidth]{people/docs/stravinsky.png}
+    \end{columns}
+\end{frame}
+
+
+
+\begin{frame}{Acknowledgements}
 Other mentors - all the college people, Tami
 \end{frame}
 
-\begin{frame}{ACKNOLEDGEMENTS}
+\begin{frame}{Acknowledgements}
 Mentors outside of college - Strong man Rum guy, MIT hobby shop guys, Sandbox
 \end{frame}
 
-\begin{frame}{ACKNOLEDGEMENTS}
-Other friends - Dan Nick Garnette brett
+
+              
+
+\begin{frame}{Acknowledgements - Friends}
+    \begin{columns}
+        \column{0.5\textwidth}
+            \centering
+            \includegraphics[width=0.5\textwidth]{people/friends/grad.png}
+            \includegraphics[width=0.5\textwidth]{people/friends/nathannick.png}
+        \column{0.5\textwidth}
+            \centering
+            \includegraphics[width=0.6\textwidth]{people/friends/medan.png}
+            \includegraphics[width=0.6\textwidth]{people/friends/medanOLDER.png}
+    \end{columns}
+    
 \end{frame}
 
-\begin{frame}{ACKNOLEDGEMENTS}
-Family and Haley - Jen 
+
+
+\begin{frame}{Acknowledgements - Family}
+    \begin{columns}
+        \column{0.3\textwidth}
+            \includegraphics[width=0.88\textwidth]{people/jen/matt_and_maddie_nuc.jpg}
+            \includegraphics[width=0.88\textwidth]{people/jen/mejenyoung.png}
+                \column{0.3\textwidth}
+            \includegraphics[trim={18cm 10cm 10cm 10cm} ,clip,width=0.88\textwidth]{people/jen/mejen.png}
+            \includegraphics[width=0.88\textwidth]{people/jen/mejenboat.png}
+
+                            \column{0.3\textwidth}
+            \includegraphics[width=0.88\textwidth]{people/jen/poss3.png}
+            \includegraphics[trim={0cm 2cm 2cm 10cm} ,clip,width=0.88\textwidth]{people/jen/poss4.png}
+            
+    \end{columns}
 \end{frame}
+
+
+\begin{frame}{Acknowledgements - Haley}
+    \begin{columns}
+        \column{0.2\textwidth}
+            \includegraphics[width=0.98\textwidth]{people/haley/origin.png}
+            \includegraphics[width=0.98\textwidth]{people/haley/angeldevil.png}
+        \column{0.2\textwidth}
+            \includegraphics[width=0.98\textwidth]{people/haley/usyoung.png}
+            \includegraphics[width=0.98\textwidth]{people/haley/prom.png}
+        \column{0.3\textwidth}
+            \includegraphics[trim={10cm 10cm 10cm 10cm} ,clip,width=0.98\textwidth]{people/haley/mehaley.png}
+            \includegraphics[width=0.98\textwidth]{people/haley/grad.png}
+            
+        \column{0.25\textwidth}
+            \includegraphics[width=0.85\textwidth]{people/haley/moxy.png}
+            \includegraphics[width=0.85\textwidth]{people/haley/beard2.png}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{}
+\centering
+In Conclusion: Thanks! 
+\vspace{1cm}
+\begin{columns}
+        \column{0.3\textwidth} 
+        \centering
+        \includegraphics[width=0.8\textwidth]{people/funny/xkcdos_acc_vs_precision.png}
+        {\myfont{\tiny    https://xkcd.com/2696/   }}
+        
+        \column{0.3\textwidth}   
+        \centering
+        
+        \includegraphics[width=0.98\textwidth]{people/funny/thesis_defense_2x.png}
+        {\myfont{\tiny    https://xkcd.com/1403/   }}
+        
+        \column{0.33\textwidth}   
+        \centering
+        
+        \includegraphics[width=0.98\textwidth]{people/funny/dilbert2.png}
+        {\myfont{\tiny    dilbert "tour of accounting"  }}
+\end{columns}
+
+\end{frame}
+
 
 \begin{frame}{Backup slides}
 Backup Slides
@@ -1961,13 +2187,6 @@ Backup Slides
 \end{frame}
 
 %Acknowledge: MIT group, Sangbaek Lee, Andrey Kim, CLAS collaboration
-
-\begin{frame}{Acknowledgements}
-MIT Milner Hadronic Physics Research Group: Richard Milner, Doug Hasell, Sangbaek Lee, Igor Korover, Xiaqing Li, Patrick Moran\\
-CLAS Collaboration, Bates Engineering, MIT Tier 2 Computing Group
-    
-%Acknowledge: MIT group, Sangbaek Lee, Andrey Kim, CLAS collaboration
-\end{frame}
 
 
 
@@ -2071,10 +2290,6 @@ If, on the other hand, photons did have mass, it would mean they are catholic
 From \href{https://indico.cern.ch/event/797767/contributions/3682622/attachments/1965784/3268756/6_radici.pdf}{Marco Radici}
 \end{frame}
 
-
-\begin{frame}{People}
-\includegraphics[width=0.5\textwidth]{people/matt_and_maddie_nuc.jpg}
-\end{frame}
 
 
 \begin{frame}{Slide about Lincoln Labs}
