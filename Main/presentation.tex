@@ -1453,7 +1453,7 @@ The acceptance dominates the correction factors, but others must be included for
      \textbf{Overall Normalization}
               \begin{itemize} 
         \item Simulation detector efficiencies need match true efficiencies
-        \item Normalizing to prior CLAS result shows no systematic shift, $\sim$ 10\% spread
+        \item Normalizing to prior CLAS result yields 9\% correction, $\sim$ 10\% spread
         \item Studies ongoing collaboration-wide
     \end{itemize}
     \end{columns}
@@ -1586,7 +1586,7 @@ Superimposed sine-wave coloring indicates reconstruction performance
         \column{0.33\textwidth}
         \begin{itemize}
             \item 1841 total bins passing all criteria
-            \item 7 bins in t from t=0.12 to t=1.7 
+            \item 7 bins in \textit{t} from \textit{t}=0.12 to \textit{t}=1.7 
             \item Bins with enough statics used in further analysis:
             \begin{itemize}
                 
@@ -1693,7 +1693,7 @@ Fit A+\textcolor{blue}{Bcos(2$\phi$)}+\textcolor{red}{Ccos($\phi$)} for each dis
 \end{frame}
 
 
-\begin{frame}{Structure Function Extraction}
+\begin{frame}{Structure Function Extraction (Preliminary)}
  \begin{columns}
         \column{0.3\textwidth}
         \begin{itemize}
@@ -1722,7 +1722,7 @@ Fit A+\textcolor{blue}{Bcos(2$\phi$)}+\textcolor{red}{Ccos($\phi$)} for each dis
                     
         \column{0.7\textwidth}
         \begin{tikzpicture}
-            \node[anchor=south west, inner sep=0] (image) at (0,0) {\includegraphics[width=0.859\textwidth]{defense/combined_t_final.png}};
+            \node[anchor=south west, inner sep=0] (image) at (0,0) {\includegraphics[width=0.859\textwidth]{lastminute/updated_GK.png}};
             
             \node[anchor=north west, xshift=-.15cm, yshift=-0.1cm](smallImage) at (image.north west) {\includegraphics[trim={2.5cm 0.5cm  5cm 2.5cm} ,clip,width=0.325\textwidth]{defense/sample_struct_fun.png}}; % Adjust the width if needed
           \draw[red, thick] ($(smallImage.south west) + (0.185cm, 0.15cm)$) rectangle ($(smallImage.north east) - (0.1cm, 0.1cm)$);
@@ -1743,7 +1743,7 @@ Fit A+\textcolor{blue}{Bcos(2$\phi$)}+\textcolor{red}{Ccos($\phi$)} for each dis
 
 \end{frame}
 
-\begin{frame}{Cross Section t Dependence}
+\begin{frame}{Cross Section t Dependence }
 \vspace{-0.2cm}
 Instead of fitting A+\textcolor{blue}{Bcos(2$\phi$)}+\textcolor{red}{Ccos($\phi$)}, integrate over $\phi$
 \vspace{0.2cm}
@@ -1821,7 +1821,7 @@ Instead of fitting A+\textcolor{blue}{Bcos(2$\phi$)}+\textcolor{red}{Ccos($\phi$
 
 
 
-\begin{frame}{Cross Section t Dependence}
+\begin{frame}{Cross Section t Dependence (Preliminary)}
    
     \begin{columns}
     
@@ -1850,26 +1850,33 @@ Instead of fitting A+\textcolor{blue}{Bcos(2$\phi$)}+\textcolor{red}{Ccos($\phi$
 
 \end{frame}
 
-\begin{frame}{xB, Q2 Dependence of B Parameter}
+\begin{frame}{$x_B$ Dependence of B Parameter (Preliminary)}
 
             \begin{columns}
-                        \column{0.33\textwidth}
-                    
-                        \begin{itemize}
-                            \setlength\itemsep{.5em}
-                \item Dependence of B parameter decreases as expected across $x_B$
-                %\item The parameter B is  related to the distance between the struck quark and the rest of the nucleon
-                %\item Preliminary CLAS12 results agree with CLAS6 published results, and are in line with expectations from the above interpretation
-                
-                \end{itemize}
 
-            
-                        \column{0.33\textwidth}
-                        \includegraphics[width=0.99\textwidth]{defense/B_vs_Q2_and_xB.png}
-                         \column{0.33\textwidth}
-                         \includegraphics[width=0.99\textwidth]{defense/B_vs_xB_and_Q2.png}
-            
-\end{columns}
+               \column{0.6\textwidth}
+                        \centering
+                        \includegraphics[width=0.799\textwidth]{defense/B_vs_Q2_and_xB.png} \\
+                        \includegraphics[trim={0 17cm 0 0cm},clip,width=0.2\textwidth]{lastminute/xbB.png}
+                        \includegraphics[trim={0 8.5cm 0 8.5cm},clip,width=0.2\textwidth]{lastminute/xbB.png}
+                        \includegraphics[trim={0 0cm 0 17cm},clip,width=0.2\textwidth]{lastminute/xbB.png}\\
+                    {\myfont{\tiny [M. Burkardt arXiv 0207047] }}
+
+               \column{0.4\textwidth}
+               \centering
+                    \begin{itemize}
+                        \item \textbf{Top}: \textit{B} parameter across $x_B$
+                        \item \textbf{Bottom}: Theory model of quark distribution in nucleon
+                        \item Dependence of B parameter decreases in agreement with Impact Parameter Space Interpretation of GPDs
+                    \end{itemize}
+                
+
+                                                        %\item The parameter B is  related to the distance between the struck quark and the rest of the nucleon
+                                %\item Preliminary CLAS12 results agree with CLAS6 published results, and are in line with expectations from the above interpretation
+                                
+                
+
+    \end{columns}
 \end{frame}
 
 \iffalse
@@ -1897,10 +1904,9 @@ show q2 xb result as single panel
 \begin{frame}{Conclusion and Path Forward}
 \begin{itemize}
     \setlength\itemsep{1em}
-    \item Efforts have allowed for measurement of DV$\pi^0$P cross section over a wide range of kinematics.
-    \item Overall normalization efforts are a collaboration wide effort and ongoing; normalization independent results can already be extracted
-    \item Results are consistent with expectations from prior results
-    \item Path is cleared for Rosenbluth separation of $\sigma_L$ and $\sigma_T$ terms, expansion to unbinned cross section results, more
+    \item Efforts have allowed for measurement of DV$\pi^0$P cross section over a wide range of kinematics, the first DVMP cross section measurement at CLAS12.
+    \item Overall normalization efforts are a collaboration wide effort and ongoing; normalization independent results can already be extracted.  Results are consistent with expectations from prior results.
+    \item Path is cleared for further analysis - e.g. Rosenbluth separation of $\sigma_L$ and $\sigma_T$ terms, expansion to unbinned cross section results.
     %thats it for the physics results, but the physics wouldn't be possible without the people
     
 \end{itemize}
@@ -1923,6 +1929,7 @@ show q2 xb result as single panel
 
 \appendix
 
+\iffalse
 
 \begin{frame}{Acknowledgements - Committee}
     \begin{columns}
@@ -2017,16 +2024,16 @@ show q2 xb result as single panel
             \column{0.3\textwidth}
         \centering
             
-            \includegraphics[width=0.95\textwidth]{people/bates/jim.png}
+            \includegraphics[width=0.85\textwidth]{people/bates/jim.png}
             
                 \column{0.3\textwidth}
         \centering
                 
-            \includegraphics[width=0.95\textwidth]{people/bates/ernie.png}
+            \includegraphics[width=0.85\textwidth]{people/bates/ernie.png}
             \column{0.3\textwidth}
         \centering
             
-            \includegraphics[width=0.95\textwidth]{people/bates/chris.png}
+            \includegraphics[width=0.8\textwidth]{people/bates/chris.png}
             
         \end{columns}   
 
@@ -2053,58 +2060,186 @@ show q2 xb result as single panel
                         \column{0.3\textwidth}
         \centering
             
-            \includegraphics[width=0.5\textwidth]{people/lns/cathy.png}
-            \includegraphics[width=0.5\textwidth]{people/lns/sydney.png}
+            \includegraphics[width=0.45\textwidth]{people/lns/cathy.png}
+            \includegraphics[width=0.45\textwidth]{people/lns/sydney.png}
+            \includegraphics[width=0.35\textwidth]{people/people/kaufman.png}
+            
             
         \end{columns}   
 \end{frame}
 
 \begin{frame}{Acknowledgements - MIT}
+    \begin{columns}
+
+        \column{0.16\textwidth}
+            \centering
+            \includegraphics[width=0.99\textwidth]{people/milnergroup/alanguth.png}
+            \includegraphics[width=0.99\textwidth]{people/milnergroup/kardar.png}
+        \column{0.16\textwidth}
+            \centering
+            \includegraphics[width=0.99\textwidth]{people/milnergroup/christoph.png}
+            \includegraphics[width=0.99\textwidth]{people/milnergroup/bolek.png}
+                \column{0.16\textwidth}
+            \centering
+            \includegraphics[width=0.99\textwidth]{people/milnergroup/orhen.png}
+            \includegraphics[width=0.99\textwidth]{people/milnergroup/seth_loyd.png}
+                \column{0.16\textwidth}
+            \centering
+            \includegraphics[width=0.99\textwidth]{people/milnergroup/mike.png}
+            \includegraphics[width=0.99\textwidth]{people/milnergroup/thaler.png}
+                \column{0.16\textwidth}
+            \centering
+            \includegraphics[width=0.99\textwidth]{people/milnergroup/lupe.png}
+            \includegraphics[width=0.99\textwidth]{people/milnergroup/lindley.png}
+                \column{0.16\textwidth}
+            \centering
+            \includegraphics[width=0.99\textwidth]{people/milnergroup/yury.png}
+            \includegraphics[width=0.99\textwidth]{people/milnergroup/phil.png}
+        \end{columns}   
+        
 
 \end{frame}
 
 
-\begin{frame}{Acknowledgements}
-Other mentors - magnusson phillips noon mvevoy messina
-other friends at MIT  BAND group
+\begin{frame}{Acknowledgements - UMass Amherst}
+    \begin{columns}
+
+        \column{0.16\textwidth}
+            \centering
+            \includegraphics[width=0.99\textwidth]{people/umassprofs/auerbach.png}
+            \includegraphics[width=0.99\textwidth]{people/umassprofs/davis.png}
+                \column{0.16\textwidth}
+            \centering
+            \includegraphics[width=0.99\textwidth]{people/umassprofs/miskimen.png}
+            \includegraphics[width=0.99\textwidth]{people/umassprofs/dinsmore.png}
+                \column{0.16\textwidth}
+            \centering
+            \includegraphics[width=0.99\textwidth]{people/umassprofs/tami.png}
+            \includegraphics[width=0.99\textwidth]{people/umassprofs/kusner.png}
+                \column{0.16\textwidth}
+            \centering
+            \includegraphics[width=0.99\textwidth]{people/umassprofs/pocar.png}
+            \includegraphics[width=0.99\textwidth]{people/umassprofs/schiffman.png}
+                \column{0.16\textwidth}
+            \centering
+            \includegraphics[width=0.99\textwidth]{people/umassprofs/whitbourne.png}
+            \includegraphics[width=0.99\textwidth]{people/umassprofs/tuominen.png}
+                \column{0.16\textwidth}
+            \centering
+            \includegraphics[width=0.99\textwidth]{people/umassprofs/weifan.png}
+            \includegraphics[width=0.99\textwidth]{people/umassprofs/jentoft.png}
+            
+        \end{columns}   
 \end{frame}
+
+
+\begin{frame}{Acknowledgements - Teachers}
+    \begin{columns}
+
+        \column{0.16\textwidth}
+            \centering
+            \includegraphics[width=0.99\textwidth]{people/teachers/waldron.png}
+            \includegraphics[width=0.99\textwidth]{people/people/shap2.png}
+        \column{0.16\textwidth}
+            \centering
+            \includegraphics[width=0.99\textwidth]{people/teachers/juice.png}
+            \includegraphics[width=0.99\textwidth]{people/teachers/fuhr.png}
+        \column{0.16\textwidth}
+            \centering
+            \includegraphics[width=0.99\textwidth]{people/teachers/rice.png}
+            \includegraphics[width=0.99\textwidth]{people/teachers/thompson.png}
+
+        \column{0.16\textwidth}
+            \centering
+            \includegraphics[width=0.99\textwidth]{people/teachers/mcevoy.png}
+            \includegraphics[width=0.99\textwidth]{people/teachers/landry.png}
+
+        \column{0.16\textwidth}
+            \centering
+            \includegraphics[width=0.99\textwidth]{people/teachers/messina.png}
+            \includegraphics[width=0.99\textwidth]{people/teachers/noon.png}
+
+        \column{0.16\textwidth}
+            \centering
+            \includegraphics[width=0.99\textwidth]{people/teachers/kis.png}
+            \includegraphics[width=0.99\textwidth]{people/teachers/makos.png}
+
+        \end{columns}   
+\end{frame}
+
 
 
 \begin{frame}{Acknowledgements - Mentors}
     \begin{columns}
-        \column{0.25\textwidth}
+        \column{0.2\textwidth}
             \centering
-            \includegraphics[width=0.5\textwidth]{people/coaches/cullen.png}
-            \includegraphics[width=0.5\textwidth]{people/coaches/maly.png}
-        \column{0.25\textwidth}
+            \includegraphics[width=0.865\textwidth]{people/coaches/cullen.png}
+            \includegraphics[width=0.865\textwidth]{people/coaches/maly.png}
+        \column{0.2\textwidth}
             \centering
-            \includegraphics[width=0.5\textwidth]{people/coaches/pancoast.png}
-            \includegraphics[width=0.5\textwidth]{people/coaches/deli.png}   
-        \column{0.25\textwidth}
+            \includegraphics[width=0.875\textwidth]{people/coaches/pancoast.png}
+            \includegraphics[width=0.875\textwidth]{people/coaches/deli.png}   
+        \column{0.2\textwidth}
             \centering
-            \includegraphics[width=0.5\textwidth]{people/docs/cardoos.png}
-            \includegraphics[width=0.5\textwidth]{people/docs/chukwueloka.png}
-        \column{0.25\textwidth}
+            \includegraphics[width=0.85\textwidth]{people/docs/cardoos.png}
+            \includegraphics[width=0.85\textwidth]{people/docs/chukwueloka.png}
+        \column{0.2\textwidth}
             \centering
-            \includegraphics[width=0.5\textwidth]{people/docs/jon.png}
-            \includegraphics[width=0.5\textwidth]{people/docs/stravinsky.png}
+            \includegraphics[width=0.855\textwidth]{people/docs/jon.png}
+            \includegraphics[width=0.855\textwidth]{people/docs/stravinsky.png}
+        \column{0.2\textwidth}
+                \centering
+                \includegraphics[width=0.865\textwidth]{people/mentors/et.png}
+                \includegraphics[width=0.865\textwidth]{people/mentors/inky.png}
     \end{columns}
 \end{frame}
 
 
-
-\begin{frame}{Acknowledgements}
-Other mentors - all the college people, Tami
+\begin{frame}{Acknowledgements - MIT Family }
+     \begin{columns}
+             \column{0.25\textwidth}
+                \centering
+                \includegraphics[width=0.865\textwidth]{people/band/rey.png}
+                \includegraphics[width=0.865\textwidth]{people/band/smolsky.png}
+                
+            \column{0.25\textwidth}
+                \centering
+                \includegraphics[width=0.865\textwidth]{people/band/loyd.png}
+                \includegraphics[width=0.865\textwidth]{people/band/bdot.png}
+            \column{0.25\textwidth}
+                \centering
+                \includegraphics[width=0.9765\textwidth]{people/band/stan.png}
+            \column{0.25\textwidth}
+                \centering
+            \includegraphics[width=0.9765\textwidth]{people/band/yunjie.png}        
+    \end{columns}
+    
 \end{frame}
 
-\begin{frame}{Acknowledgements}
-Mentors outside of college - Strong man Rum guy, MIT hobby shop guys, Sandbox
+
+\begin{frame}{Acknowledgements - MIT Family }
+     \begin{columns}
+             \column{0.33\textwidth}
+                \centering
+                \includegraphics[width=0.865\textwidth]{people/milnergroup/peterfisher.png}
+                \includegraphics[width=0.865\textwidth]{people/people/chairs.png}
+
+            \column{0.33\textwidth}
+                \centering
+                \includegraphics[width=0.965\textwidth]{people/band/band2.jpg}
+
+                            
+            \column{0.33\textwidth}
+                \centering
+                \includegraphics[width=0.965\textwidth]{people/people/hayami.jpg}
+                    
+                
+    \end{columns}
+
 \end{frame}
 
 
-              
-
-\begin{frame}{Acknowledgements - Friends}
+\begin{frame}{Acknowledgements - Family}
     \begin{columns}
         \column{0.5\textwidth}
             \centering
@@ -2180,8 +2315,9 @@ In Conclusion: Thanks!
 
 \end{frame}
 
-
+\fi
 \begin{frame}{Backup slides}
+\centering
 Backup Slides
 
 \end{frame}
@@ -2189,13 +2325,77 @@ Backup Slides
 %Acknowledge: MIT group, Sangbaek Lee, Andrey Kim, CLAS collaboration
 
 
+\begin{frame}{Tracking GK Model Drift}
 
-\begin{frame}{Backup slides}
-\centering
-Comparision with CLAS6\\
+        \centering
+        \includegraphics[width=0.6\textwidth]{lastminute/GK_model_Drift.png}           
 
-    \includegraphics[scale=0.2832]{DNP/comp_c12_gk_c6.jpg}\\
 \end{frame}
+
+\begin{frame}{Extracting Physics Directly with OMNIFOLD}
+\vspace{-.75cm}
+            \begin{columns}[t, onlytextwidth]
+                        \column{0.5\textwidth}
+                    \begin{figure}
+                        \centering
+                        \includegraphics[trim={0 0  0 0cm} ,clip,width=.915684982\textwidth]{Main/OMNI/omni1.png}
+                    \end{figure}
+
+                                        \begin{figure}
+                        \centering
+                        \includegraphics[trim={0 0  0 0cm} ,clip,width=.60685684982\textwidth]{Main/OMNI/omni4.png}
+                    \end{figure}
+                        \column{0.5\textwidth}
+
+                                        \begin{figure}
+                        \centering
+                        \includegraphics[trim={0 0  0 0cm} ,clip,width=.585684982\textwidth]{Main/OMNI/omni3.png}
+                    \end{figure}
+                    
+                    \begin{figure}
+                        \centering
+                        \includegraphics[trim={0 0  0 0cm} ,clip,width=.89684982\textwidth]{Main/OMNI/omni2.png}
+                    \end{figure}
+
+            \end{columns}
+                        {\myfont{\tiny    [ arxiv:1911.09107]   }}
+                       
+
+\end{frame}
+
+\begin{frame}{Unbinned Cross Sections}
+
+        \centering
+        \includegraphics[width=0.4\textwidth]{lastminute/ubninned.png}              
+
+\end{frame}
+
+\begin{frame}{Unfolding Outliers}
+
+        \centering
+        \includegraphics[width=0.4\textwidth]{lastminute/binbybinimprovement.png}            
+
+\end{frame}
+
+
+\begin{frame}{BSA}
+
+        
+        \begin{columns}
+                                
+    
+            \column{0.5\textwidth}
+                \begin{figure}
+                    \centering
+                    \includegraphics[width=0.6\textwidth]{defense/BSA.png}
+                    \caption{Caption}
+                    \label{fig:enter-label}
+                \end{figure}
+
+        \end{columns}
+       %Calculated Integrated Luminosity from Fall 2018  dataset: 5.512 e+40 $cm^{-2}$ inbending, 4.652 e+40 $cm^{-2}$ outbending
+\end{frame} 
+
 
 
 
@@ -2245,6 +2445,14 @@ Comparision with CLAS6\\
 %Comments on measuring pion polariability
 %a few words about how pions are useful
 %\end{frame}
+
+
+\begin{frame}{Backup slides}
+\centering
+Comparision with CLAS6\\
+
+    \includegraphics[scale=0.2832]{DNP/comp_c12_gk_c6.jpg}\\
+\end{frame}
 
 
 
@@ -2405,56 +2613,7 @@ On xB being related to the timing resolution scale - essentially a post hoc inte
 \end{frame}
 
 
-\begin{frame}{Extracting Physics Directly with OMNIFOLD}
-\vspace{-.75cm}
-            \begin{columns}[t, onlytextwidth]
-                        \column{0.5\textwidth}
-                    \begin{figure}
-                        \centering
-                        \includegraphics[trim={0 0  0 0cm} ,clip,width=.915684982\textwidth]{Main/OMNI/omni1.png}
-                    \end{figure}
 
-                                        \begin{figure}
-                        \centering
-                        \includegraphics[trim={0 0  0 0cm} ,clip,width=.60685684982\textwidth]{Main/OMNI/omni4.png}
-                    \end{figure}
-                        \column{0.5\textwidth}
-
-                                        \begin{figure}
-                        \centering
-                        \includegraphics[trim={0 0  0 0cm} ,clip,width=.585684982\textwidth]{Main/OMNI/omni3.png}
-                    \end{figure}
-                    
-                    \begin{figure}
-                        \centering
-                        \includegraphics[trim={0 0  0 0cm} ,clip,width=.89684982\textwidth]{Main/OMNI/omni2.png}
-                    \end{figure}
-
-            \end{columns}
-                        {\myfont{\tiny    [ arxiv:1911.09107]   }}
-                       
-
-\end{frame}
-
-
-
-\begin{frame}{BSA}
-
-        
-        \begin{columns}
-                                
-    
-            \column{0.5\textwidth}
-                \begin{figure}
-                    \centering
-                    \includegraphics[width=0.6\textwidth]{defense/BSA.png}
-                    \caption{Caption}
-                    \label{fig:enter-label}
-                \end{figure}
-
-        \end{columns}
-       Calculated Integrated Luminosity from Fall 2018  dataset: 5.512 e+40 $cm^{-2}$ inbending, 4.652 e+40 $cm^{-2}$ outbending
-\end{frame} 
 
 \end{document}
 
